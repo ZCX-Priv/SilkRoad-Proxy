@@ -1,0 +1,845 @@
+2025-03-12 23:39:40.615 | INFO     | __main__:<module>:485 - Serving HTTP on 0.0.0.0 port 4430 (https://127.0.0.1:4430...)
+2025-03-12 23:40:07.412 | INFO     | __main__:signal_handler:96 - 程序退出，正在清理缓存...
+2025-03-14 20:29:20.936 | INFO     | __main__:<module>:471 - Serving HTTP on 0.0.0.0 port 4430 (https://127.0.0.1:4430...)
+2025-03-14 20:29:47.534 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-14 20:29:49.880 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-14 20:41:08.457 | INFO     | __main__:main:503 - Serving HTTP on 0.0.0.0 port 4430 (https://127.0.0.1:4430...)
+2025-03-14 20:45:37.982 | INFO     | __main__:main:536 - Serving HTTP on 0.0.0.0 port 4430 (https://127.0.0.1:4430...)
+2025-03-14 20:46:13.494 | INFO     | __main__:main:536 - Serving HTTP on 0.0.0.0 port 4430 (https://127.0.0.1:4430...)
+2025-03-14 20:46:47.774 | INFO     | __main__:signal_handler:110 - 程序退出，正在清理缓存...
+2025-03-14 20:46:47.787 | INFO     | __main__:clear_temp_cache:79 - Cleared temp cache directory.
+2025-03-15 10:45:17.194 | INFO     | __main__:<module>:469 - Serving HTTP on 0.0.0.0 port 4430 (https://127.0.0.1:4430...)
+2025-03-15 10:46:49.810 | ERROR    | __main__:process_error:250 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 10:46:54.094 | ERROR    | __main__:process_error:250 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 10:47:02.795 | ERROR    | __main__:process_error:250 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 11:51:38.454 | INFO     | __main__:<module>:469 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-15 12:02:07.283 | INFO     | __main__:<module>:469 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-15 12:02:43.680 | INFO     | __main__:<module>:469 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-15 12:03:28.020 | ERROR    | __main__:process_error:250 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:03:28.974 | ERROR    | __main__:process_error:250 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:03:29.035 | ERROR    | __main__:process_error:250 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:03:30.016 | ERROR    | __main__:process_error:250 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:03:30.078 | ERROR    | __main__:process_error:250 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:04:25.267 | ERROR    | __main__:process_error:250 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:04:25.293 | ERROR    | __main__:process_error:250 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:04:25.818 | ERROR    | __main__:process_error:250 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:04:49.083 | INFO     | __main__:signal_handler:82 - 程序退出，正在清理缓存...
+2025-03-15 12:09:16.381 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-15 12:09:56.624 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:10:06.206 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:10:30.555 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:10:39.412 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1018)
+2025-03-15 12:10:40.801 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:10:41.045 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:10:41.286 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:10:42.339 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:10:44.771 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:10:45.497 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:10:48.661 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:10:51.548 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:10:59.524 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:10:59.711 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:12:51.485 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:12:53.530 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1018)
+2025-03-15 12:14:45.310 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-15 12:15:56.795 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:15:56.909 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:15:58.641 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:15:59.829 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:15:59.910 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:16:07.742 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:16:10.572 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:16:10.658 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:16:12.195 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:16:14.181 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:16:17.631 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:16:17.698 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:16:22.841 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:16:25.544 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:16:40.301 | ERROR    | __main__:process_error:244 - Proxy error: The read operation timed out
+2025-03-15 12:16:42.880 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:16:43.147 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:16:43.967 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:17:13.084 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:17:13.110 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:17:36.226 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:17:36.313 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:17:38.888 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:17:43.498 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:17:43.570 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:17:43.888 | ERROR    | __main__:process_error:244 - Proxy error: Server disconnected without sending a response.
+2025-03-15 12:17:46.495 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:17:46.876 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:17:46.978 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:17:50.828 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:17:51.763 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:17:55.157 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:18:00.325 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:18:01.652 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:18:02.888 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:18:16.717 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:18:16.732 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:18:17.699 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 12:18:25.899 | ERROR    | __main__:process_error:244 - Proxy error: The read operation timed out
+2025-03-15 12:25:28.265 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-15 13:55:16.303 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-15 13:55:46.868 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 13:56:18.774 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 13:57:12.403 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 13:57:12.589 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 13:57:18.186 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 13:57:18.396 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:00:44.467 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:00:46.134 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:00:47.036 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:00:52.404 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:00:52.521 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:00:52.525 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:00:52.581 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1018)
+2025-03-15 14:01:06.063 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:01:06.850 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:01:07.800 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:01:12.808 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1018)
+2025-03-15 14:01:12.811 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:01:12.981 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:01:13.039 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:01:29.867 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:01:31.532 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:01:32.468 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:01:36.272 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1018)
+2025-03-15 14:01:36.362 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:01:36.654 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-15 14:01:49.565 | ERROR    | __main__:process_error:244 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-18 22:31:08.951 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-18 22:32:56.799 | INFO     | __main__:<module>:461 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-18 22:43:17.081 | INFO     | __main__:<module>:461 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 10:42:42.771 | INFO     | __main__:<module>:461 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 10:43:28.639 | INFO     | __main__:signal_handler:81 - 程序退出，正在清理缓存...
+2025-03-23 11:38:14.142 | ERROR    | __main__:<module>:607 - Server error: 
+2025-03-23 11:39:30.824 | ERROR    | __main__:<module>:609 - Server error: 
+2025-03-23 11:40:27.415 | ERROR    | __main__:<module>:610 - Server error: 
+2025-03-23 11:41:49.775 | ERROR    | __main__:<module>:612 - Server error: 
+2025-03-23 11:47:25.702 | ERROR    | __main__:<module>:612 - Server error: 
+2025-03-23 11:48:05.784 | INFO     | __main__:<module>:461 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 11:51:20.145 | INFO     | __main__:<module>:461 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 12:01:08.690 | INFO     | __main__:<module>:566 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 12:01:31.277 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\911a5e31f447943ea9778810e5c15286
+2025-03-23 12:01:31.452 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\911a5e31f447943ea9778810e5c15286
+2025-03-23 12:01:31.507 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\5fe9d6fb2a25882cbddb0313549152b4
+2025-03-23 12:01:31.830 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\3d16b7c4addd830028a9a40389b47281
+2025-03-23 12:01:31.926 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\5fe9d6fb2a25882cbddb0313549152b4
+2025-03-23 12:01:32.142 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\ed62e6b06c15268ef1f89320bbe3e17e
+2025-03-23 12:01:36.542 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\ed62e6b06c15268ef1f89320bbe3e17e
+2025-03-23 12:01:37.688 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\87e843e30dd924837e7e9d0b805cd53f
+2025-03-23 12:01:37.757 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\59672175572450c9212703709d61130c
+2025-03-23 12:01:38.036 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\56ef860492624a7ee7114483295e776f
+2025-03-23 12:01:38.094 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\3aef2c046d7d7f4e2d8d3362e602ef24
+2025-03-23 12:01:38.579 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\1fda2084a94b2d400268368aa1ef03d6
+2025-03-23 12:01:39.454 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\48db939a680fa53d64b63f7abcb3a4c9
+2025-03-23 12:01:46.376 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\64cf9c9d26bbca1143cde3b1f3df20a7
+2025-03-23 12:01:46.591 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\75e70dee6e76dd124cbef84eb0d262ff
+2025-03-23 12:01:46.747 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\a0dd7884a53c82b6bf58669594e0e16a
+2025-03-23 12:01:49.592 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\add8c0855fca6ec2dc1acee9fd74354f
+2025-03-23 12:01:50.853 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\6cfa2058ea413f1fad0fdf7ad774377e
+2025-03-23 12:01:50.932 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\4a56afd797c94a676c6a978923db929b
+2025-03-23 12:01:51.290 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\5027cb48eac66541b0953c070358d0fc
+2025-03-23 12:01:51.426 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\ac92b279b6c50a899bd7183882395816
+2025-03-23 12:01:51.626 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\9ad1986b0b2a549adc7c76741c619051
+2025-03-23 12:01:51.746 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\5f577015b545589b0c66b8f13462965f
+2025-03-23 12:01:53.608 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\18fc6d10dfd5cd4f59580b7290942694
+2025-03-23 12:02:00.138 | ERROR    | __main__:process_error:357 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:02:00.328 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\d22fe97ca04903b1ffbfc53a0821f6e9
+2025-03-23 12:02:00.776 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\f4215d7cacc9e80dcdaf8843f066b862
+2025-03-23 12:02:01.269 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\e58d953d112f44e4b19887b474cec9d9
+2025-03-23 12:02:01.419 | ERROR    | __main__:process_error:357 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:02:03.022 | ERROR    | __main__:do_request:453 - Proxy异常: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-03-23 12:02:03.214 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\e81c1f5749545c5f7d247b3a100ffe62
+2025-03-23 12:02:03.720 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\e81c1f5749545c5f7d247b3a100ffe62
+2025-03-23 12:02:04.472 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\9c60116e10fa3c47ed6432a403d9c8c3
+2025-03-23 12:02:04.724 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\07513c88b094654a16042259998f613b
+2025-03-23 12:02:08.636 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\614fb522304ad7bc2aea62eca77242f3
+2025-03-23 12:02:09.614 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\9bfa48d35cb701a310adc3a299d213fe
+2025-03-23 12:02:09.784 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\7048f412d4a6bcd7f58b8eb4a915186f
+2025-03-23 12:02:09.903 | ERROR    | __main__:do_request:453 - Proxy异常: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-03-23 12:02:09.980 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\5149fbe74b193341c7f504fbc47fa531
+2025-03-23 12:02:09.990 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\4d74d9beb6085b0ee5fd07482e502992
+2025-03-23 12:02:10.963 | ERROR    | __main__:do_request:453 - Proxy异常: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-03-23 12:02:13.850 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\af9d6a11155dcc4a509394786149b356
+2025-03-23 12:02:14.037 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\af9d6a11155dcc4a509394786149b356
+2025-03-23 12:02:14.657 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\03fc5873a89586132b7b6fa3ba09789d
+2025-03-23 12:02:14.787 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\b05d98776079ea00f6e0be305084eba6
+2025-03-23 12:02:14.787 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\b60dd8e2c1500b8cd8eb636b997ab4bc
+2025-03-23 12:02:14.943 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\7b0bf7623b03b13c6879525c2c2b48fb
+2025-03-23 12:02:15.137 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\405a75f51bb1b2e2a13b79063a1c1cd5
+2025-03-23 12:02:15.436 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\8528d16f8544d4843d9ce9d790ff7157
+2025-03-23 12:02:16.305 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\79168b72757e080d1a5675f3ab3975e0
+2025-03-23 12:02:16.694 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\79168b72757e080d1a5675f3ab3975e0
+2025-03-23 12:02:19.879 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\6f2a6b6de888d04797abf665396e52b3
+2025-03-23 12:02:20.246 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\a4651afc1c2befc3ee77d2c362dbd528
+2025-03-23 12:02:20.317 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\5c619197796803cf3083cf7fd8e8e236
+2025-03-23 12:02:20.318 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\055a5b277565a5cc95750d4f257809de
+2025-03-23 12:02:20.320 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\a0b67076b8485fb7c995306ddbc7c787
+2025-03-23 12:02:20.459 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\eeac61d6fef36119717a3986def137e1
+2025-03-23 12:02:20.657 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\eb2f7abd5f4d792d5f82ff624e800548
+2025-03-23 12:02:20.758 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\4262a79b710125bd41b8d3ecda9fcac4
+2025-03-23 12:02:20.898 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\f3bf716c048291d951384fcc4f1016fc
+2025-03-23 12:02:20.950 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\23a02dd97a8eb05feb7afdf22b6d7221
+2025-03-23 12:02:21.069 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\9431d6d8d4b383d964bd0262b7b5ef12
+2025-03-23 12:02:21.398 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\9e24bc08ab44490cdc6f395342de8d83
+2025-03-23 12:02:21.482 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\8fe3f8f2b60741a4aa1439b0a6474c3e
+2025-03-23 12:02:21.504 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\aa5af3a380e8e378b7838fbbba22ea06
+2025-03-23 12:02:21.659 | ERROR    | __main__:do_request:453 - Proxy异常: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-03-23 12:02:21.664 | ERROR    | __main__:do_request:453 - Proxy异常: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-03-23 12:02:21.698 | ERROR    | __main__:do_request:453 - Proxy异常: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-03-23 12:02:21.710 | ERROR    | __main__:do_request:453 - Proxy异常: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-03-23 12:02:22.591 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\ed62e6b06c15268ef1f89320bbe3e17e
+2025-03-23 12:02:22.870 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\59672175572450c9212703709d61130c
+2025-03-23 12:02:22.907 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\56ef860492624a7ee7114483295e776f
+2025-03-23 12:02:22.923 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\87e843e30dd924837e7e9d0b805cd53f
+2025-03-23 12:02:23.010 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\3aef2c046d7d7f4e2d8d3362e602ef24
+2025-03-23 12:02:23.021 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\48db939a680fa53d64b63f7abcb3a4c9
+2025-03-23 12:02:23.132 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\1fda2084a94b2d400268368aa1ef03d6
+2025-03-23 12:02:28.607 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\a0dd7884a53c82b6bf58669594e0e16a
+2025-03-23 12:02:28.697 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\64cf9c9d26bbca1143cde3b1f3df20a7
+2025-03-23 12:02:29.094 | ERROR    | __main__:do_request:453 - Proxy异常: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-03-23 12:02:29.095 | ERROR    | __main__:do_request:453 - Proxy异常: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-03-23 12:02:35.411 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\ed62e6b06c15268ef1f89320bbe3e17e
+2025-03-23 12:02:35.708 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\87e843e30dd924837e7e9d0b805cd53f
+2025-03-23 12:02:35.709 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\59672175572450c9212703709d61130c
+2025-03-23 12:02:35.709 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\56ef860492624a7ee7114483295e776f
+2025-03-23 12:02:35.801 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\3aef2c046d7d7f4e2d8d3362e602ef24
+2025-03-23 12:02:35.885 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\48db939a680fa53d64b63f7abcb3a4c9
+2025-03-23 12:02:35.901 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\1fda2084a94b2d400268368aa1ef03d6
+2025-03-23 12:02:38.442 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\64cf9c9d26bbca1143cde3b1f3df20a7
+2025-03-23 12:02:38.615 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\a0dd7884a53c82b6bf58669594e0e16a
+2025-03-23 12:02:40.633 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\4a56afd797c94a676c6a978923db929b
+2025-03-23 12:02:40.708 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\9ad1986b0b2a549adc7c76741c619051
+2025-03-23 12:02:40.751 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\ac92b279b6c50a899bd7183882395816
+2025-03-23 12:02:47.828 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\1fd49de098f3d54f19cd3898e78cef7b
+2025-03-23 12:02:48.320 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\840f1deb6149f13001fc0c76497163de
+2025-03-23 12:02:48.508 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\dcc7f6bdee92edf2d15fadcd85dba041
+2025-03-23 12:02:48.526 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\31ae0a560200b414933bc036e9cd29cc
+2025-03-23 12:02:48.555 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\e38e20db44cd9230a590fc9c57cf1c2a
+2025-03-23 12:02:48.630 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\001695b97f09ec5312d9280db9cd4782
+2025-03-23 12:02:48.746 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\0039f206c34d555c2f79dfd1874a343a
+2025-03-23 12:02:48.914 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\75dc4a617827d69b229293f3e7944c3f
+2025-03-23 12:02:49.037 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\5548206bd16f461253353b858dd3f12a
+2025-03-23 12:02:49.049 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\d1f39cd897e88c9415c516bc1261f508
+2025-03-23 12:02:49.058 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\acf56cb7c99b0071dcbfab0334916821
+2025-03-23 12:02:49.272 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\0cad0843cc719668d3d8944af843a664
+2025-03-23 12:02:49.420 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\d945c1a8e343a8244ff7ebc88c6966b0
+2025-03-23 12:02:49.482 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\e35edbec68e9627c97e9baa855ba15e6
+2025-03-23 12:02:49.636 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\869eb595234dd98872ead9d92ed056f9
+2025-03-23 12:02:49.709 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\d626340fbf7ba740cc686b5053645dc2
+2025-03-23 12:02:49.833 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\4aae76e2387c088b0250cbda35c23f69
+2025-03-23 12:02:49.923 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\7142288a7f4fb10e5bf34c15ebf97351
+2025-03-23 12:02:50.031 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\45bd8d79171250cf66e9d7bd6aabd2a7
+2025-03-23 12:02:50.128 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\7a1b48ff64835bb71a98fa64ca5d900a
+2025-03-23 12:02:50.201 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\6a8d27760eed0650cbfb332ac0c4d090
+2025-03-23 12:02:50.298 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\ad9e994a834ec0dacfc39c5566b1fb24
+2025-03-23 12:02:50.392 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\3491777c927770931baf180b8aa7403d
+2025-03-23 12:02:50.457 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\8eb7881a0a5e94fb66fd500fb61e660f
+2025-03-23 12:02:50.629 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\d2a6ddb3c2b2f0158f442622135a385a
+2025-03-23 12:02:50.758 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\53eef4c6fe18adbe9047880956500542
+2025-03-23 12:02:50.851 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\d6a5e8c8dc29456bb38c4d82ef9c5915
+2025-03-23 12:02:50.953 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\4ad502c4770b4dd8d7c948758ec6fc27
+2025-03-23 12:02:51.100 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\7d983c68404cab89d90ada2fbb76a39c
+2025-03-23 12:02:51.162 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\9424ee7ac33317b339f666f741d6d95f
+2025-03-23 12:02:51.228 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\e52443bbe6aa95f7c34de0540166ab44
+2025-03-23 12:02:51.293 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\55a6f66a5579342878819a38d3e74f0b
+2025-03-23 12:02:51.362 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\c1a80eb43ff1f167c950c1135e32a9ad
+2025-03-23 12:02:51.424 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\f4e6665389828d26f093edb5a1586cb5
+2025-03-23 12:02:51.500 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\3c957f44c370bcd96a51795642902b80
+2025-03-23 12:02:51.564 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\ed40ecad4cf8fe7c524adf61e9e1e7e7
+2025-03-23 12:02:51.668 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\5dd50c3f2742945889399d5e74a042ed
+2025-03-23 12:02:51.849 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\160862bb5a267c598ccffa7f009ac89e
+2025-03-23 12:02:51.916 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\06a1584ccb2654d113261be5776fe53e
+2025-03-23 12:02:51.984 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\c382ffef0fd16521e04dda445fd46bb1
+2025-03-23 12:02:52.275 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\73d8d7fce6e62f048a80c23f59b770f5
+2025-03-23 12:02:52.345 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\6d5bb1988a8bd06cd3e0079fd5f6760d
+2025-03-23 12:02:52.416 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\f013d615825e0e0520967050ef115e50
+2025-03-23 12:02:52.848 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\dda5fac44f3f1ff36adcefa035456cff
+2025-03-23 12:02:52.981 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\dcbb9a66664a6b64d0c9620b2d8b54c3
+2025-03-23 12:02:53.127 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\63396e82b7ea844fe28b86a4d8ac5a9a
+2025-03-23 12:02:53.195 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\7b50e6448e88d3287601a8599643ce94
+2025-03-23 12:02:53.252 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\16aac1c9a3539c531ad004bbe6a71796
+2025-03-23 12:02:53.372 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\0462e3abee188b136713753fea8bb2fa
+2025-03-23 12:02:53.434 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\ed62e6b06c15268ef1f89320bbe3e17e
+2025-03-23 12:02:53.511 | ERROR    | __main__:do_request:453 - Proxy异常: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-03-23 12:02:54.044 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\59672175572450c9212703709d61130c
+2025-03-23 12:02:54.062 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\56ef860492624a7ee7114483295e776f
+2025-03-23 12:02:54.062 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\87e843e30dd924837e7e9d0b805cd53f
+2025-03-23 12:02:54.130 | ERROR    | __main__:do_request:453 - Proxy异常: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-03-23 12:02:54.223 | ERROR    | __main__:do_request:453 - Proxy异常: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-03-23 12:02:54.270 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\1fda2084a94b2d400268368aa1ef03d6
+2025-03-23 12:02:54.276 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\3bc7aeadb30323d8bd3135c961006ab2
+2025-03-23 12:02:54.276 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\3aef2c046d7d7f4e2d8d3362e602ef24
+2025-03-23 12:02:54.276 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\48db939a680fa53d64b63f7abcb3a4c9
+2025-03-23 12:02:54.624 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\bce81b10b847046ac672875d39f0141f
+2025-03-23 12:02:56.919 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\64cf9c9d26bbca1143cde3b1f3df20a7
+2025-03-23 12:02:58.628 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\ac92b279b6c50a899bd7183882395816
+2025-03-23 12:02:58.628 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\4a56afd797c94a676c6a978923db929b
+2025-03-23 12:02:58.629 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\9ad1986b0b2a549adc7c76741c619051
+2025-03-23 12:02:58.976 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\5f577015b545589b0c66b8f13462965f
+2025-03-23 12:03:02.974 | ERROR    | __main__:do_request:453 - Proxy异常: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-03-23 12:03:06.123 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\85f06f01e99b181665273e5702d0fdf3
+2025-03-23 12:03:06.241 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\85f06f01e99b181665273e5702d0fdf3
+2025-03-23 12:03:22.107 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\75e70dee6e76dd124cbef84eb0d262ff
+2025-03-23 12:03:23.247 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\53a42138517335a9dcbfbc254c0102ca
+2025-03-23 12:03:24.004 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\809a484e85459e99292f540331eb292e
+2025-03-23 12:03:24.199 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\9fa46d67feadeaeb52a2bb5e8f2113fa
+2025-03-23 12:03:24.264 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\e1ed39a3ebf5397f909a451a587f587a
+2025-03-23 12:03:24.377 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\725c69c3ddebd2f69171fb59dfe39549
+2025-03-23 12:03:24.577 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\e157241c1438b5172536ee3485e5ff70
+2025-03-23 12:03:24.674 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\53fd5504311dafa7dd3a6859de1d2a44
+2025-03-23 12:03:25.116 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\c5fb599c48ff3c47bcf23a87a7eb0bb7
+2025-03-23 12:03:25.366 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\052c2448ae0b50c55274fd1376b4fb8f
+2025-03-23 12:03:25.496 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\93fc70d2dc70ae042d1f31a9285be5b7
+2025-03-23 12:03:25.579 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\7d0197a27a91cb6e3ea194c98fde98e0
+2025-03-23 12:03:25.851 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\06d0c17fcd5128f884214475c8d0868d
+2025-03-23 12:03:26.171 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\37bb22c02ded6cc9cd22bdf5dd34acf0
+2025-03-23 12:03:26.410 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\79f4326377bb0d4f20b1f826bf61267e
+2025-03-23 12:03:26.479 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\b33b13592aa2a47a9464f7a207ab3179
+2025-03-23 12:03:26.784 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\b2ecdb792c3cf75c90a62199063544e0
+2025-03-23 12:03:26.924 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\ab1c4174fc5b0282b9053d2d2869f61e
+2025-03-23 12:03:27.169 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\bb0150c6adc43405d169ebfc5e2cdf2e
+2025-03-23 12:03:27.361 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\599fe5f4db8d11f045662a377355872b
+2025-03-23 12:03:27.516 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\fc56d7eb6f81530b53874423f1350060
+2025-03-23 12:03:27.573 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\2cee55c92266f3aa2cba4e0ecf54e408
+2025-03-23 12:03:27.907 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\f658467ddebe11d642c4e1fb0306828f
+2025-03-23 12:03:27.977 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\50c59a251041b789f1cc88b96727fa90
+2025-03-23 12:03:28.153 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\e88404373f0b2b40689cffeb9bd1441b
+2025-03-23 12:03:28.300 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\bad2bd40118a345f5f04b081b3f9ba5a
+2025-03-23 12:03:28.368 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\7b27bcfa1243ce48686a6214e1cae405
+2025-03-23 12:03:28.493 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\64e4e22b5af5577279093763174fec67
+2025-03-23 12:03:28.825 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\29ddf43049ba2c4a9e31aa78375a981c
+2025-03-23 12:03:29.166 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\f114a76873cc50ff6cd265388fa27536
+2025-03-23 12:03:29.420 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\1d820b29fc57b09cfc4dcfee6214eb99
+2025-03-23 12:03:29.744 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\c90d2da5e552f3c25b33a310a3d95949
+2025-03-23 12:03:29.831 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\1be365c4e7ac03baa856e5ff897254c4
+2025-03-23 12:03:29.891 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\f694248d8c7f5601ea8d26d533b14902
+2025-03-23 12:03:30.153 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\09397d8c5279b2415ad94b1217685fa6
+2025-03-23 12:03:30.216 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\e82e98b58d94939cd792b23e982da6a2
+2025-03-23 12:03:30.440 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\046114f49b77a0a71fa46bda18746f81
+2025-03-23 12:03:30.528 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\4db8f1c6808fee06dea55529fb56218e
+2025-03-23 12:03:30.678 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\5817a8e4ed92db3f4db5e8a5f11a4e9c
+2025-03-23 12:03:30.807 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\aa084f522e2052dfe4699f9e3cc74747
+2025-03-23 12:03:30.864 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\efc12f915be01ac40cec85c269c3e2a2
+2025-03-23 12:03:31.193 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\454583bb47346c15ec0dbdfc8ac11e6f
+2025-03-23 12:03:31.254 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\822a9ce92de00c0b56fb356460b7728f
+2025-03-23 12:03:31.639 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\1ee83ce2efa5e5392a6183f9cbc35392
+2025-03-23 12:03:31.975 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\bd71162c45cfa13690550539cde2591b
+2025-03-23 12:03:32.088 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\d054fd9a824e7da09321e28bf3d5457a
+2025-03-23 12:03:32.153 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\d12ffbe2640b56336bd00139abe07a58
+2025-03-23 12:03:32.153 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\f82a5c2224a1a6a6bdfaa6affa18cc65
+2025-03-23 12:03:32.396 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\6dc5498bc90d599ab9fbbf5cdaefcc8e
+2025-03-23 12:03:32.913 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\6cc0347f411182d620def99c51f345ba
+2025-03-23 12:03:32.974 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\7da0cf6052ecd0388a62b2052271c429
+2025-03-23 12:03:32.976 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\7c2519ffb3ef63f872af6219f5fd24fd
+2025-03-23 12:03:33.138 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\bd5edc9becd0d0ae306391c7bfdf8fc7
+2025-03-23 12:03:33.196 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\a47ca0228e107e3d9d584c957962b2e0
+2025-03-23 12:03:33.836 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\d5d53353e8b837ad48b49304642fbaec
+2025-03-23 12:03:33.894 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\4d55748de88fe3ca475f720726df99e1
+2025-03-23 12:03:33.894 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\3c7d77b12969059ef9c917bc1a4c1d5c
+2025-03-23 12:03:33.993 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\c96ef082b811c920ceac1f5fac3bc7d8
+2025-03-23 12:03:34.055 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\bbc0b049be3b7c8fb2890b088712103b
+2025-03-23 12:03:34.835 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\6aa50b16197bb45e0b17b1f7cd47a8f5
+2025-03-23 12:03:34.918 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\53b8433d056ef637a189a865316d011e
+2025-03-23 12:03:34.930 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\40b6e1db627f1eb9b90c4b1233f5e767
+2025-03-23 12:03:34.989 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\efe0aa15b8fcd2d461d969cecd49c62a
+2025-03-23 12:03:35.269 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\fa31d8864cd0e6a9fc743302061c0758
+2025-03-23 12:03:35.548 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\825bb736ef4be3c3d0526aab629a2c4a
+2025-03-23 12:03:36.425 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\563d754929b6d17f84da2bc7f9e6204d
+2025-03-23 12:03:36.429 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\5b15e3f05c32f46a3f58c25982af6844
+2025-03-23 12:03:36.560 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\cd0d3ee5ff61a3225bc6adad2983227a
+2025-03-23 12:03:36.745 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\8242965c400035ec9d30ff9804bf917c
+2025-03-23 12:03:37.031 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\f5598e00cf3187961cd7ee527fcf43b2
+2025-03-23 12:03:37.087 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\b8e8f6d2ff377872b9650b61e2685940
+2025-03-23 12:03:37.157 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\a34e9e343dc2ff93d16533c8d8c71433
+2025-03-23 12:03:37.217 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\5e019c230bbe55a791e21a76c6e56bd8
+2025-03-23 12:03:37.790 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\581643b481fda0274c4ad1b9bf83eb85
+2025-03-23 12:03:37.847 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\5c4be93ced9a20ce18e108994d93ad28
+2025-03-23 12:03:37.911 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\94fbae52864ec71b5731a1975819b9d8
+2025-03-23 12:03:38.501 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\69c0ced95e56c64f76c0b2cb9ce8eadd
+2025-03-23 12:03:38.612 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\c79c765ef59cc00dac79f588e608ad3c
+2025-03-23 12:03:39.094 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\5f4870011c13072bfeec463337c7ac08
+2025-03-23 12:03:39.181 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\bb48c34cb5c231a3c65d4acc83cf849f
+2025-03-23 12:03:39.275 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\a01bf98fdfa4ef32a8355115439b79f0
+2025-03-23 12:03:39.336 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\3281d06acac75ab99436087a1c679ce0
+2025-03-23 12:03:39.339 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\30e93163f09c2669af305ec507801869
+2025-03-23 12:03:39.823 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\67f8428d8d0882ee133e31721e88a32e
+2025-03-23 12:03:39.881 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\7cb9edb02a18163a888b30d1973141dd
+2025-03-23 12:03:40.486 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\6436e66e351db19b342c3c1144db6358
+2025-03-23 12:03:40.739 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\0ace07b101a7a271702477f495816efc
+2025-03-23 12:03:40.799 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\c8772c8aba788548a567bd8d8cd82778
+2025-03-23 12:03:41.033 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\7723ad8d57c233e888c713e483f7e412
+2025-03-23 12:03:41.101 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\343973ffaa25e0eb8c8139d62d7c6438
+2025-03-23 12:03:41.380 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\b9343ef87b2b981da08d530bd754d09d
+2025-03-23 12:03:41.496 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\3e008cd23f1c4ff261bd6d6eda4ea3f8
+2025-03-23 12:03:41.555 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\66e5a0058bb311390588d663128fb357
+2025-03-23 12:03:41.650 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\8d472b6b52252461e5b3498717bcf45a
+2025-03-23 12:03:42.190 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\f42399989a957be20c060aa9ba0aef78
+2025-03-23 12:03:42.284 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\d3a2ba182269b39a674bd3284becd7d3
+2025-03-23 12:03:42.513 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\4b158912c7262445db8869c280fc0a90
+2025-03-23 12:03:42.525 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\c6b38cd0b38942ba29f6e9e77ffbf673
+2025-03-23 12:03:43.012 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\6a33419f44c9cbc1de51335f86ede2d4
+2025-03-23 12:03:43.137 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\032a907640db54f6871166e5e7312c39
+2025-03-23 12:03:43.322 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\b29952dda98816b636b985d3b742af74
+2025-03-23 12:03:43.386 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\1320f092450d557593e02e7264330a97
+2025-03-23 12:03:43.461 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\6842b8be3b97ee8fa61802baed062328
+2025-03-23 12:03:43.778 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\6e6a64cbfb23e4fa9b698c7c549025e9
+2025-03-23 12:03:44.077 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\4e45ae0479217418a5799eeb6b497347
+2025-03-23 12:03:44.506 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\bab54b46ca41174455ebf8e211793b82
+2025-03-23 12:03:44.765 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\d324cd719574862f3c9ea3e682e59786
+2025-03-23 12:03:44.858 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\d8d8816a5e1f9d6932029be34e8381ed
+2025-03-23 12:03:44.917 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\afce190bdedcfb78065e4fe27d62ea26
+2025-03-23 12:03:49.246 | INFO     | __main__:write:180 - 已缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\8071b0a46d29f3c151e04de3ac155179
+2025-03-23 12:04:12.272 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:14.199 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:20.220 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:22.087 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:25.837 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:29.119 | INFO     | __main__:read:171 - 使用缓存文件: C:\Users\赵晨旭\Desktop\SilkRoad\temp\cache\add8c0855fca6ec2dc1acee9fd74354f
+2025-03-23 12:04:29.245 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:29.454 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:29.543 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:29.721 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:29.790 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:29.823 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:29.824 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:29.883 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:29.952 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:30.086 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:30.159 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:30.198 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:30.285 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:30.290 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:30.408 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:30.410 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:30.495 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:30.626 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:04:30.770 | ERROR    | __main__:process_error:357 - Proxy error: [Errno 11001] getaddrinfo failed
+2025-03-23 12:42:18.463 | INFO     | __main__:<module>:469 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 12:42:59.525 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:43:00.654 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:43:10.001 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:43:10.027 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:43:16.671 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:43:18.551 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:43:20.319 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:43:45.210 | ERROR    | __main__:process_error:252 - Proxy error: _ssl.c:1001: The handshake operation timed out
+2025-03-23 12:43:56.862 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:43:56.867 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:43:59.060 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:44:01.013 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:44:04.716 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:44:15.082 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:44:15.148 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:44:15.452 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:44:15.800 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:44:15.868 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:45:19.412 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:45:19.416 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:45:26.033 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:45:27.413 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:45:28.962 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:45:55.005 | ERROR    | __main__:process_error:252 - Proxy error: _ssl.c:1001: The handshake operation timed out
+2025-03-23 12:45:55.782 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:45:55.787 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:45:57.316 | ERROR    | __main__:process_error:252 - Proxy error: _ssl.c:1001: The handshake operation timed out
+2025-03-23 12:45:58.316 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:45:59.856 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:46:00.336 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:46:02.267 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:51:43.904 | INFO     | __main__:<module>:469 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 12:52:00.118 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:52:00.120 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:52:06.823 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:52:13.089 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:52:14.563 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:52:17.978 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:52:26.509 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:52:43.232 | ERROR    | __main__:process_error:252 - Proxy error: _ssl.c:1001: The handshake operation timed out
+2025-03-23 12:53:01.940 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:01.944 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:04.810 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:06.062 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:06.644 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:16.259 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:16.260 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:18.019 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:19.241 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:20.025 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:23.887 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:23.889 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:26.258 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:27.316 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:27.499 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:53:28.221 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:55:52.542 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:55:55.828 | ERROR    | __main__:process_error:252 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:59:14.918 | INFO     | __main__:<module>:473 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 12:59:43.083 | ERROR    | __main__:process_error:256 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:59:43.084 | ERROR    | __main__:process_error:256 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:59:45.310 | ERROR    | __main__:process_error:256 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:59:46.389 | ERROR    | __main__:process_error:256 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:59:46.864 | ERROR    | __main__:process_error:256 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 12:59:51.554 | ERROR    | __main__:process_error:256 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 13:00:10.857 | ERROR    | __main__:process_error:256 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 13:00:10.859 | ERROR    | __main__:process_error:256 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 13:00:11.189 | ERROR    | __main__:process_error:256 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 13:00:11.190 | ERROR    | __main__:process_error:256 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 13:00:11.519 | ERROR    | __main__:process_error:256 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 13:00:53.955 | INFO     | __main__:signal_handler:81 - 程序退出，正在清理缓存...
+2025-03-23 14:15:00.354 | INFO     | __main__:<module>:476 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 14:16:23.797 | INFO     | __main__:signal_handler:81 - 程序退出，正在清理缓存...
+2025-03-23 14:18:02.222 | INFO     | __main__:<module>:454 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 14:18:41.262 | ERROR    | __main__:process_error:237 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:18:41.325 | ERROR    | __main__:process_error:237 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:19:00.144 | ERROR    | __main__:process_error:237 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:21:07.985 | INFO     | __main__:<module>:450 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 14:21:36.774 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:21:36.775 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:21:41.198 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:21:42.249 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:21:47.682 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:21:50.501 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:21:56.176 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:22:16.221 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:22:16.225 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:22:18.121 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:22:18.477 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:22:18.813 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:22:20.493 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:28:37.913 | INFO     | __main__:<module>:486 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 14:29:47.245 | INFO     | __main__:<module>:450 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 14:31:24.699 | INFO     | __main__:signal_handler:59 - 程序退出，正在清理缓存...
+2025-03-23 14:31:31.820 | INFO     | __main__:<module>:450 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 14:32:15.094 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:32:16.032 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:35:55.332 | ERROR    | __main__:process_error:233 - Proxy error: Server disconnected without sending a response.
+2025-03-23 14:36:00.035 | ERROR    | __main__:process_error:233 - Proxy error: Server disconnected without sending a response.
+2025-03-23 14:36:11.840 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:36:12.828 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:36:47.261 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:38:55.035 | INFO     | __main__:signal_handler:59 - 程序退出，正在清理缓存...
+2025-03-23 14:39:03.980 | INFO     | __main__:<module>:450 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-23 14:39:21.019 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:40:01.107 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:40:01.407 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:40:12.998 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:42:08.176 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:42:11.678 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:43:21.556 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:43:51.077 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:44:20.179 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:44:20.775 | ERROR    | __main__:process_error:233 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-23 14:48:28.457 | INFO     | __main__:signal_handler:59 - 程序退出，正在清理缓存...
+2025-03-30 10:19:42.619 | INFO     | __main__:<module>:450 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-30 10:20:21.135 | INFO     | __main__:signal_handler:59 - 程序退出，正在清理缓存...
+2025-03-30 10:22:44.781 | INFO     | __main__:<module>:493 - 服务器启动于 https://127.0.0.1:8080
+2025-03-30 10:22:49.974 | INFO     | __main__:log_message:465 - 127.0.0.1 - "GET / HTTP/1.1" 302 -
+2025-03-30 10:22:50.008 | INFO     | __main__:log_message:465 - 127.0.0.1 - "GET /login HTTP/1.1" 200 -
+2025-03-30 10:22:54.260 | INFO     | __main__:log_message:465 - 127.0.0.1 - "POST /login HTTP/1.1" 302 -
+2025-03-30 10:22:54.294 | INFO     | __main__:log_message:465 - 127.0.0.1 - "GET / HTTP/1.1" 200 -
+2025-03-30 10:23:05.651 | ERROR    | __main__:_handle_error:345 - 代理错误: name 'USER_AGENTS' is not defined
+2025-03-30 10:23:05.666 | ERROR    | __main__:_handle_request:398 - 请求处理错误: '\n            margin'
+2025-03-30 10:23:05.681 | INFO     | __main__:log_message:465 - 127.0.0.1 - code 500, message '\n            margin'
+2025-03-30 10:23:05.696 | INFO     | __main__:log_message:465 - 127.0.0.1 - "GET /https://www.bing.com/ HTTP/1.1" 500 -
+2025-03-30 10:23:05.954 | INFO     | __main__:log_message:465 - 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 200 -
+2025-03-30 10:23:10.747 | ERROR    | __main__:_handle_error:345 - 代理错误: name 'USER_AGENTS' is not defined
+2025-03-30 10:23:10.766 | ERROR    | __main__:_handle_request:398 - 请求处理错误: '\n            margin'
+2025-03-30 10:23:11.027 | INFO     | __main__:log_message:465 - 127.0.0.1 - code 500, message '\n            margin'
+2025-03-30 10:23:11.246 | INFO     | __main__:log_message:465 - 127.0.0.1 - "GET /https://yandex.com/showcaptcha/ HTTP/1.1" 500 -
+2025-03-30 11:12:04.429 | INFO     | __main__:signal_handler:48 - 程序退出，正在清理缓存...
+2025-03-30 11:35:23.746 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-30 11:49:27.597 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-30 13:01:24.557 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-30 14:40:11.453 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-30 14:47:59.532 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-30 15:07:24.182 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-30 15:13:11.663 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-03-30 15:13:31.630 | ERROR    | __main__:process_error:240 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-03-30 15:14:01.271 | INFO     | __main__:signal_handler:59 - 程序退出，正在清理缓存...
+2025-03-30 15:17:05.866 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (http://127.0.0.1:8080...)
+2025-03-30 15:17:45.807 | INFO     | __main__:signal_handler:59 - 程序退出，正在清理缓存...
+2025-03-30 15:18:40.041 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (http://127.0.0.1:8080...)
+2025-03-30 15:19:16.999 | INFO     | __main__:signal_handler:59 - 程序退出，正在清理缓存...
+2025-04-04 16:06:03.512 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (http://127.0.0.1:8080...)
+2025-04-04 16:06:45.747 | INFO     | __main__:signal_handler:59 - 程序退出，正在清理缓存...
+2025-04-04 16:06:51.360 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-04-04 16:07:43.016 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-04-04 16:08:33.168 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (http://127.0.0.1:8080...)
+2025-04-04 16:08:57.460 | ERROR    | __main__:process_error:240 - Proxy error: Server disconnected without sending a response.
+2025-04-04 16:09:10.092 | ERROR    | __main__:process_error:240 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:09:10.551 | ERROR    | __main__:process_error:240 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:09:11.029 | ERROR    | __main__:process_error:240 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:09:19.295 | ERROR    | __main__:process_error:240 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:09:39.635 | INFO     | __main__:signal_handler:59 - 程序退出，正在清理缓存...
+2025-04-04 16:10:27.089 | INFO     | __main__:<module>:463 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-04-04 16:17:09.995 | INFO     | __main__:<module>:518 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-04-04 16:17:20.352 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:20.903 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:21.049 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:21.323 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:21.613 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:22.208 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:22.466 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:23.249 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:23.439 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:24.239 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:24.483 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:25.811 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:26.177 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:26.663 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:32.011 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:33.812 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:39.934 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:40.133 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:45.008 | ERROR    | __main__:process_error:245 - Proxy error: Server disconnected without sending a response.
+2025-04-04 16:17:45.417 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:46.695 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:46.983 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:47.779 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:48.035 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:48.637 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:49.030 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:49.783 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:49.904 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:51.020 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:53.320 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:57.764 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:57.826 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:59.440 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:17:59.506 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:00.441 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:00.798 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:00.916 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:01.292 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:02.229 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:03.502 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:03.929 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:04.464 | ERROR    | __main__:process_error:245 - Proxy error: Server disconnected without sending a response.
+2025-04-04 16:18:04.526 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:11.624 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:11.785 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:11.847 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:12.083 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:12.802 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:13.811 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:14.072 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:14.275 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:14.813 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:16.001 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:16.272 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:16.764 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:18.343 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:18.386 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:34.292 | ERROR    | __main__:process_error:245 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:18:59.635 | ERROR    | __main__:process_error:245 - Proxy error: _ssl.c:1001: The handshake operation timed out
+2025-04-04 16:21:50.892 | INFO     | __main__:<module>:564 - SSL context configured successfully
+2025-04-04 16:21:50.892 | INFO     | __main__:<module>:569 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-04-04 16:22:10.007 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:22:10.008 | ERROR    | __main__:process_error:282 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:22:27.486 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [Errno 11002] getaddrinfo failed
+2025-04-04 16:22:27.486 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [Errno 11002] getaddrinfo failed
+2025-04-04 16:22:27.488 | ERROR    | __main__:process_error:282 - Proxy error: [Errno 11002] getaddrinfo failed
+2025-04-04 16:22:27.488 | ERROR    | __main__:process_error:282 - Proxy error: [Errno 11002] getaddrinfo failed
+2025-04-04 16:22:29.917 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:22:29.918 | ERROR    | __main__:process_error:282 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:22:34.156 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:22:34.158 | ERROR    | __main__:process_error:282 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:22:38.491 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [Errno 11002] getaddrinfo failed
+2025-04-04 16:22:38.493 | ERROR    | __main__:process_error:282 - Proxy error: [Errno 11002] getaddrinfo failed
+2025-04-04 16:22:41.990 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: peer closed connection without sending complete message body (incomplete chunked read)
+2025-04-04 16:22:41.992 | ERROR    | __main__:process_error:282 - Proxy error: peer closed connection without sending complete message body (incomplete chunked read)
+2025-04-04 16:22:46.581 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: Server disconnected without sending a response.
+2025-04-04 16:22:46.582 | ERROR    | __main__:process_error:282 - Proxy error: Server disconnected without sending a response.
+2025-04-04 16:22:51.589 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:22:51.591 | ERROR    | __main__:process_error:282 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:23:01.925 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:23:01.927 | ERROR    | __main__:process_error:282 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:23:05.972 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:23:05.974 | ERROR    | __main__:process_error:282 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:23:11.313 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:23:11.315 | ERROR    | __main__:process_error:282 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:28:29.360 | INFO     | __main__:<module>:599 - SSL context configured successfully
+2025-04-04 16:28:29.361 | INFO     | __main__:<module>:604 - Serving HTTP on 0.0.0.0 port 8080 (https://127.0.0.1:8080...)
+2025-04-04 16:29:09.247 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:29:09.248 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:29:09.249 | ERROR    | __main__:process_error:300 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:29:09.250 | ERROR    | __main__:process_error:300 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:29:10.281 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:29:10.282 | ERROR    | __main__:process_error:300 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:29:14.840 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 16:29:15.158 | WARNING  | __main__:proxy:207 - Timeout on attempt 1/3: _ssl.c:1001: The handshake operation timed out
+2025-04-04 16:29:19.208 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [Errno 11002] getaddrinfo failed
+2025-04-04 16:29:19.210 | ERROR    | __main__:process_error:300 - Proxy error: [Errno 11002] getaddrinfo failed
+2025-04-04 16:29:19.306 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [Errno 11002] getaddrinfo failed
+2025-04-04 16:29:19.308 | ERROR    | __main__:process_error:300 - Proxy error: [Errno 11002] getaddrinfo failed
+2025-04-04 16:29:48.583 | ERROR    | __main__:proxy:217 - Error on attempt 2/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:29:48.585 | ERROR    | __main__:process_error:300 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:29:56.445 | ERROR    | __main__:proxy:217 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 16:29:58.137 | INFO     | __main__:signal_handler:60 - 程序退出，正在清理缓存...
+2025-04-04 16:30:29.576 | INFO     | __main__:<module>:604 - Serving HTTP on 0.0.0.0 port 8080 (http://127.0.0.1:8080...)
+2025-04-04 16:39:43.334 | INFO     | __main__:<module>:587 - Serving HTTP on 0.0.0.0 port 8080 (http://127.0.0.1:8080...)
+2025-04-04 16:39:47.167 | INFO     | __main__:<module>:587 - Serving HTTP on 0.0.0.0 port 8080 (http://127.0.0.1:8080...)
+2025-04-04 16:39:53.228 | INFO     | __main__:signal_handler:79 - 程序退出，正在清理缓存...
+2025-04-04 16:42:05.108 | INFO     | __main__:<module>:623 - Serving HTTP on 0.0.0.0 port 8080 (http://127.0.0.1:8080...)
+2025-04-04 16:42:53.556 | INFO     | __main__:system_check_and_cleanup:55 - 开始系统自检和缓存清理...
+2025-04-04 16:42:53.557 | INFO     | __main__:system_check_and_cleanup:63 - 创建目录: C:\Users\赵晨旭\Desktop\SilkRoad\temp
+2025-04-04 16:42:53.567 | INFO     | __main__:system_check_and_cleanup:63 - 创建目录: C:\Users\赵晨旭\Desktop\SilkRoad\logs
+2025-04-04 16:42:53.568 | INFO     | __main__:clear_temp_cache:48 - Cleared temp cache directory.
+2025-04-04 16:42:53.568 | INFO     | __main__:system_check_and_cleanup:86 - 系统自检和缓存清理完成
+2025-04-04 16:42:53.577 | INFO     | __main__:<module>:664 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (http://127.0.0.1:8080...)
+2025-04-04 16:43:34.622 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:34.622 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:34.624 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:34.625 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:34.876 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: Server disconnected without sending a response.
+2025-04-04 16:43:34.877 | ERROR    | __main__:process_error:350 - Proxy error: Server disconnected without sending a response.
+2025-04-04 16:43:36.845 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:36.846 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:40.123 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:40.125 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:40.217 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:40.219 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:40.485 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:40.487 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:40.854 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:40.856 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:41.947 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:41.997 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:43.251 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: Server disconnected without sending a response.
+2025-04-04 16:43:43.252 | ERROR    | __main__:process_error:350 - Proxy error: Server disconnected without sending a response.
+2025-04-04 16:43:46.322 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:46.362 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:46.447 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:46.451 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:46.488 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:46.504 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:46.537 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:46.538 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:48.510 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 16:43:48.514 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:48.670 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:48.832 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 16:43:50.133 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:50.133 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:50.134 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:50.134 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:50.604 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 16:43:52.574 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:52.576 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:53.770 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: Server disconnected without sending a response.
+2025-04-04 16:43:53.771 | ERROR    | __main__:process_error:350 - Proxy error: Server disconnected without sending a response.
+2025-04-04 16:43:54.107 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: Server disconnected without sending a response.
+2025-04-04 16:43:54.108 | ERROR    | __main__:process_error:350 - Proxy error: Server disconnected without sending a response.
+2025-04-04 16:43:55.329 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: peer closed connection without sending complete message body (received 3689 bytes, expected 146598)
+2025-04-04 16:43:55.330 | ERROR    | __main__:process_error:350 - Proxy error: peer closed connection without sending complete message body (received 3689 bytes, expected 146598)
+2025-04-04 16:43:55.821 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:55.822 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:56.152 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:56.154 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:57.030 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:57.032 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:57.595 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:57.596 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:57.978 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:57.979 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:59.403 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:43:59.404 | ERROR    | __main__:process_error:350 - Proxy error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 16:44:02.198 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: Server disconnected without sending a response.
+2025-04-04 16:44:02.201 | ERROR    | __main__:process_error:350 - Proxy error: Server disconnected without sending a response.
+2025-04-04 16:44:03.524 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: Server disconnected without sending a response.
+2025-04-04 16:44:03.525 | ERROR    | __main__:process_error:350 - Proxy error: Server disconnected without sending a response.
+2025-04-04 16:44:04.634 | ERROR    | __main__:proxy:280 - Error on attempt 1/3: peer closed connection without sending complete message body (incomplete chunked read)
+2025-04-04 16:44:04.635 | ERROR    | __main__:process_error:350 - Proxy error: peer closed connection without sending complete message body (incomplete chunked read)
+2025-04-04 16:44:34.664 | INFO     | __main__:signal_handler:115 - 程序退出，正在清理缓存...
+2025-04-04 16:53:46.701 | INFO     | __main__:system_check_and_cleanup:55 - 开始系统自检和缓存清理...
+2025-04-04 16:53:46.702 | INFO     | __main__:system_check_and_cleanup:63 - 创建目录: C:\Users\赵晨旭\Desktop\SilkRoad\temp
+2025-04-04 16:53:46.703 | INFO     | __main__:clear_temp_cache:134 - Cleared temp cache directory.
+2025-04-04 16:53:46.703 | INFO     | __main__:system_check_and_cleanup:86 - 系统自检和缓存清理完成
+2025-04-04 16:53:46.712 | INFO     | __main__:<module>:735 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (http://127.0.0.1:8080...)
+2025-04-04 16:53:56.768 | INFO     | __main__:signal_handler:115 - 程序退出，正在清理缓存...
+2025-04-04 16:54:46.308 | INFO     | __main__:system_check_and_cleanup:55 - 开始系统自检和缓存清理...
+2025-04-04 16:54:46.308 | INFO     | __main__:system_check_and_cleanup:63 - 创建目录: C:\Users\赵晨旭\Desktop\SilkRoad\temp
+2025-04-04 16:54:46.309 | INFO     | __main__:clear_temp_cache:134 - Cleared temp cache directory.
+2025-04-04 16:54:46.310 | INFO     | __main__:system_check_and_cleanup:86 - 系统自检和缓存清理完成
+2025-04-04 16:54:46.318 | INFO     | __main__:<module>:733 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (http://127.0.0.1:8080...)
+2025-04-04 16:54:49.000 | INFO     | __main__:signal_handler:115 - 程序退出，正在清理缓存...
+2025-04-04 16:57:52.824 | INFO     | __main__:system_check_and_cleanup:55 - 开始系统自检和缓存清理...
+2025-04-04 16:57:52.825 | INFO     | __main__:system_check_and_cleanup:63 - 创建目录: C:\Users\赵晨旭\Desktop\SilkRoad\temp
+2025-04-04 16:57:52.826 | INFO     | __main__:clear_temp_cache:48 - Cleared temp cache directory.
+2025-04-04 16:57:52.826 | INFO     | __main__:system_check_and_cleanup:86 - 系统自检和缓存清理完成
+2025-04-04 16:57:52.835 | INFO     | __main__:<module>:750 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (http://127.0.0.1:8080...)
+2025-04-04 16:58:23.124 | INFO     | __main__:system_check_and_cleanup:55 - 开始系统自检和缓存清理...
+2025-04-04 16:58:23.125 | INFO     | __main__:system_check_and_cleanup:63 - 创建目录: c:\Users\赵晨旭\Desktop\SilkRoad\temp
+2025-04-04 16:58:23.126 | INFO     | __main__:clear_temp_cache:48 - Cleared temp cache directory.
+2025-04-04 16:58:23.127 | INFO     | __main__:system_check_and_cleanup:86 - 系统自检和缓存清理完成
+2025-04-04 16:58:23.137 | INFO     | __main__:<module>:750 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (http://127.0.0.1:8080...)
+2025-04-04 16:59:35.268 | INFO     | __main__:system_check_and_cleanup:55 - 开始系统自检和缓存清理...
+2025-04-04 16:59:35.269 | INFO     | __main__:system_check_and_cleanup:63 - 创建目录: C:\Users\赵晨旭\Desktop\SilkRoad\temp
+2025-04-04 16:59:35.270 | INFO     | __main__:clear_temp_cache:48 - Cleared temp cache directory.
+2025-04-04 16:59:35.270 | INFO     | __main__:system_check_and_cleanup:86 - 系统自检和缓存清理完成
+2025-04-04 16:59:35.279 | INFO     | __main__:<module>:750 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (http://127.0.0.1:8080...)
+2025-04-04 17:02:46.094 | INFO     | __main__:system_check_and_cleanup:55 - 开始系统自检和缓存清理...
+2025-04-04 17:02:46.095 | INFO     | __main__:system_check_and_cleanup:63 - 创建目录: C:\Users\赵晨旭\Desktop\SilkRoad\temp
+2025-04-04 17:02:46.095 | INFO     | __main__:clear_temp_cache:48 - Cleared temp cache directory.
+2025-04-04 17:02:46.096 | INFO     | __main__:system_check_and_cleanup:86 - 系统自检和缓存清理完成
+2025-04-04 17:02:46.103 | INFO     | __main__:<module>:709 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (http://127.0.0.1:8080...)
+2025-04-04 17:05:07.701 | INFO     | __main__:system_check_and_cleanup:55 - 开始系统自检和缓存清理...
+2025-04-04 17:05:07.702 | INFO     | __main__:system_check_and_cleanup:63 - 创建目录: C:\Users\赵晨旭\Desktop\SilkRoad\temp
+2025-04-04 17:05:07.702 | INFO     | __main__:clear_temp_cache:48 - Cleared temp cache directory.
+2025-04-04 17:05:07.703 | INFO     | __main__:system_check_and_cleanup:86 - 系统自检和缓存清理完成
+2025-04-04 17:05:07.712 | INFO     | __main__:<module>:709 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (http://127.0.0.1:8080...)
+2025-04-04 17:05:10.825 | ERROR    | __main__:get_login_html:230 - 登录页面格式化错误: '\n            font-family'
+2025-04-04 17:05:15.934 | ERROR    | __main__:get_login_html:230 - 登录页面格式化错误: '\n            font-family'
+2025-04-04 17:05:22.006 | ERROR    | __main__:get_login_html:230 - 登录页面格式化错误: '\n            font-family'
+2025-04-04 17:05:29.298 | ERROR    | __main__:get_login_html:230 - 登录页面格式化错误: '\n            font-family'
+2025-04-04 17:19:01.221 | INFO     | __main__:system_check_and_cleanup:55 - 开始系统自检和缓存清理...
+2025-04-04 17:19:01.222 | INFO     | __main__:system_check_and_cleanup:63 - 创建目录: C:\Users\赵晨旭\Desktop\SilkRoad\temp
+2025-04-04 17:19:01.223 | INFO     | __main__:clear_temp_cache:48 - Cleared temp cache directory.
+2025-04-04 17:19:01.223 | INFO     | __main__:system_check_and_cleanup:86 - 系统自检和缓存清理完成
+2025-04-04 17:19:01.236 | INFO     | __main__:<module>:720 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (http://127.0.0.1:8080...)
+2025-04-04 17:19:15.006 | ERROR    | __main__:get_login_html:230 - 登录页面格式化错误: '\n            font-family'
+2025-04-04 17:19:15.297 | ERROR    | __main__:get_login_html:230 - 登录页面格式化错误: '\n            font-family'
+2025-04-04 17:19:31.962 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-04-04 17:19:45.680 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-04-04 17:19:54.022 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2025-04-04 17:19:54.106 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 17:19:54.269 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 17:19:54.660 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 17:19:54.840 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 17:26:41.026 | INFO     | __main__:system_check_and_cleanup:55 - 开始系统自检和缓存清理...
+2025-04-04 17:26:41.029 | INFO     | __main__:system_check_and_cleanup:63 - 创建目录: C:\Users\赵晨旭\Desktop\SilkRoad\temp
+2025-04-04 17:26:41.035 | INFO     | __main__:clear_temp_cache:48 - Cleared temp cache directory.
+2025-04-04 17:26:41.035 | INFO     | __main__:system_check_and_cleanup:86 - 系统自检和缓存清理完成
+2025-04-04 17:26:41.044 | INFO     | __main__:<module>:720 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (http://127.0.0.1:8080...)
+2025-04-04 17:26:49.078 | ERROR    | __main__:get_login_html:230 - 登录页面格式化错误: '\n            font-family'
+2025-04-04 17:26:49.383 | ERROR    | __main__:get_login_html:230 - 登录页面格式化错误: '\n            font-family'
+2025-04-04 17:27:22.811 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 17:28:03.033 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 17:28:09.678 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 17:28:20.023 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 17:28:20.173 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 17:28:20.430 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 17:28:20.452 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [Errno 11002] getaddrinfo failed
+2025-04-04 17:28:20.728 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 17:28:21.445 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 17:28:23.113 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+2025-04-04 17:28:25.964 | INFO     | __main__:signal_handler:115 - 程序退出，正在清理缓存...
+2025-04-04 17:28:26.435 | ERROR    | __main__:proxy:325 - Error on attempt 1/3: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)
+2025-04-04 17:29:15.021 | INFO     | __main__:system_check_and_cleanup:55 - 开始系统自检和缓存清理...
+2025-04-04 17:29:15.022 | INFO     | __main__:system_check_and_cleanup:63 - 创建目录: C:\Users\赵晨旭\Desktop\SilkRoad\temp
+2025-04-04 17:29:15.023 | INFO     | __main__:clear_temp_cache:48 - Cleared temp cache directory.
+2025-04-04 17:29:15.023 | INFO     | __main__:system_check_and_cleanup:86 - 系统自检和缓存清理完成
+2025-04-04 17:29:15.031 | INFO     | __main__:<module>:726 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (http://127.0.0.1:8080...)
+2025-04-04 17:29:30.532 | ERROR    | __main__:get_login_html:230 - 登录页面格式化错误: '\n            font-family'
+2025-04-04 17:29:30.840 | ERROR    | __main__:get_login_html:230 - 登录页面格式化错误: '\n            font-family'
+2025-04-04 17:29:57.166 | INFO     | __main__:signal_handler:115 - 程序退出，正在清理缓存...
+2025-04-04 17:31:23.712 | INFO     | __main__:system_check_and_cleanup:55 - 开始系统自检和缓存清理...
+2025-04-04 17:31:23.713 | INFO     | __main__:system_check_and_cleanup:63 - 创建目录: C:\Users\赵晨旭\Desktop\SilkRoad\temp
+2025-04-04 17:31:23.714 | INFO     | __main__:clear_temp_cache:48 - Cleared temp cache directory.
+2025-04-04 17:31:23.714 | INFO     | __main__:system_check_and_cleanup:86 - 系统自检和缓存清理完成
+2025-04-04 17:31:23.723 | INFO     | __main__:<module>:726 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (http://127.0.0.1:8080...)
