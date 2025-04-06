@@ -42,12 +42,228 @@ periodic_gc()
 
 def clear_temp_cache():
     """程序退出时清除 temp 文件夹中的缓存（包括编译后的 .pyc 与网站缓存）"""
-    temp_dir = os.path.join(os.path.dirname(__file__), "temp")
+    # 确保使用程序所在目录
+    temp_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp")
     if os.path.exists(temp_dir):
-        shutil.rmtree(temp_dir)
-        logger.info("Cleared temp cache directory.")
+        try:
+            # 先关闭所有打开的文件句柄
+            for root, dirs, files in os.walk(temp_dir):
+                for file in files:
+                    file_path = os.path.join(root, file)
+                    try:
+                        # 尝试打开并立即关闭文件,释放文件句柄
+                        with open(file_path, 'rb'):
+                            pass
+                    except:
+                        pass
+            
+            # 等待100ms让系统完全释放文件句柄
+            time.sleep(0.1)
+            
+            # 删除目录树
+            shutil.rmtree(temp_dir, ignore_errors=True)
+            
+            # 确认目录是否被删除,如果没有则强制删除
+            if os.path.exists(temp_dir):
+                os.system(f'rd /s /q "{temp_dir}"' if platform.system() == 'Windows' else f'rm -rf "{temp_dir}"')
+            
+            logger.info("已清除临时缓存目录。")
+        except Exception as e:
+            logger.error(f"清除缓存目录时出错: {e}")
 
+# 注册清理函数
 atexit.register(clear_temp_cache)
+
+# 添加缓存管理类
+class CacheManager:
+    """管理系统缓存的类"""
+    def __init__(self):
+        # 使用程序所在目录
+        self.base_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "temp")
+        self.html_cache_dir = os.path.join(self.base_dir, "html")
+        self.media_cache_dir = os.path.join(self.base_dir, "media")
+        self.response_cache_dir = os.path.join(self.base_dir, "responses")
+        self.max_cache_size = 500 * 1024 * 1024  # 500MB
+        self.max_cache_age = 24 * 60 * 60  # 24小时
+        
+        # 确保缓存目录存在
+        self._ensure_cache_dirs()
+        
+        # 启动定期清理任务
+        self._schedule_cleanup()
+    
+    def _ensure_cache_dirs(self):
+        """确保所有缓存目录存在"""
+        for dir_path in [self.base_dir, self.html_cache_dir, 
+                         self.media_cache_dir, self.response_cache_dir]:
+            if not os.path.exists(dir_path):
+                os.makedirs(dir_path)
+                logger.debug(f"创建缓存目录: {dir_path}")
+    
+    def _schedule_cleanup(self):
+        """安排定期清理任务"""
+        cleanup_interval = 3600  # 每小时清理一次
+        Timer(cleanup_interval, self._cleanup_cache).start()
+    
+    def _cleanup_cache(self):
+        """清理过期和过大的缓存"""
+        try:
+            logger.info("开始清理缓存...")
+            now = time.time()
+            total_size = 0
+            files_info = []
+            
+            # 收集所有缓存文件信息
+            for root, _, files in os.walk(self.base_dir):
+                for file in files:
+                    file_path = os.path.join(root, file)
+                    try:
+                        file_stat = os.stat(file_path)
+                        file_size = file_stat.st_size
+                        file_mtime = file_stat.st_mtime
+                        total_size += file_size
+                        files_info.append((file_path, file_size, file_mtime))
+                    except (FileNotFoundError, PermissionError) as e:
+                        logger.warning(f"无法获取文件信息 {file_path}: {e}")
+            
+            # 删除过期文件
+            expired_files = [(path, size) for path, size, mtime in files_info 
+                            if now - mtime > self.max_cache_age]
+            for path, size in expired_files:
+                try:
+                    os.remove(path)
+                    total_size -= size
+                    logger.debug(f"删除过期缓存文件: {path}")
+                except (FileNotFoundError, PermissionError) as e:
+                    logger.warning(f"无法删除文件 {path}: {e}")
+            
+            # 如果缓存仍然过大，按最后访问时间排序删除
+            if total_size > self.max_cache_size:
+                remaining_files = [(path, size, mtime) for path, size, mtime in files_info 
+                                if not any(path == exp_path for exp_path, _ in expired_files)]
+                remaining_files.sort(key=lambda x: x[2])  # 按修改时间排序
+                
+                for path, size, _ in remaining_files:
+                    if total_size <= self.max_cache_size:
+                        break
+                    try:
+                        os.remove(path)
+                        total_size -= size
+                        logger.debug(f"删除过大缓存文件: {path}")
+                    except (FileNotFoundError, PermissionError) as e:
+                        logger.warning(f"无法删除文件 {path}: {e}")
+            
+            logger.info(f"缓存清理完成，当前缓存大小: {total_size / 1024 / 1024:.2f}MB")
+            
+            # 重新安排下一次清理
+            self._schedule_cleanup()
+        except Exception as e:
+            logger.error(f"缓存清理过程中出错: {e}")
+            # 即使出错也要重新安排清理
+            self._schedule_cleanup()
+    
+    def get_cache_path(self, url, content_type=None):
+        """根据URL和内容类型获取缓存路径"""
+        # 使用URL的哈希值作为文件名，避免路径过长或包含非法字符
+        import hashlib
+        url_hash = hashlib.md5(url.encode()).hexdigest()
+        
+        # 根据内容类型选择缓存目录
+        if content_type and "text/html" in content_type:
+            cache_dir = self.html_cache_dir
+            ext = ".html"
+        elif content_type and ("image/" in content_type or "video/" in content_type or "audio/" in content_type):
+            cache_dir = self.media_cache_dir
+            # 从content_type中提取扩展名
+            ext = "." + content_type.split("/")[-1].split(";")[0]
+        else:
+            cache_dir = self.response_cache_dir
+            ext = ".dat"
+        
+        return os.path.join(cache_dir, url_hash + ext)
+    
+    def save_to_cache(self, url, content, content_type=None, headers=None):
+        """保存响应内容到缓存"""
+        try:
+            cache_path = self.get_cache_path(url, content_type)
+            
+            # 保存内容
+            with open(cache_path, 'wb') as f:
+                f.write(content)
+            
+            # 如果提供了headers，也保存它们
+            if headers:
+                headers_path = cache_path + ".headers"
+                with open(headers_path, 'w', encoding='utf-8') as f:
+                    json.dump(dict(headers), f)
+            
+            logger.debug(f"已缓存: {url} -> {cache_path}")
+            return True
+        except Exception as e:
+            logger.warning(f"缓存保存失败 {url}: {e}")
+            return False
+    
+    def get_from_cache(self, url, content_type=None):
+        """从缓存获取响应内容"""
+        try:
+            cache_path = self.get_cache_path(url, content_type)
+            headers_path = cache_path + ".headers"
+            
+            # 检查缓存是否存在且未过期
+            if not os.path.exists(cache_path):
+                return None, None
+            
+            file_stat = os.stat(cache_path)
+            if time.time() - file_stat.st_mtime > self.max_cache_age:
+                # 缓存已过期，删除并返回None
+                os.remove(cache_path)
+                if os.path.exists(headers_path):
+                    os.remove(headers_path)
+                return None, None
+            
+            # 读取缓存内容
+            with open(cache_path, 'rb') as f:
+                content = f.read()
+            
+            # 读取headers（如果存在）
+            headers = None
+            if os.path.exists(headers_path):
+                with open(headers_path, 'r', encoding='utf-8') as f:
+                    headers = json.load(f)
+            
+            # 更新访问时间
+            os.utime(cache_path, None)
+            if os.path.exists(headers_path):
+                os.utime(headers_path, None)
+            
+            logger.debug(f"缓存命中: {url}")
+            return content, headers
+        except Exception as e:
+            logger.warning(f"读取缓存失败 {url}: {e}")
+            return None, None
+    
+    def clear_cache(self, url=None, content_type=None):
+        """清除特定URL的缓存或所有缓存"""
+        if url:
+            try:
+                cache_path = self.get_cache_path(url, content_type)
+                headers_path = cache_path + ".headers"
+                
+                if os.path.exists(cache_path):
+                    os.remove(cache_path)
+                if os.path.exists(headers_path):
+                    os.remove(headers_path)
+                logger.debug(f"已清除缓存: {url}")
+            except Exception as e:
+                logger.warning(f"清除缓存失败 {url}: {e}")
+        else:
+            # 清除所有缓存
+            clear_temp_cache()
+            self._ensure_cache_dirs()
+            logger.info("已清除所有缓存")
+
+# 创建缓存管理器实例
+cache_manager = CacheManager()
 
 # 添加系统自检和缓存清理函数
 def system_check_and_cleanup():
@@ -55,9 +271,9 @@ def system_check_and_cleanup():
     logger.info("开始系统自检和缓存清理...")
     
     # 1. 检查必要的目录是否存在，不存在则创建
-    required_dirs = ["temp","databases"]
+    required_dirs = ["temp", "databases", "templates"]
     for dir_name in required_dirs:
-        dir_path = os.path.join(os.path.dirname(__file__), dir_name)
+        dir_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), dir_name)
         if not os.path.exists(dir_path):
             os.makedirs(dir_path)
             logger.info(f"创建目录: {dir_path}")
@@ -67,7 +283,7 @@ def system_check_and_cleanup():
     clear_temp_cache()
     
     # 清除__pycache__文件夹
-    pycache_dir = os.path.join(os.path.dirname(__file__), "__pycache__")
+    pycache_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "__pycache__")
     if os.path.exists(pycache_dir):
         shutil.rmtree(pycache_dir)
         logger.info("清除 __pycache__ 目录")
@@ -83,7 +299,11 @@ def system_check_and_cleanup():
     except Exception as e:
         logger.error(f"检查配置文件时出错: {e}")
     
+    # 4. 初始化缓存目录结构
+    cache_manager._ensure_cache_dirs()
+    
     logger.info("系统自检和缓存清理完成")
+
 
 def exit_confirmation():
     """退出程序时弹出确认对话框"""
@@ -113,19 +333,47 @@ def exit_confirmation():
 def signal_handler(sig, frame):
     if exit_confirmation():
         logger.info("程序退出，正在清理缓存...")
-        sys.exit(0)
+        # 强制终止所有线程并退出
+        os._exit(0)
     else:
         logger.info("继续运行程序。")
 
 # 注册SIGINT信号处理器（Ctrl+C）
 signal.signal(signal.SIGINT, signal_handler)
 
-# 在Windows上注册SIGBREAK信号处理器（关闭窗口）
+# 在Windows上使用更可靠的方法捕获窗口关闭事件
 if platform.system() == "Windows":
     try:
-        signal.signal(signal.SIGBREAK, signal_handler)
-    except AttributeError:
-        logger.warning("无法注册SIGBREAK信号处理器")
+        import ctypes
+        
+        # Windows API常量
+        CTRL_CLOSE_EVENT = 2
+        CTRL_C_EVENT = 0
+        
+        # 定义控制台处理函数类型
+        @ctypes.WINFUNCTYPE(ctypes.c_int, ctypes.c_uint)
+        def console_ctrl_handler(ctrl_type):
+            # 处理窗口关闭事件
+            if ctrl_type in (CTRL_CLOSE_EVENT, CTRL_C_EVENT):
+                if exit_confirmation():
+                    logger.info("程序退出，正在清理缓存...")
+                    # 使用os._exit()强制终止进程
+                    os._exit(0)
+                else:
+                    logger.info("继续运行程序")
+                return 1
+            return 0
+        
+        # 设置控制台控制处理器
+        if ctypes.windll.kernel32.SetConsoleCtrlHandler(console_ctrl_handler, 1) == 0:
+            logger.warning("无法设置控制台控制处理器")
+    except (ImportError, AttributeError) as e:
+        logger.warning(f"无法注册Windows控制台事件处理器: {e}")
+        # 回退到使用SIGBREAK
+        try:
+            signal.signal(signal.SIGBREAK, signal_handler)
+        except AttributeError:
+            logger.warning("无法注册SIGBREAK信号处理器")
 
 # ------------------ 会话与用户管理 ------------------
 class Sessions(object):
@@ -184,45 +432,17 @@ class Template(object):
 
     def get_login_html(self, login_failed=False):
         try:
-            # 尝试使用命名占位符格式化
-            login_html = self.login_html.format(login_failed=1 if login_failed else 0)
+            # 使用字符串替换而不是format_map,更灵活且不易出错
+            login_html = self.login_html
+            replacements = {
+                '{login_failed}': '1' if login_failed else '0',
+                '{timestamp}': str(int(time.time())),
+                '{server_name}': config.get('SERVER_NAME', 'SilkRoad'),
+                '{domain}': config.get('DOMAIN', 'localhost')
+            }
             
-            # 检查是否需要添加样式
-            if "<style>" not in login_html:
-                # 如果模板中没有样式标签，尝试添加默认样式
-                default_style = """
-                <style>
-                body {
-                    font-family: 'Arial', sans-serif;
-                    background-color: #f5f5f5;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100vh;
-                    margin: 0;
-                }
-                .login-container {
-                    background-color: white;
-                    padding: 30px;
-                    border-radius: 8px;
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-                    width: 350px;
-                }
-                .error-message {
-                    color: #f44336;
-                    text-align: center;
-                    margin-bottom: 15px;
-                }
-                </style>
-                """
-                
-                # 在<head>标签后插入样式
-                if "<head>" in login_html:
-                    login_html = login_html.replace("<head>", "<head>\n" + default_style)
-                else:
-                    # 如果没有<head>标签，在<html>标签后插入
-                    login_html = login_html.replace("<html>", "<html>\n<head>" + default_style + "</head>")
-            
+            for old, new in replacements.items():
+                login_html = login_html.replace(old, new)
             return login_html
             
         except (KeyError, ValueError) as e:
@@ -275,7 +495,30 @@ class Proxy(object):
         self.process_request()
         content_length = int(self.handler.headers.get('Content-Length', 0))
         data = self.handler.rfile.read(content_length) if content_length > 0 else None
-
+        # 只对GET请求尝试使用缓存
+        if self.handler.command == 'GET':
+            # 尝试从缓存获取响应
+            cached_content, cached_headers = cache_manager.get_from_cache(self.url)
+            if cached_content is not None:
+                logger.info(f"使用缓存响应: {self.url}")
+                # 模拟一个响应对象
+                class CachedResponse:
+                    def __init__(self, content, headers):
+                        self.content = content
+                        self.headers = headers or {}
+                        self.status_code = 200
+                        self.encoding = 'utf-8'
+                    
+                    def iter_bytes(self, chunk_size):
+                        """模拟iter_bytes方法，用于分块传输"""
+                        remaining = self.content
+                        while remaining:
+                            chunk, remaining = remaining[:chunk_size], remaining[chunk_size:]
+                            yield chunk
+                
+                # 使用缓存的内容处理响应
+                self.process_response(CachedResponse(cached_content, cached_headers))
+                return
         # 添加重试逻辑
         retry_count = 0
         while retry_count < self.max_retries:
@@ -353,8 +596,14 @@ class Proxy(object):
         # 如果存在 Range 请求头，保持不变（用于断点续传）
 
     def process_response(self, r):
-        # 如果响应为 HTML，则进行链接修正处理
+        # 获取内容类型和URL
         content_type = r.headers.get('Content-Type', '')
+        url = self.url
+        
+        # 检查是否可缓存
+        cacheable = r.status_code == 200 and self.handler.command == 'GET'
+        
+        # 如果响应为 HTML，则进行链接修正处理
         if "text/html" in content_type:
             # 尝试使用UTF-8编码处理文本内容
             content = self.revision_link(r.content, 'utf-8')
@@ -395,6 +644,19 @@ class Proxy(object):
         # 判断是否为大文件（例如超过 1MB）或非 HTML 内容
         is_large_file = int(r.headers.get('Content-Length', 0)) > 1024 * 1024
         is_html = "text/html" in content_type
+        
+        # 尝试缓存响应内容（如果是可缓存的响应）
+        if cacheable:
+            # 对于HTML内容，缓存修正后的内容
+            if is_html:
+                cache_manager.save_to_cache(url, content, content_type, r.headers)
+            # 对于非HTML内容或小文件，直接缓存原始内容
+            elif not is_large_file:
+                cache_manager.save_to_cache(url, r.content, content_type, r.headers)
+            # 对于大文件，可以选择不缓存或仅缓存部分内容
+            elif is_large_file and config.get('CACHE_LARGE_FILES', False):
+                logger.debug(f"缓存大文件: {url}")
+                cache_manager.save_to_cache(url, r.content, content_type, r.headers)
         
         if is_html and not is_large_file:
             # 对 HTML 内容进行链接修正

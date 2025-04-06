@@ -843,3 +843,401 @@
 2025-04-04 17:31:23.714 | INFO     | __main__:clear_temp_cache:48 - Cleared temp cache directory.
 2025-04-04 17:31:23.714 | INFO     | __main__:system_check_and_cleanup:86 - 系统自检和缓存清理完成
 2025-04-04 17:31:23.723 | INFO     | __main__:<module>:726 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (http://127.0.0.1:8080...)
+2025-04-06 09:46:55.688 | INFO     | __main__:system_check_and_cleanup:55 - 开始系统自检和缓存清理...
+2025-04-06 09:46:55.689 | INFO     | __main__:system_check_and_cleanup:63 - 创建目录: C:\Users\赵晨旭\Desktop\SilkRoad-Proxy\temp
+2025-04-06 09:46:55.694 | INFO     | __main__:clear_temp_cache:48 - Cleared temp cache directory.
+2025-04-06 09:46:55.694 | INFO     | __main__:system_check_and_cleanup:86 - 系统自检和缓存清理完成
+2025-04-06 09:46:55.733 | INFO     | __main__:<module>:726 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 09:47:03.959 | ERROR    | __main__:get_login_html:230 - 登录页面格式化错误: '\n            font-family'
+2025-04-06 09:47:04.273 | ERROR    | __main__:get_login_html:230 - 登录页面格式化错误: '\n            font-family'
+2025-04-06 10:02:08.751 | INFO     | __main__:system_check_and_cleanup:250 - 开始系统自检和缓存清理...
+2025-04-06 10:02:08.754 | INFO     | __main__:clear_temp_cache:50 - 已清除临时缓存目录。
+2025-04-06 10:02:08.784 | INFO     | __main__:system_check_and_cleanup:284 - 系统自检和缓存清理完成
+2025-04-06 10:02:08.811 | INFO     | __main__:<module>:953 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:02:15.630 | ERROR    | __main__:get_login_html:428 - 登录页面格式化错误: '\n            font-family'
+2025-04-06 10:02:15.952 | ERROR    | __main__:get_login_html:428 - 登录页面格式化错误: '\n            font-family'
+2025-04-06 10:02:56.467 | ERROR    | __main__:proxy:552 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。, Context: {'url': 'https://cn.bing.com/rp/N8bxBtGOD_RYkJyDp4X-S2XkRp0.css', 'method': 'GET', 'headers': '{\'sec-ch-ua-full-version-list\': \'"Microsoft Edge";v="135.0.3179.54", "Not-A.Brand";v="8.0.0.0", "Chromium";v="135.0.7049.42"\', \'sec-ch-ua-platform\': \'"Windows"\', \'viewport-width\': \'1272\', \'device-memo...', 'retry_count': 0}
+2025-04-06 10:07:55.434 | INFO     | __main__:system_check_and_cleanup:250 - 开始系统自检和缓存清理...
+2025-04-06 10:07:55.436 | INFO     | __main__:clear_temp_cache:50 - 已清除临时缓存目录。
+2025-04-06 10:07:55.438 | INFO     | __main__:system_check_and_cleanup:284 - 系统自检和缓存清理完成
+2025-04-06 10:07:55.450 | INFO     | __main__:<module>:916 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:08:09.074 | INFO     | __main__:signal_handler:313 - 程序退出，正在清理缓存...
+2025-04-06 10:08:17.479 | INFO     | __main__:system_check_and_cleanup:250 - 开始系统自检和缓存清理...
+2025-04-06 10:08:17.481 | INFO     | __main__:clear_temp_cache:50 - 已清除临时缓存目录。
+2025-04-06 10:08:17.483 | INFO     | __main__:system_check_and_cleanup:284 - 系统自检和缓存清理完成
+2025-04-06 10:08:17.495 | INFO     | __main__:<module>:916 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:08:21.591 | ERROR    | __main__:get_login_html:391 - 登录页面格式化错误: '\n            font-family'
+2025-04-06 10:08:21.912 | ERROR    | __main__:get_login_html:391 - 登录页面格式化错误: '\n            font-family'
+2025-04-06 10:08:44.740 | INFO     | __main__:signal_handler:313 - 程序退出，正在清理缓存...
+2025-04-06 10:11:50.169 | INFO     | __main__:system_check_and_cleanup:250 - 开始系统自检和缓存清理...
+2025-04-06 10:11:50.171 | INFO     | __main__:clear_temp_cache:50 - 已清除临时缓存目录。
+2025-04-06 10:11:50.173 | INFO     | __main__:system_check_and_cleanup:284 - 系统自检和缓存清理完成
+2025-04-06 10:11:50.185 | INFO     | __main__:<module>:922 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:11:54.399 | ERROR    | __main__:get_login_html:397 - 登录页面格式化错误: '\n            font-family'
+2025-04-06 10:11:54.719 | ERROR    | __main__:get_login_html:397 - 登录页面格式化错误: '\n            font-family'
+2025-04-06 10:14:17.479 | INFO     | __main__:signal_handler:313 - 程序退出，正在清理缓存...
+2025-04-06 10:14:23.645 | INFO     | __main__:system_check_and_cleanup:250 - 开始系统自检和缓存清理...
+2025-04-06 10:14:23.647 | INFO     | __main__:clear_temp_cache:50 - 已清除临时缓存目录。
+2025-04-06 10:14:23.649 | INFO     | __main__:system_check_and_cleanup:284 - 系统自检和缓存清理完成
+2025-04-06 10:14:23.662 | INFO     | __main__:<module>:925 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:14:38.267 | INFO     | __main__:signal_handler:313 - 程序退出，正在清理缓存...
+2025-04-06 10:16:31.401 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:16:31.503 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:16:31.506 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:16:31.518 | INFO     | __main__:<module>:946 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:16:35.808 | INFO     | __main__:signal_handler:334 - 程序退出，正在清理缓存...
+2025-04-06 10:26:52.097 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:26:52.199 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:26:52.202 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:26:52.214 | INFO     | __main__:<module>:959 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:27:16.112 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/tlifxqsNyCzxIJnRwtQKuZToQQw.js
+2025-04-06 10:27:16.480 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/a9PfjU7qc2g7-52bmseAvJyFaH8.js
+2025-04-06 10:27:16.778 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/4Z7ViQ5I19H6Ev8Tv6KD9woNL18.js
+2025-04-06 10:27:18.160 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/dszBSmLt9uRJAaI3s0YOIodLb1M.js
+2025-04-06 10:27:18.296 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com/hp/api/v1/carousel?&format=json&ecount=24&efirst=0&
+2025-04-06 10:27:18.315 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//hp/api/v1/carousel?&format=json&ecount=20&efirst=0&&ecount=24&efirst=0&features=tobads&ads=1&features=tobcnads
+2025-04-06 10:27:18.792 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/Kztfii5jt_tZqOfH9TXTthmg_8w.js
+2025-04-06 10:27:19.078 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/ptgQGwN87F2ruAoVaDKbWBIygao.js
+2025-04-06 10:27:19.291 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/-qou8UrPZt4bgLmTOoPctZFjj_U.js
+2025-04-06 10:27:19.407 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/tlifxqsNyCzxIJnRwtQKuZToQQw.js
+2025-04-06 10:27:19.501 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/tlifxqsNyCzxIJnRwtQKuZToQQw.js
+2025-04-06 10:27:20.047 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com/rp/5rHD5InoFE4xIivZXwjgbgKUhfM.css
+2025-04-06 10:27:20.249 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/rmSo7lElFJjqhc_h042yOrJsPyk.js
+2025-04-06 10:27:23.411 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/Z2dAGKwouocpixOCDOMCNmMuIAY.js
+2025-04-06 10:27:23.607 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/Yvu4V7hzvXm-5_FtB2akUvonmKM.js
+2025-04-06 10:27:23.719 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/DB0udn8H5cDxTqZJgNshPTecxvc.js
+2025-04-06 10:27:23.821 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/k02upO3eJWjKAquJryP9z-tXM5o.js
+2025-04-06 10:27:23.911 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/KzajC7s6UO9JXrm9f7PUFByrqpk.js
+2025-04-06 10:27:24.032 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/m7UJkiJzqbDdcIJpX0sxsem0pPM.js
+2025-04-06 10:27:24.283 | ERROR    | __main__:proxy:545 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。, Context: {'url': 'https://cn.bing.com/rp/ec6fyPVSMhLIjXcS7kqO0bFsw64.png', 'method': 'GET', 'headers': '{\'sec-ch-ua-full-version-list\': \'"Microsoft Edge";v="135.0.3179.54", "Not-A.Brand";v="8.0.0.0", "Chromium";v="135.0.7049.42"\', \'sec-ch-ua-platform\': \'"Windows"\', \'viewport-width\': \'1272\', \'device-memo...', 'retry_count': 0}
+2025-04-06 10:27:24.303 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com/rp/Tv0EV5_9-KXlQzHg9JIZULER0JI.css
+2025-04-06 10:27:24.313 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com/rp/B1coP5ajP9oQkyK8sFlJSc8K4tk.js
+2025-04-06 10:27:24.456 | ERROR    | __main__:proxy:545 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。, Context: {'url': 'https://cn.bing.com/fd/ls/l?IG=2AEB271CFE0046AEB0DE338F1EF24731&Type=Event.ClientInst&DATA=[{%22T%22:%22CI.FeedbackInit%22,%22FID%22:%22CI%22,%22Name%22:%22Feedback%22,%22Text%22:%22sb_feedback%22,%22SDK%22:%22SJ%22}]', 'method': 'GET', 'headers': '{\'sec-ch-ua-full-version-list\': \'"Microsoft Edge";v="135.0.3179.54", "Not-A.Brand";v="8.0.0.0", "Chromium";v="135.0.7049.42"\', \'sec-ch-ua-platform\': \'"Windows"\', \'viewport-width\': \'1272\', \'device-memo...', 'retry_count': 0}
+2025-04-06 10:27:24.545 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com/rp/FVF5xt4Yv_UqQbB1cSr7xiseI3Q.js
+2025-04-06 10:27:24.544 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com/rp/Qndz9JjgwcUmQXJtx8jX5rqHXyk.js
+2025-04-06 10:27:25.088 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com/rp/AbsSL-tQ5-45b9CA3_gTDt8iAzY.css
+2025-04-06 10:27:25.102 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com/rp/pDRDB3jXHI1CI5WcvsxuF7a-wv8.css
+2025-04-06 10:27:25.188 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com/rp/hnbKPXkCFcRGOetolJIjMte9I6s.css
+2025-04-06 10:27:25.463 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/fXynPmiad9rTtk7JXNoDPA9njIk.js
+2025-04-06 10:27:25.695 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/a9PfjU7qc2g7-52bmseAvJyFaH8.js
+2025-04-06 10:27:25.888 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/4Z7ViQ5I19H6Ev8Tv6KD9woNL18.js
+2025-04-06 10:27:25.987 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/dszBSmLt9uRJAaI3s0YOIodLb1M.js
+2025-04-06 10:27:26.153 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/ptgQGwN87F2ruAoVaDKbWBIygao.js
+2025-04-06 10:27:26.290 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/Kztfii5jt_tZqOfH9TXTthmg_8w.js
+2025-04-06 10:27:26.291 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/-qou8UrPZt4bgLmTOoPctZFjj_U.js
+2025-04-06 10:27:26.292 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/tlifxqsNyCzxIJnRwtQKuZToQQw.js
+2025-04-06 10:27:26.533 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/Z2dAGKwouocpixOCDOMCNmMuIAY.js
+2025-04-06 10:27:26.532 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/rmSo7lElFJjqhc_h042yOrJsPyk.js
+2025-04-06 10:27:26.536 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/DB0udn8H5cDxTqZJgNshPTecxvc.js
+2025-04-06 10:27:26.538 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/Yvu4V7hzvXm-5_FtB2akUvonmKM.js
+2025-04-06 10:27:26.795 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/k02upO3eJWjKAquJryP9z-tXM5o.js
+2025-04-06 10:27:26.854 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/KzajC7s6UO9JXrm9f7PUFByrqpk.js
+2025-04-06 10:27:26.879 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/vE_Wye-y6H0tMPGd14yRiLbXay0.js
+2025-04-06 10:27:26.895 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/m7UJkiJzqbDdcIJpX0sxsem0pPM.js
+2025-04-06 10:27:27.108 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/fEzca4bKO4pRulhVlOoat7eLgmU.js
+2025-04-06 10:27:27.110 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/No5xIZMVh9KdmI4bjLD9p4Xl0Ys.js
+2025-04-06 10:27:27.228 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/MWgq_OYohQuMsx-qjpxMXsnruVc.js
+2025-04-06 10:27:27.229 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/uhCnIv_xh3wzed7ntfAo1Gf_1s8.js
+2025-04-06 10:27:27.233 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/VMYMrXeSZyOXW5LQn-ede-_1jZk.js
+2025-04-06 10:27:27.355 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/zeCxMEtVi23nUD1VnJIBRkRzb4g.js
+2025-04-06 10:27:27.431 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/2LpcFhWkqO2O6Txcji6g-0kKCZQ.js
+2025-04-06 10:27:27.500 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/FdV4c_-YGVxX40_HeKzMQcIRcuc.js
+2025-04-06 10:27:27.744 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/jHWA81xSQB2ngRxUekvXH6LfaMU.js
+2025-04-06 10:27:27.746 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/t6Bkpkzq5ckAnvfW2PY7kNOTPJ0.js
+2025-04-06 10:27:27.749 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/4AMThTi2J3ZQsYWAB3hKD8MJnLw.js
+2025-04-06 10:27:27.750 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/tlifxqsNyCzxIJnRwtQKuZToQQw.js
+2025-04-06 10:27:27.813 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/a9PfjU7qc2g7-52bmseAvJyFaH8.js
+2025-04-06 10:27:27.999 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/4Z7ViQ5I19H6Ev8Tv6KD9woNL18.js
+2025-04-06 10:27:28.275 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//hp/api/model
+2025-04-06 10:27:28.289 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com/hp/api/v1/carousel?&format=json&ecount=24&efirst=0&
+2025-04-06 10:27:28.292 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//hp/api/v1/carousel?&format=json&ecount=20&efirst=0&&ecount=24&efirst=0&features=tobads&ads=1&features=tobcnads
+2025-04-06 10:27:28.533 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/dszBSmLt9uRJAaI3s0YOIodLb1M.js
+2025-04-06 10:27:28.532 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//hp/api/v1/carousel?&format=json&ecount=20&efirst=0&&ecount=24&efirst=0&features=tobads&ads=1&features=tobcnads
+2025-04-06 10:27:28.639 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com/hp/api/v1/carousel?&format=json&ecount=24&efirst=0&
+2025-04-06 10:27:28.978 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/Kztfii5jt_tZqOfH9TXTthmg_8w.js
+2025-04-06 10:27:29.082 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/ptgQGwN87F2ruAoVaDKbWBIygao.js
+2025-04-06 10:27:29.299 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/-qou8UrPZt4bgLmTOoPctZFjj_U.js
+2025-04-06 10:27:29.374 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/tlifxqsNyCzxIJnRwtQKuZToQQw.js
+2025-04-06 10:27:29.461 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/tlifxqsNyCzxIJnRwtQKuZToQQw.js
+2025-04-06 10:27:29.594 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com/rp/332XHEGc10qdbz1-IwKBv4jiTdU.css
+2025-04-06 10:27:29.672 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/rmSo7lElFJjqhc_h042yOrJsPyk.js
+2025-04-06 10:27:31.015 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/Z2dAGKwouocpixOCDOMCNmMuIAY.js
+2025-04-06 10:27:31.708 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com/rp/hNgDIlLI3qeWQl2mQa4IC1pp090.js
+2025-04-06 10:27:32.158 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/Yvu4V7hzvXm-5_FtB2akUvonmKM.js
+2025-04-06 10:27:32.498 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/DB0udn8H5cDxTqZJgNshPTecxvc.js
+2025-04-06 10:27:32.578 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/k02upO3eJWjKAquJryP9z-tXM5o.js
+2025-04-06 10:27:32.657 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/KzajC7s6UO9JXrm9f7PUFByrqpk.js
+2025-04-06 10:27:32.762 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/m7UJkiJzqbDdcIJpX0sxsem0pPM.js
+2025-04-06 10:27:32.832 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/vE_Wye-y6H0tMPGd14yRiLbXay0.js
+2025-04-06 10:27:32.902 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/fEzca4bKO4pRulhVlOoat7eLgmU.js
+2025-04-06 10:27:32.974 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/No5xIZMVh9KdmI4bjLD9p4Xl0Ys.js
+2025-04-06 10:27:33.037 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/MWgq_OYohQuMsx-qjpxMXsnruVc.js
+2025-04-06 10:27:33.106 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/uhCnIv_xh3wzed7ntfAo1Gf_1s8.js
+2025-04-06 10:27:33.170 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/VMYMrXeSZyOXW5LQn-ede-_1jZk.js
+2025-04-06 10:27:33.233 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/zeCxMEtVi23nUD1VnJIBRkRzb4g.js
+2025-04-06 10:27:33.313 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/2LpcFhWkqO2O6Txcji6g-0kKCZQ.js
+2025-04-06 10:27:33.427 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/FdV4c_-YGVxX40_HeKzMQcIRcuc.js
+2025-04-06 10:27:33.509 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/jHWA81xSQB2ngRxUekvXH6LfaMU.js
+2025-04-06 10:27:33.576 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/t6Bkpkzq5ckAnvfW2PY7kNOTPJ0.js
+2025-04-06 10:27:33.693 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com//rp/4AMThTi2J3ZQsYWAB3hKD8MJnLw.js
+2025-04-06 10:27:33.950 | INFO     | __main__:proxy:474 - 使用缓存响应: https://cn.bing.com/rp/332XHEGc10qdbz1-IwKBv4jiTdU.css
+2025-04-06 10:27:38.442 | INFO     | __main__:signal_handler:334 - 程序退出，正在清理缓存...
+2025-04-06 10:32:42.447 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:32:44.532 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:32:44.538 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:32:44.552 | INFO     | __main__:<module>:984 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:32:49.357 | INFO     | __main__:console_ctrl_handler:357 - 程序退出，正在清理缓存...
+2025-04-06 10:32:52.177 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:32:52.280 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:32:52.283 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:32:52.295 | INFO     | __main__:<module>:984 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:32:54.797 | INFO     | __main__:console_ctrl_handler:357 - 程序退出，正在清理缓存...
+2025-04-06 10:32:58.996 | INFO     | __main__:signal_handler:334 - 程序退出，正在清理缓存...
+2025-04-06 10:33:09.514 | INFO     | __main__:console_ctrl_handler:357 - 程序退出，正在清理缓存...
+2025-04-06 10:33:40.098 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:33:40.200 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:33:40.203 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:33:40.215 | INFO     | __main__:<module>:959 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:33:44.992 | INFO     | __main__:signal_handler:334 - 程序退出，正在清理缓存...
+2025-04-06 10:47:01.730 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:47:01.833 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:47:01.836 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:47:01.864 | INFO     | __main__:<module>:993 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:48:39.864 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:48:39.965 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:48:39.969 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:48:39.983 | INFO     | __main__:<module>:974 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:49:37.218 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:49:37.320 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:49:37.323 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:49:37.335 | INFO     | __main__:<module>:986 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:49:41.679 | INFO     | __main__:console_ctrl_handler:358 - 程序退出，正在清理缓存...
+2025-04-06 10:51:37.936 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:51:38.039 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:51:38.041 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:51:38.053 | INFO     | __main__:<module>:987 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:51:41.581 | INFO     | __main__:console_ctrl_handler:359 - 程序退出，正在清理缓存...
+2025-04-06 10:51:44.369 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:51:44.471 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:51:44.475 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:51:44.486 | INFO     | __main__:<module>:987 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:51:46.773 | INFO     | __main__:console_ctrl_handler:359 - 程序退出，正在清理缓存...
+2025-04-06 10:52:16.865 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:52:16.967 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:52:16.970 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:52:16.982 | INFO     | __main__:<module>:987 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:52:24.370 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:52:24.472 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:52:24.475 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:52:24.487 | INFO     | __main__:<module>:987 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:53:15.838 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:53:15.940 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:53:15.943 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:53:15.956 | INFO     | __main__:<module>:988 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:53:18.391 | INFO     | __main__:console_ctrl_handler:359 - 程序退出，正在清理缓存...
+2025-04-06 10:53:20.081 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:53:20.184 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:53:20.187 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:53:20.198 | INFO     | __main__:<module>:988 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:53:22.503 | INFO     | __main__:console_ctrl_handler:363 - 继续运行程序。
+2025-04-06 10:57:16.555 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:57:16.658 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:57:16.661 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:57:16.674 | INFO     | __main__:<module>:989 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:57:18.761 | INFO     | __main__:console_ctrl_handler:363 - 继续运行程序
+2025-04-06 10:59:19.969 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 10:59:20.071 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 10:59:20.074 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 10:59:20.087 | INFO     | __main__:<module>:988 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 10:59:22.994 | INFO     | __main__:console_ctrl_handler:363 - 继续运行程序
+2025-04-06 11:00:10.143 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 11:00:10.246 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 11:00:10.249 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 11:00:10.261 | INFO     | __main__:<module>:988 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 11:00:12.303 | INFO     | __main__:console_ctrl_handler:363 - 继续运行程序
+2025-04-06 11:02:29.464 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 11:02:29.566 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 11:02:29.569 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 11:02:29.581 | INFO     | __main__:<module>:1003 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 11:02:31.959 | INFO     | __main__:console_ctrl_handler:361 - 程序退出，正在清理缓存...
+2025-04-06 11:02:34.450 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 11:02:34.552 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 11:02:34.555 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 11:02:34.566 | INFO     | __main__:<module>:1003 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 11:02:36.750 | INFO     | __main__:console_ctrl_handler:364 - 继续运行程序
+2025-04-06 11:02:44.086 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 11:02:44.188 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 11:02:44.191 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 11:02:44.204 | INFO     | __main__:<module>:1003 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 11:04:16.637 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 11:04:16.739 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 11:04:16.742 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 11:04:16.754 | INFO     | __main__:<module>:1001 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 11:04:19.393 | INFO     | __main__:handle_ctrl_c:374 - 继续运行程序
+2025-04-06 11:04:21.655 | INFO     | __main__:handle_ctrl_c:371 - 程序退出，正在清理缓存...
+2025-04-06 11:04:23.725 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 11:04:23.827 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 11:04:23.832 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 11:04:23.844 | INFO     | __main__:<module>:1001 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 11:04:27.296 | INFO     | __main__:console_ctrl_handler:364 - 继续运行程序
+2025-04-06 11:04:29.589 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 11:04:29.691 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 11:04:29.694 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 11:04:29.706 | INFO     | __main__:<module>:1001 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 11:04:31.504 | INFO     | __main__:console_ctrl_handler:361 - 程序退出，正在清理缓存...
+2025-04-06 11:35:34.259 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 11:35:34.362 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 11:35:34.364 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 11:35:34.376 | INFO     | __main__:<module>:988 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 11:35:37.515 | INFO     | __main__:console_ctrl_handler:359 - 程序退出，正在清理缓存...
+2025-04-06 11:35:39.414 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 11:35:39.517 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 11:35:39.519 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 11:35:39.531 | INFO     | __main__:<module>:988 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 11:35:42.531 | INFO     | __main__:console_ctrl_handler:363 - 继续运行程序
+2025-04-06 11:35:45.154 | INFO     | __main__:console_ctrl_handler:359 - 程序退出，正在清理缓存...
+2025-04-06 11:52:01.457 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 11:52:01.559 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 11:52:01.563 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 11:52:01.590 | INFO     | __main__:<module>:988 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 11:52:20.573 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/tlifxqsNyCzxIJnRwtQKuZToQQw.js
+2025-04-06 11:52:21.120 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/p5FEdYrxIEuxYfzXnnTB9pKvt6U.js
+2025-04-06 11:52:21.362 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/ll5safRRGP6rhu7ruw_Elk8rOpg.js
+2025-04-06 11:52:21.548 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/a9PfjU7qc2g7-52bmseAvJyFaH8.js
+2025-04-06 11:52:21.758 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/4Z7ViQ5I19H6Ev8Tv6KD9woNL18.js
+2025-04-06 11:52:22.049 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/dszBSmLt9uRJAaI3s0YOIodLb1M.js
+2025-04-06 11:52:23.078 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com/hp/api/v1/carousel?&format=json&ecount=24&efirst=0&
+2025-04-06 11:52:23.135 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//hp/api/v1/carousel?&format=json&ecount=20&efirst=0&&ecount=24&efirst=0&features=tobads&ads=1&features=tobcnads
+2025-04-06 11:52:23.250 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/Kztfii5jt_tZqOfH9TXTthmg_8w.js
+2025-04-06 11:52:23.391 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/ptgQGwN87F2ruAoVaDKbWBIygao.js
+2025-04-06 11:52:23.764 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/-qou8UrPZt4bgLmTOoPctZFjj_U.js
+2025-04-06 11:52:23.880 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/tlifxqsNyCzxIJnRwtQKuZToQQw.js
+2025-04-06 11:52:23.964 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/tlifxqsNyCzxIJnRwtQKuZToQQw.js
+2025-04-06 11:52:24.130 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com/rp/5rHD5InoFE4xIivZXwjgbgKUhfM.css
+2025-04-06 11:52:24.300 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/rmSo7lElFJjqhc_h042yOrJsPyk.js
+2025-04-06 11:52:24.408 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/Z2dAGKwouocpixOCDOMCNmMuIAY.js
+2025-04-06 11:52:24.571 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/Yvu4V7hzvXm-5_FtB2akUvonmKM.js
+2025-04-06 11:52:25.785 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/DB0udn8H5cDxTqZJgNshPTecxvc.js
+2025-04-06 11:52:27.069 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/k02upO3eJWjKAquJryP9z-tXM5o.js
+2025-04-06 11:52:27.157 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/KzajC7s6UO9JXrm9f7PUFByrqpk.js
+2025-04-06 11:52:27.262 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/m7UJkiJzqbDdcIJpX0sxsem0pPM.js
+2025-04-06 11:52:27.367 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/vE_Wye-y6H0tMPGd14yRiLbXay0.js
+2025-04-06 11:52:27.456 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/fEzca4bKO4pRulhVlOoat7eLgmU.js
+2025-04-06 11:52:27.541 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/No5xIZMVh9KdmI4bjLD9p4Xl0Ys.js
+2025-04-06 11:52:27.626 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/MWgq_OYohQuMsx-qjpxMXsnruVc.js
+2025-04-06 11:52:27.707 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/uhCnIv_xh3wzed7ntfAo1Gf_1s8.js
+2025-04-06 11:52:27.790 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/VMYMrXeSZyOXW5LQn-ede-_1jZk.js
+2025-04-06 11:52:27.874 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/zeCxMEtVi23nUD1VnJIBRkRzb4g.js
+2025-04-06 11:52:28.059 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/2LpcFhWkqO2O6Txcji6g-0kKCZQ.js
+2025-04-06 11:52:28.218 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/FdV4c_-YGVxX40_HeKzMQcIRcuc.js
+2025-04-06 11:52:28.311 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/jHWA81xSQB2ngRxUekvXH6LfaMU.js
+2025-04-06 11:52:28.390 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/t6Bkpkzq5ckAnvfW2PY7kNOTPJ0.js
+2025-04-06 11:52:28.532 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/4AMThTi2J3ZQsYWAB3hKD8MJnLw.js
+2025-04-06 11:52:28.802 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com/rp/5rHD5InoFE4xIivZXwjgbgKUhfM.css
+2025-04-06 11:52:35.000 | INFO     | __main__:console_ctrl_handler:359 - 程序退出，正在清理缓存...
+2025-04-06 11:52:53.345 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 11:52:55.075 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 11:52:55.077 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 11:52:55.089 | INFO     | __main__:<module>:988 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 11:53:44.148 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/tlifxqsNyCzxIJnRwtQKuZToQQw.js
+2025-04-06 11:53:44.401 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/p5FEdYrxIEuxYfzXnnTB9pKvt6U.js
+2025-04-06 11:53:44.799 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/ll5safRRGP6rhu7ruw_Elk8rOpg.js
+2025-04-06 11:53:44.931 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/a9PfjU7qc2g7-52bmseAvJyFaH8.js
+2025-04-06 11:53:45.137 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/4Z7ViQ5I19H6Ev8Tv6KD9woNL18.js
+2025-04-06 11:53:45.524 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/dszBSmLt9uRJAaI3s0YOIodLb1M.js
+2025-04-06 11:53:46.602 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//hp/api/v1/carousel?&format=json&ecount=20&efirst=0&&ecount=24&efirst=0&features=tobads&ads=1&features=tobcnads
+2025-04-06 11:53:46.604 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com/hp/api/v1/carousel?&format=json&ecount=24&efirst=0&
+2025-04-06 11:53:46.866 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/Kztfii5jt_tZqOfH9TXTthmg_8w.js
+2025-04-06 11:53:46.982 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/ptgQGwN87F2ruAoVaDKbWBIygao.js
+2025-04-06 11:53:47.116 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/-qou8UrPZt4bgLmTOoPctZFjj_U.js
+2025-04-06 11:53:47.184 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/tlifxqsNyCzxIJnRwtQKuZToQQw.js
+2025-04-06 11:53:47.249 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/tlifxqsNyCzxIJnRwtQKuZToQQw.js
+2025-04-06 11:53:47.387 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/rmSo7lElFJjqhc_h042yOrJsPyk.js
+2025-04-06 11:53:47.464 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/Z2dAGKwouocpixOCDOMCNmMuIAY.js
+2025-04-06 11:53:47.467 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com/rp/aqaxa012Ae7Rcx9aI9PKnhG8VpU.css
+2025-04-06 11:53:47.657 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/Yvu4V7hzvXm-5_FtB2akUvonmKM.js
+2025-04-06 11:53:47.762 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/DB0udn8H5cDxTqZJgNshPTecxvc.js
+2025-04-06 11:53:47.876 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/k02upO3eJWjKAquJryP9z-tXM5o.js
+2025-04-06 11:53:47.975 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/KzajC7s6UO9JXrm9f7PUFByrqpk.js
+2025-04-06 11:53:48.076 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/m7UJkiJzqbDdcIJpX0sxsem0pPM.js
+2025-04-06 11:53:48.150 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/vE_Wye-y6H0tMPGd14yRiLbXay0.js
+2025-04-06 11:53:48.220 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/fEzca4bKO4pRulhVlOoat7eLgmU.js
+2025-04-06 11:53:48.293 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/No5xIZMVh9KdmI4bjLD9p4Xl0Ys.js
+2025-04-06 11:53:48.363 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/MWgq_OYohQuMsx-qjpxMXsnruVc.js
+2025-04-06 11:53:48.454 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/uhCnIv_xh3wzed7ntfAo1Gf_1s8.js
+2025-04-06 11:53:48.591 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/VMYMrXeSZyOXW5LQn-ede-_1jZk.js
+2025-04-06 11:53:48.713 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/zeCxMEtVi23nUD1VnJIBRkRzb4g.js
+2025-04-06 11:53:48.803 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/2LpcFhWkqO2O6Txcji6g-0kKCZQ.js
+2025-04-06 11:53:48.944 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/FdV4c_-YGVxX40_HeKzMQcIRcuc.js
+2025-04-06 11:53:49.062 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/jHWA81xSQB2ngRxUekvXH6LfaMU.js
+2025-04-06 11:53:49.144 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/t6Bkpkzq5ckAnvfW2PY7kNOTPJ0.js
+2025-04-06 11:53:49.279 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com//rp/4AMThTi2J3ZQsYWAB3hKD8MJnLw.js
+2025-04-06 11:53:49.821 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com/rp/aqaxa012Ae7Rcx9aI9PKnhG8VpU.css
+2025-04-06 11:53:56.799 | ERROR    | __main__:proxy:574 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。, Context: {'url': 'https://cn.bing.com//search?q=%E5%BF%85%E5%BA%94%E4%B8%8A%E7%9A%84%E7%83%AD%E7%82%B9&form=HPNN01', 'method': 'GET', 'headers': '{\'sec-ch-ua-full-version-list\': \'"Microsoft Edge";v="135.0.3179.54", "Not-A.Brand";v="8.0.0.0", "Chromium";v="135.0.7049.42"\', \'sec-ch-ua-platform\': \'"Windows"\', \'viewport-width\': \'1272\', \'device-memo...', 'retry_count': 0}
+2025-04-06 11:54:09.609 | INFO     | __main__:proxy:503 - 使用缓存响应: https://cn.bing.com/rp/fXynPmiad9rTtk7JXNoDPA9njIk.js
+2025-04-06 11:58:21.526 | INFO     | __main__:proxy:503 - 使用缓存响应: https://assets.imedao.com/js/analytics-119298.js
+2025-04-06 11:58:30.927 | INFO     | __main__:proxy:503 - 使用缓存响应: https://assets.imedao.com/style/common/base-66667a.css
+2025-04-06 11:58:30.944 | INFO     | __main__:proxy:503 - 使用缓存响应: https://assets.imedao.com/style/widget/umeditor/editor-3497a7.css
+2025-04-06 11:58:30.960 | INFO     | __main__:proxy:503 - 使用缓存响应: https://assets.imedao.com/style/reward-7167cb.css
+2025-04-06 11:58:31.032 | INFO     | __main__:proxy:503 - 使用缓存响应: https://assets.imedao.com/style/pages/sns/TSNB.single-48ef79.css
+2025-04-06 11:58:38.598 | INFO     | __main__:proxy:503 - 使用缓存响应: https://zz.bdstatic.com/linksubmit/push.js
+2025-04-06 11:58:40.058 | INFO     | __main__:proxy:503 - 使用缓存响应: https://hm.baidu.com/hm.js?1db88642e346389874251b5a1eded6e3
+2025-04-06 11:58:40.078 | INFO     | __main__:proxy:503 - 使用缓存响应: https://ssl.google-analytics.com/ga.js
+2025-04-06 11:58:40.145 | INFO     | __main__:proxy:503 - 使用缓存响应: https://assets.imedao.com/style/common/base-66667a.css
+2025-04-06 11:58:40.172 | INFO     | __main__:proxy:503 - 使用缓存响应: https://assets.imedao.com/style/widget/umeditor/editor-3497a7.css
+2025-04-06 11:58:40.186 | INFO     | __main__:proxy:503 - 使用缓存响应: https://assets.imedao.com/style/pages/sns/TSNB.single-48ef79.css
+2025-04-06 11:58:40.268 | INFO     | __main__:proxy:503 - 使用缓存响应: https://assets.imedao.com/style/reward-7167cb.css
+2025-04-06 11:58:45.679 | ERROR    | __main__:proxy:574 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。, Context: {'url': 'https://assets.imedao.com/js/qrcode.min.js?_=1743911898781', 'method': 'GET', 'headers': '{\'sec-ch-ua-full-version-list\': \'"Microsoft Edge";v="135.0.3179.54", "Not-A.Brand";v="8.0.0.0", "Chromium";v="135.0.7049.42"\', \'sec-ch-ua-platform\': \'"Windows"\', \'viewport-width\': \'1272\', \'device-memo...', 'retry_count': 0}
+2025-04-06 11:58:58.647 | INFO     | __main__:console_ctrl_handler:359 - 程序退出，正在清理缓存...
+2025-04-06 12:23:20.496 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 12:23:20.691 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 12:23:20.694 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 12:23:20.706 | INFO     | __main__:<module>:999 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 12:23:24.280 | INFO     | __main__:console_ctrl_handler:359 - 程序退出，正在清理缓存...
+2025-04-06 12:23:51.341 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 12:23:51.444 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 12:23:51.451 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 12:23:51.461 | INFO     | __main__:<module>:999 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (http://127.0.0.1:8080...)
+2025-04-06 12:24:14.200 | INFO     | __main__:console_ctrl_handler:359 - 程序退出，正在清理缓存...
+2025-04-06 12:24:39.626 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 12:24:39.729 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 12:24:39.732 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 12:24:39.744 | INFO     | __main__:<module>:999 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 12:25:25.879 | INFO     | __main__:console_ctrl_handler:359 - 程序退出，正在清理缓存...
+2025-04-06 12:25:27.558 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 12:25:27.660 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 12:25:27.663 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 12:25:27.676 | INFO     | __main__:<module>:988 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 12:25:44.918 | ERROR    | __main__:proxy:574 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。, Context: {'url': 'https://cn.bing.com//rp/4Z7ViQ5I19H6Ev8Tv6KD9woNL18.js', 'method': 'GET', 'headers': '{\'sec-ch-ua-full-version-list\': \'"Microsoft Edge";v="135.0.3179.54", "Not-A.Brand";v="8.0.0.0", "Chromium";v="135.0.7049.42"\', \'sec-ch-ua-platform\': \'"Windows"\', \'viewport-width\': \'1272\', \'device-memo...', 'retry_count': 0}
+2025-04-06 12:25:45.021 | ERROR    | __main__:proxy:574 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。, Context: {'url': 'https://cn.bing.com//rp/dszBSmLt9uRJAaI3s0YOIodLb1M.js', 'method': 'GET', 'headers': '{\'sec-ch-ua-full-version-list\': \'"Microsoft Edge";v="135.0.3179.54", "Not-A.Brand";v="8.0.0.0", "Chromium";v="135.0.7049.42"\', \'sec-ch-ua-platform\': \'"Windows"\', \'viewport-width\': \'1272\', \'device-memo...', 'retry_count': 0}
+2025-04-06 12:25:45.437 | ERROR    | __main__:proxy:574 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。, Context: {'url': 'https://cn.bing.com//rp/Kztfii5jt_tZqOfH9TXTthmg_8w.js', 'method': 'GET', 'headers': '{\'sec-ch-ua-full-version-list\': \'"Microsoft Edge";v="135.0.3179.54", "Not-A.Brand";v="8.0.0.0", "Chromium";v="135.0.7049.42"\', \'sec-ch-ua-platform\': \'"Windows"\', \'viewport-width\': \'1272\', \'device-memo...', 'retry_count': 0}
+2025-04-06 12:29:48.742 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/_next/static/css/0cf283724e5de3ee.css
+2025-04-06 12:29:48.867 | INFO     | __main__:proxy:503 - 使用缓存响应: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3319195466187694
+2025-04-06 12:29:48.870 | INFO     | __main__:proxy:503 - 使用缓存响应: https://www.statcounter.com/counter/counter.js
+2025-04-06 12:29:48.873 | INFO     | __main__:proxy:503 - 使用缓存响应: https://www.googletagmanager.com/gtag/js?id=G-7SNEEV6WT6
+2025-04-06 12:29:53.702 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/_next/static/chunks/webpack-08dcc4385290f4ba.js
+2025-04-06 12:29:53.852 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/_next/static/chunks/4cb0f2ca-b33ada5d717c49b9.js
+2025-04-06 12:29:53.975 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/_next/static/chunks/713-2c4c84a5ee4b4f3b.js
+2025-04-06 12:29:54.060 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/_next/static/chunks/main-app-d936ea86bd27e368.js
+2025-04-06 12:29:54.151 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/_next/static/chunks/app/not-found-57c2f575d49e208b.js
+2025-04-06 12:29:54.221 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/_next/static/media/4473ecc91f70f139-s.p.woff
+2025-04-06 12:29:54.286 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/_next/static/media/463dafcda517f24f-s.p.woff
+2025-04-06 12:29:54.358 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/_next/static/chunks/84fbfe7f-92e9b62cddb76266.js
+2025-04-06 12:29:54.438 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/_next/static/chunks/456-aa3bc8b83340d6b1.js
+2025-04-06 12:29:54.517 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/_next/static/chunks/228-9767f92b8bfc8cf0.js
+2025-04-06 12:29:54.627 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/_next/static/chunks/730-225c2216326d60e2.js
+2025-04-06 12:29:54.709 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/_next/static/chunks/app/%5Blocale%5D/layout-3dca743bbe094eaa.js
+2025-04-06 12:29:54.828 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/_next/static/chunks/app/%5Blocale%5D/page-55a63d5578b8ad74.js
+2025-04-06 12:29:55.585 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/?_rsc=18ln6
+2025-04-06 12:29:55.657 | INFO     | __main__:proxy:503 - 使用缓存响应: https://subwaysurfersunblocked.org/games?_rsc=18ln6
+2025-04-06 12:30:04.534 | ERROR    | __main__:proxy:574 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。, Context: {'url': 'https://subwaysurfersunblocked.org/cdn-cgi/challenge-platform/scripts/jsd/main.js', 'method': 'GET', 'headers': '{\'sec-ch-ua-platform\': \'"Windows"\', \'User-Agent\': \'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36\', \'sec-ch-ua\': \'"Microsoft Edge";v="1...', 'retry_count': 0}
+2025-04-06 12:30:04.773 | ERROR    | __main__:proxy:574 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。, Context: {'url': 'https://subwaysurfersunblocked.org/zh/_next/static/chunks/84fbfe7f-92e9b62cddb76266.js', 'method': 'GET', 'headers': '{\'sec-ch-ua-full-version-list\': \'"Microsoft Edge";v="135.0.3179.54", "Not-A.Brand";v="8.0.0.0", "Chromium";v="135.0.7049.42"\', \'sec-ch-ua-platform\': \'"Windows"\', \'viewport-width\': \'1272\', \'device-memo...', 'retry_count': 0}
+2025-04-06 12:30:05.058 | ERROR    | __main__:proxy:574 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。, Context: {'url': 'https://s.sprunkiinfected.org/images/sprunki/corruptbox3.jpg', 'method': 'GET', 'headers': '{\'sec-ch-ua-full-version-list\': \'"Microsoft Edge";v="135.0.3179.54", "Not-A.Brand";v="8.0.0.0", "Chromium";v="135.0.7049.42"\', \'sec-ch-ua-platform\': \'"Windows"\', \'viewport-width\': \'1272\', \'device-memo...', 'retry_count': 0}
+2025-04-06 12:30:05.377 | ERROR    | __main__:proxy:574 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。, Context: {'url': 'https://subwaysurfersunblocked.org/zh/_next/static/chunks/730-225c2216326d60e2.js', 'method': 'GET', 'headers': '{\'sec-ch-ua-full-version-list\': \'"Microsoft Edge";v="135.0.3179.54", "Not-A.Brand";v="8.0.0.0", "Chromium";v="135.0.7049.42"\', \'sec-ch-ua-platform\': \'"Windows"\', \'viewport-width\': \'1272\', \'device-memo...', 'retry_count': 0}
+2025-04-06 12:30:06.544 | ERROR    | __main__:proxy:574 - Error on attempt 1/3: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。, Context: {'url': 'https://subwaysurfersunblocked.org/zh/_next/static/chunks/228-9767f92b8bfc8cf0.js', 'method': 'GET', 'headers': '{\'sec-ch-ua-full-version-list\': \'"Microsoft Edge";v="135.0.3179.54", "Not-A.Brand";v="8.0.0.0", "Chromium";v="135.0.7049.42"\', \'sec-ch-ua-platform\': \'"Windows"\', \'viewport-width\': \'1272\', \'device-memo...', 'retry_count': 0}
+2025-04-06 12:30:09.764 | INFO     | __main__:console_ctrl_handler:359 - 程序退出，正在清理缓存...
+2025-04-06 12:30:43.601 | INFO     | __main__:system_check_and_cleanup:271 - 开始系统自检和缓存清理...
+2025-04-06 12:30:47.096 | INFO     | __main__:clear_temp_cache:70 - 已清除临时缓存目录。
+2025-04-06 12:30:47.100 | INFO     | __main__:system_check_and_cleanup:305 - 系统自检和缓存清理完成
+2025-04-06 12:30:47.116 | INFO     | __main__:<module>:988 - 系统启动完成！服务运行在 0.0.0.0 端口 8080 (https://127.0.0.1:8080...)
+2025-04-06 12:30:53.035 | INFO     | __main__:console_ctrl_handler:359 - 程序退出，正在清理缓存...

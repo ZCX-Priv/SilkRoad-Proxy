@@ -9,6 +9,7 @@
     "LOG_FILE": "SilkRoad.log",
     "LOGIN_PATH": "/login",
     "FAVICON_PATH": "/favicon.ico",
+    "CACHE_LARGE_FILES": false,
     "SERVER_NAME": "SilkRoad/2.0",
     "SESSION_COOKIE_NAME": "SilkRoad_session",
     "SCHEME": "https",

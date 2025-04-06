@@ -228,9 +228,9 @@
         }
         
         .model-selector {
-            background-color: #f8fafc;
+            background-color: var(--input-bg); /* 使用变量确保在不同主题下显示正常 */
             padding: 15px 20px;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid var(--border-color); /* 使用变量确保在不同主题下显示正常 */
             display: flex;
             align-items: center;
         }
@@ -690,12 +690,71 @@
         input:checked + .slider:before {
             transform: translateX(26px);
         }
+
+                /* 添加角色选择器折叠功能样式 */
+                .character-selector-container {
+            position: relative;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .character-selector {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0;
+            background-color: var(--input-bg);
+            border: none;
+            visibility: hidden;
+        }
+        
+        .character-selector.expanded {
+            max-height: 300px; /* 增加最大高度，确保在移动端可以完全展开 */
+            padding: 15px 20px;
+            overflow-x: auto;
+            overflow-y: auto; /* 添加垂直滚动条，确保内容可以完全显示 */
+            visibility: visible;
+        }
+        
+        .character-toggle {
+            padding: 10px 20px;
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .character-toggle:hover {
+            background-color: rgba(59, 130, 246, 0.05);
+        }
+        
+        .character-toggle .current-character {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .character-toggle .current-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            background-color: var(--primary-color);
+            color: white;
+        }
         
         /* 响应式设计 */
         @media (max-width: 768px) {
             .chat-container {
                 height: 100vh;
                 border-radius: 0;
+                width: 100%;
+                max-width: 100%;
             }
             
             .chat-bubble {
@@ -709,12 +768,119 @@
             .input-container button {
                 padding: 12px;
             }
+            
+            /* 改善移动端角色选择器 */
+            .character-selector.expanded {
+                max-height: 250px; /* 增加移动端展开时的最大高度 */
+                padding: 10px;
+                overflow-y: auto; /* 添加垂直滚动以确保所有内容可见 */
+                border-bottom: 1px solid var(--border-color);
+            }
 
+            .character-selector {
+                max-height: 0;
+                padding: 0;
+                overflow: hidden;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none; /* Firefox */
+                transition: max-height 0.3s ease, padding 0.3s ease;
+                border: none;
+            }
+            
+            .character-selector::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, Edge */
+            }
+            
+            .character-card {
+                min-width: 70px;
+                margin-right: 8px;
+                padding: 8px;
+            }
+            
+            /* 改善移动端模型选择器 */
+            .model-selector {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 10px;
+            }
+            
+            .model-selector select {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            
+            .clear-chat-btn {
+                width: 100%;
+            }
+            
+            /* 改善移动端输入区域 */
+            .input-container {
+                padding: 10px;
+            }
+            
+            .input-container textarea {
+                padding: 10px;
+                font-size: 16px; /* 防止iOS自动缩放 */
+            }
+            
+            /* 改善设置面板在移动端的显示 */
+            .settings-panel {
+                width: 90%;
+                max-width: 300px;
+                right: 5%;
+            }
+            
+            /* 改善消息气泡在移动端的显示 */
+            .chat-history {
+                padding: 10px;
+            }
+            
             /* 全屏模式样式 */
-        .chat-container:fullscreen {
-            height: 100%;
-            max-width: 100%;
-            border-radius: 0;
+            .chat-container:fullscreen {
+                height: 100%;
+                max-width: 100%;
+                border-radius: 0;
+            }
+            
+            .chat-container:-webkit-full-screen {
+                height: 100%;
+                max-width: 100%;
+                border-radius: 0;
+            }
+            
+            .chat-container:-ms-fullscreen {
+                height: 100%;
+                max-width: 100%;
+                border-radius: 0;
+            }
+        }
+        
+        /* 添加平板特定样式 */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .chat-container {
+                width: 95%;
+                max-width: 95%;
+            }
+            
+            .character-selector {
+                overflow-x: auto;
+                overflow-y: auto; /* 添加垂直滚动 */
+                flex-wrap: wrap; /* 允许换行显示 */
+                justify-content: flex-start;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .character-selector.expanded {
+                max-height: 200px; /* 为平板设置合适的展开高度 */
+            }
+            
+            .character-card {
+                min-width: 80px;
+                margin-bottom: 10px; /* 添加底部间距 */
+            }
         }
         
         .chat-container:-webkit-full-screen {
@@ -727,7 +893,6 @@
             height: 100%;
             max-width: 100%;
             border-radius: 0;
-        }
         }
     </style>
 </head>
@@ -788,7 +953,16 @@
                 </label>
             </div>
         </div>
-    <div class="character-selector" id="characterSelector"></div>
+        <div class="character-selector-container">
+            <div class="character-toggle" onclick="toggleCharacterSelector()">
+                <div class="current-character">
+                    <div class="current-avatar" id="currentCharacterAvatar"></div>
+                    <span id="currentCharacterName">通用助手</span>
+                </div>
+                <i class="fas fa-chevron-down" id="characterToggleIcon"></i>
+            </div>
+            <div class="character-selector" id="characterSelector"></div>
+        </div>
     <div class="model-selector">
         <label for="model">选择模型:</label>
         <select id="model" onchange="changeModel()">
@@ -878,6 +1052,62 @@
             avatar: '<i class="fas fa-heart"></i>',
             prompt: '你是一个富有同理心的心理顾问，可以提供情感支持和建议，但不提供专业医疗建议。',
             greeting: "你好！我是心理顾问助手，可以提供情感支持和建议。有什么想聊的吗？"
+        },
+        {
+            id: 'mathematician',
+            name: '数学专家',
+            avatar: '<i class="fas fa-square-root-alt"></i>',
+            prompt: '你是一个数学专家，擅长解决各种数学问题，从基础数学到高等数学，并能清晰地解释数学概念和解题思路。',
+            greeting: "你好！我是数学专家助手，可以帮你解决数学问题、解释数学概念。有什么数学问题需要解答吗？"
+        },
+        {
+            id: 'travel',
+            name: '旅游顾问',
+            avatar: '<i class="fas fa-plane"></i>',
+            prompt: '你是一个旅游顾问，熟悉世界各地的旅游景点、文化习俗、旅行规划和旅游小贴士。',
+            greeting: "你好！我是旅游顾问助手，可以为你提供旅游建议、景点推荐和旅行规划。计划去哪里旅行吗？"
+        },
+        {
+            id: 'health',
+            name: '健康顾问',
+            avatar: '<i class="fas fa-heartbeat"></i>',
+            prompt: '你是一个健康生活顾问，提供关于健康饮食、运动健身、生活习惯等方面的建议，但不提供医疗诊断或治疗建议。',
+            greeting: "你好！我是健康顾问助手，可以为你提供健康生活方式的建议。有什么健康相关的问题吗？"
+        },
+        {
+            id: 'career',
+            name: '职业规划师',
+            avatar: '<i class="fas fa-briefcase"></i>',
+            prompt: '你是一个职业规划师，擅长提供职业发展建议、简历优化、面试技巧和职场交流等方面的指导。',
+            greeting: "你好！我是职业规划师助手，可以帮你进行职业规划、简历优化和面试准备。需要什么职业发展方面的帮助吗？"
+        },
+        {
+            id: 'chef',
+            name: '烹饪大师',
+            avatar: '<i class="fas fa-utensils"></i>',
+            prompt: '你是一个烹饪大师，擅长各国菜系的烹饪技巧、食谱分享和美食推荐。',
+            greeting: "你好！我是烹饪大师助手，可以为你提供食谱、烹饪技巧和美食推荐。想了解什么美食或烹饪方法吗？"
+        },
+        {
+            id: 'finance',
+            name: '财务顾问',
+            avatar: '<i class="fas fa-chart-line"></i>',
+            prompt: '你是一个财务顾问，擅长个人理财、投资建议和财务规划，但不提供具体的投资产品推荐。',
+            greeting: "你好！我是财务顾问助手，可以为你提供理财知识和财务规划建议。有什么财务问题需要解答吗？"
+        },
+        {
+            id: 'fitness',
+            name: '健身教练',
+            avatar: '<i class="fas fa-dumbbell"></i>',
+            prompt: '你是一个健身教练，擅长提供健身计划、运动建议和健康生活方式指导。',
+            greeting: "你好！我是健身教练助手，可以为你提供健身计划和运动建议。想了解什么健身相关的内容吗？"
+        },
+        {
+            id: 'catgirl',
+            name: '猫娘',
+            avatar: '<i class="fas fa-cat"></i>',
+            prompt: '你是一个可爱的猫娘，说话时喜欢在句尾加上"喵"，性格活泼可爱，喜欢撒娇，对主人非常忠诚。你会用可爱的语气和用户交流，偶尔会表现出猫的特性，如好奇心强、喜欢被夸奖等。',
+            greeting: "喵~主人好呀！我是你的猫娘，有什么需要帮忙的喵？我会尽力回答你的问题的喵~"
         }
     ];
     
@@ -951,6 +1181,41 @@ window.onload = function() {
         });
     }
     
+      // 切换角色选择器的展开/折叠状态
+      function toggleCharacterSelector() {
+        const selector = document.getElementById('characterSelector');
+        const toggleIcon = document.getElementById('characterToggleIcon');
+        
+        selector.classList.toggle('expanded');
+        
+        if (selector.classList.contains('expanded')) {
+            toggleIcon.classList.remove('fa-chevron-down');
+            toggleIcon.classList.add('fa-chevron-up');
+            // 确保展开时内容可见
+            setTimeout(() => {
+                selector.style.visibility = 'visible';
+            }, 50);
+        } else {
+            toggleIcon.classList.remove('fa-chevron-up');
+            toggleIcon.classList.add('fa-chevron-down');
+            // 在动画完成后隐藏内容
+            setTimeout(() => {
+                if (!selector.classList.contains('expanded')) {
+                    selector.style.visibility = 'hidden';
+                }
+            }, 300); // 与CSS过渡时间相匹配
+        }
+    }
+    
+    // 更新当前角色显示
+    function updateCurrentCharacterDisplay() {
+        const character = characters.find(c => c.id === currentCharacter);
+        if (!character) return;
+        
+        document.getElementById('currentCharacterName').textContent = character.name;
+        document.getElementById('currentCharacterAvatar').innerHTML = character.avatar;
+    }
+    
     // 切换角色
     function changeCharacter(characterId) {
         // 如果正在请求中，不允许切换角色
@@ -972,8 +1237,35 @@ window.onload = function() {
             }
         });
         
+        // 更新当前角色显示
+        updateCurrentCharacterDisplay();
+        
+        // 折叠角色选择器
+        document.getElementById('characterSelector').classList.remove('expanded');
+        const toggleIcon = document.getElementById('characterToggleIcon');
+        toggleIcon.classList.remove('fa-chevron-up');
+        toggleIcon.classList.add('fa-chevron-down');
+        
         // 清空聊天历史并添加新角色的欢迎消息
         clearChat(character.greeting);
+    }
+    
+    // 页面加载时添加欢迎消息
+    window.onload = function() {
+        // 初始化角色选择器
+        initCharacterSelector();
+        
+        // 更新当前角色显示
+        updateCurrentCharacterDisplay();
+        
+        // 添加默认角色的欢迎消息
+        const defaultCharacter = characters.find(c => c.id === currentCharacter);
+        chatHistory.push({ 
+            sender: 'bot', 
+            message: defaultCharacter.greeting,
+            isTypingComplete: true
+        });
+        updateChatHistory();
     }
 
     document.addEventListener('click', function(event) {
@@ -1178,7 +1470,7 @@ window.onload = function() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': 'Bearer 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',
+                    'Authorization': 'Bearer sk-xxx',
                     'HTTP-Referer': window.location.href,
                     'X-Title': 'AI Chat'
                 },
