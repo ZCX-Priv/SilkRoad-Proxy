@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - 页面未找到 | 丝绸之路</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8e9d6; /* 丝绸般的米黄色背景 */
+            color: #5a3921; /* 深棕色文字，类似古代丝绸商人使用的墨水 */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('{{path:"static/img", filename:"bgimg.jpg"}}');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            background-color: rgba(255, 250, 240, 0.9); /* 半透明的象牙色 */
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(90, 57, 33, 0.3);
+            text-align: center;
+            border: 1px solid #d4b483; /* 金色边框 */
+            position: relative;
+            overflow: hidden;
+        }
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #d4b483, #c1882e, #d4b483); /* 金色丝绸边框 */
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #9c2c13; /* 丝路红色 */
+            font-family: 'Times New Roman', serif;
+            letter-spacing: 2px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #5a3921;
+        }
+        .url {
+            font-family: monospace;
+            background-color: #f0e6d2;
+            padding: 10px;
+            border-radius: 4px;
+            word-break: break-all;
+            margin: 20px 0;
+            border-left: 4px solid #c1882e; /* 金色边框 */
+            text-align: left;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #9c2c13; /* 丝路红色 */
+            color: #f8e9d6;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border: 1px solid #7a2110;
+        }
+        .back-button:hover {
+            background-color: #7a2110;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .error-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            border-radius: 50%;
+            background-color: rgba(156, 44, 19, 0.1);
+            color: #9c2c13;
+            position: relative;
+        }
+        .error-icon::before {
+            content: "404";
+            font-weight: bold;
+            font-family: 'Times New Roman', serif;
+        }
+        .silk-decoration {
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            left: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                #d4b483,
+                #d4b483 10px,
+                #c1882e 10px,
+                #c1882e 20px
+            );
+            opacity: 0.5;
+        }
+        .top-decoration {
+            top: 0;
+        }
+        .bottom-decoration {
+            bottom: 0;
+        }
+        .compass-symbol {
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.2;
+            z-index: -1;
+            color: #9c2c13;
+        }
+        .compass-1 {
+            top: 20px;
+            right: 20px;
+            transform: rotate(15deg);
+        }
+        .compass-2 {
+            bottom: 20px;
+            left: 20px;
+            transform: rotate(-15deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="silk-decoration top-decoration"></div>
+        <div class="compass-symbol compass-1">✧</div>
+        <div class="compass-symbol compass-2">✧</div>
+        
+        <div class="error-icon"></div>
+        <h1>页面未找到</h1>
+        <p>抱歉，您寻找的页面已不在此处。</p>
+        
+        {% if requested_url %}
+        <p>您尝试访问的路径是:</p>
+        <div class="url">{{ requested_url }}</div>
+        {% endif %}
+        
+        <p>请检查您的链接是否正确，或者返回首页:</p>
+        <a href="/" class="back-button">返回首页</a>
+        
+        <div class="silk-decoration bottom-decoration"></div>
+    </div>
+</body>
+</html>

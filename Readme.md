@@ -14,7 +14,7 @@ SilkRoad-Proxy是一个功能强大的HTTP/HTTPS代理服务器，提供网页�
 ## 系统要求
 
 - Python 3.6+
-- 依赖库：httpx, loguru, publicsuffix2
+- 依赖库：httpx==0.28.1, loguru==0.7.3, publicsuffix2==2.20191221
 
 ## 安装指南
 
@@ -38,10 +38,14 @@ pip install -r requirements.txt
 - `CERT_FILE`/`KEY_FILE`: SSL证书和密钥文件路径
 - `FAVICON_FILE`: 网站图标文件路径
 - `INDEX_FILE`/`LOGIN_FILE`: 主页和登录页模板文件路径
-- `ERROR_FILE`/`BLOCK_FILE`: 错误页和黑名单阻止页模板文件路径
+- `CHAT_FILE`: 聊天页面模板文件路径
+- `FORBIDDEN_FILE`/`NOT_FOUND_FILE`: 403禁止访问和404页面未找到模板文件路径
 - `LOG_FILE`: 日志文件路径
 - `LOGIN_PATH`: 登录页面路径
 - `FAVICON_PATH`: 网站图标路径
+- `CACHE_ENABLED`: 是否启用缓存
+- `CACHE_HTML`/`CACHE_MEDIA`/`CACHE_OTHER`: HTML、媒体和其他文件的缓存设置
+- `CACHE_LARGE_FILES`: 是否缓存大文件
 - `SERVER_NAME`: 服务器名称
 - `SESSION_COOKIE_NAME`: 会话Cookie名称
 - `SCHEME`: 协议（http/https）
@@ -95,6 +99,7 @@ python SilkRoad.py
 ```
 SilkRoad-Proxy/
 ├── SilkRoad.py          # 主程序
+├── SilkRoad.log         # 日志文件
 ├── databases/           # 数据文件目录
 │   ├── blacklist.json   # 黑名单配置
 │   ├── config.json      # 系统配置
@@ -103,12 +108,20 @@ SilkRoad-Proxy/
 │   ├── cert.pem         # 证书文件
 │   └── key.pem          # 密钥文件
 ├── templates/           # 页面模板目录
-│   ├── block.html       # 黑名单阻止页
+│   ├── 403.html         # 禁止访问页面
+│   ├── 404.html         # 页面未找到
 │   ├── chat.html        # 聊天页面
-│   ├── error.html       # 错误页面
 │   ├── index.html       # 主页
-│   ├── login.html       # 登录页
-│   └── static/          # 静态资源
+│   └── login.html       # 登录页
+├── static/              # 静态资源目录
+│   ├── css/             # CSS样式文件
+│   ├── img/             # 图片资源
+│   └── js/              # JavaScript文件
+├── temp/                # 临时文件目录
+│   ├── html/            # 临时HTML文件
+│   ├── media/           # 临时媒体文件
+│   └── responses/       # 临时响应文件
+├── favicon.ico          # 网站图标
 ├── requirements.txt     # 依赖库列表
 ├── 添加开机自启.bat      # 添加开机自启脚本
 └── 解除开机自启.bat      # 解除开机自启脚本

@@ -74,7 +74,7 @@ def clear_temp_cache():
 # 注册清理函数
 atexit.register(clear_temp_cache)
 
-# 添加缓存管理类
+# ------------------ 缓存管理类 ------------------
 class CacheManager:
     """管理系统缓存的类"""
     def __init__(self):
@@ -86,12 +86,25 @@ class CacheManager:
         self.max_cache_size = 500 * 1024 * 1024  # 500MB
         self.max_cache_age = 24 * 60 * 60  # 24小时
         
+        # 从配置文件中读取缓存设置
+        self.cache_enabled = config.get("CACHE_ENABLED", True)  # 默认启用缓存
+        self.cache_html = config.get("CACHE_HTML", True)  # 默认缓存HTML
+        self.cache_media = config.get("CACHE_MEDIA", True)  # 默认缓存媒体文件
+        self.cache_other = config.get("CACHE_OTHER", True)  # 默认缓存其他响应
+        self.cache_large_files = config.get("CACHE_LARGE_FILES", False)  # 默认不缓存大文件
+        
         # 确保缓存目录存在
         self._ensure_cache_dirs()
         
         # 启动定期清理任务
         self._schedule_cleanup()
-    
+        
+        logger.info(f"缓存状态: {'启用' if self.cache_enabled else '禁用'}")
+        if self.cache_enabled:
+            logger.info(f"缓存配置: HTML({'启用' if self.cache_html else '禁用'}), "
+                       f"媒体文件({'启用' if self.cache_media else '禁用'}), "
+                       f"其他响应({'启用' if self.cache_other else '禁用'}), "
+                       f"大文件({'启用' if self.cache_large_files else '禁用'})")
     def _ensure_cache_dirs(self):
         """确保所有缓存目录存在"""
         for dir_path in [self.base_dir, self.html_cache_dir, 
@@ -184,6 +197,23 @@ class CacheManager:
     
     def save_to_cache(self, url, content, content_type=None, headers=None):
         """保存响应内容到缓存"""
+        # 如果缓存被全局禁用，直接返回
+        if not self.cache_enabled:
+            return False
+            
+        # 根据内容类型决定是否缓存
+        if content_type:
+            if "text/html" in content_type and not self.cache_html:
+                return False
+            elif ("image/" in content_type or "video/" in content_type or "audio/" in content_type) and not self.cache_media:
+                return False
+            elif not self.cache_other:
+                return False
+                
+        # 检查文件大小，如果是大文件且未启用大文件缓存，则不缓存
+        if len(content) > 1024 * 1024 and not self.cache_large_files:  # 大于1MB
+            return False
+            
         try:
             cache_path = self.get_cache_path(url, content_type)
             
@@ -205,6 +235,19 @@ class CacheManager:
     
     def get_from_cache(self, url, content_type=None):
         """从缓存获取响应内容"""
+        # 如果缓存被全局禁用，直接返回None
+        if not self.cache_enabled:
+            return None, None
+            
+        # 根据内容类型决定是否使用缓存
+        if content_type:
+            if "text/html" in content_type and not self.cache_html:
+                return None, None
+            elif ("image/" in content_type or "video/" in content_type or "audio/" in content_type) and not self.cache_media:
+                return None, None
+            elif not self.cache_other:
+                return None, None
+                
         try:
             cache_path = self.get_cache_path(url, content_type)
             headers_path = cache_path + ".headers"
@@ -291,7 +334,7 @@ def system_check_and_cleanup():
     # 3. 检查配置文件完整性
     try:
         required_configs = ["SERVER", "DOMAIN", "PORT", "BIND_IP", "SCHEME", 
-                           "LOGIN_PATH", "FAVICON_PATH", "INDEX_FILE", "LOGIN_FILE", 
+                           "LOGIN_PATH", "FAVICON_PATH", "INDEX_FILE", "LOGIN_FILE", "CHAT_FILE",
                            "FAVICON_FILE", "SESSION_COOKIE_NAME", "SERVER_NAME", "LOG_FILE"]
         missing_configs = [cfg for cfg in required_configs if cfg not in config]
         if missing_configs:
@@ -419,40 +462,301 @@ users = Users()
 class Template(object):
     def __init__(self):
         encoding = config.get("TEMPLATE_ENCODING", "utf-8")
+        self.encoding = encoding
+        self.template_dir = os.path.dirname(os.path.abspath(__file__))
+        self.static_dir = os.path.join(self.template_dir, "static")
+        
+        # 确保静态资源目录存在
+        if not os.path.exists(self.static_dir):
+            os.makedirs(self.static_dir)
+            logger.info(f"创建静态资源目录: {self.static_dir}")
+        
+        # 加载模板文件
         with open(config['INDEX_FILE'], encoding=encoding) as f:
             self.index_html = f.read()
         with open(config['LOGIN_FILE'], encoding=encoding) as f:
             self.login_html = f.read()
         # 添加加载chat.html的代码
-        with open(os.path.join('templates', 'chat.html'), encoding=encoding) as f:
+        with open(config['CHAT_FILE'], encoding=encoding) as f:
             self.chat_html = f.read()
 
-    def get_index_html(self):
-        return self.index_html
+        # 加载404页面模板
+        try:
+            with open(config['NOT_FOUND_FILE'], encoding=encoding) as f:
+                self.not_found_html = f.read()
+        except FileNotFoundError:
+            # 如果404页面文件不存在，创建一个简单的默认404页面
+            self.not_found_html = """
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>404 - 页面未找到</title>
+                <style>
+                    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+                    h1 { font-size: 36px; color: #333; }
+                    p { font-size: 18px; color: #666; }
+                    a { color: #0066cc; text-decoration: none; }
+                    a:hover { text-decoration: underline; }
+                </style>
+            </head>
+            <body>
+                <h1>404 - 页面未找到</h1>
+                <p>抱歉，您请求的页面不存在。</p>
+                <p><a href="/">返回首页</a></p>
+            </body>
+            </html>
+            """
+            logger.warning(f"404页面文件 {config['NOT_FOUND_FILE']} 不存在，使用默认模板")
+        
+        # 编译正则表达式用于解析模板标签
+        self.resource_pattern = re.compile(r'\{\{path:"([^"]+)",\s*filename:"([^"]+)"\}\}')
+        
+        # 添加更多模板标签的正则表达式
+        self.var_pattern = re.compile(r'\{\{\s*([a-zA-Z0-9_\.]+)\s*\}\}')  # 变量: {{ variable }}
+        self.if_pattern = re.compile(r'\{\%\s*if\s+(.+?)\s*\%\}(.*?)\{\%\s*endif\s*\%\}', re.DOTALL)  # 条件: {% if condition %}...{% endif %}
+        self.if_else_pattern = re.compile(r'\{\%\s*if\s+(.+?)\s*\%\}(.*?)\{\%\s*else\s*\%\}(.*?)\{\%\s*endif\s*\%\}', re.DOTALL)  # 条件带else: {% if condition %}...{% else %}...{% endif %}
+        self.for_pattern = re.compile(r'\{\%\s*for\s+([a-zA-Z0-9_]+)\s+in\s+([a-zA-Z0-9_\.]+)\s*\%\}(.*?)\{\%\s*endfor\s*\%\}', re.DOTALL)  # 循环: {% for item in items %}...{% endfor %}
+
+    def _process_template(self, template_content, context=None):
+        """处理模板内容，替换资源引用并应用上下文变量"""
+        if context is None:
+            context = {}
+        
+        # 替换资源引用
+        def replace_resource(match):
+            path_type = match.group(1)
+            filename = match.group(2)
+            
+            # 根据路径类型构建URL
+            if path_type == "static":
+                return f"{config.get('SERVER', '')}/static/{filename}"
+            elif path_type == "templates":
+                return f"{config.get('SERVER', '')}/templates/{filename}"
+            else:
+                return f"{config.get('SERVER', '')}/{path_type}/{filename}"
+        
+        # 替换资源引用 - 修复正则表达式匹配和替换逻辑
+        processed_content = self.resource_pattern.sub(replace_resource, template_content)
+        
+        # 添加更多的资源引用模式匹配
+        # 处理 src="static/xxx" 格式
+        processed_content = re.sub(r'src="static/([^"]+)"', 
+                                  f'src="{config.get("SERVER", "")}/static/\\1"', 
+                                  processed_content)
+        
+        # 处理 href="static/xxx" 格式
+        processed_content = re.sub(r'href="static/([^"]+)"', 
+                                  f'href="{config.get("SERVER", "")}/static/\\1"', 
+                                  processed_content)
+        
+        # 处理 src="templates/xxx" 格式
+        processed_content = re.sub(r'src="templates/([^"]+)"', 
+                                  f'src="{config.get("SERVER", "")}/templates/\\1"', 
+                                  processed_content)
+        
+        # 处理 href="templates/xxx" 格式
+        processed_content = re.sub(r'href="templates/([^"]+)"', 
+                                  f'href="{config.get("SERVER", "")}/templates/\\1"', 
+                                  processed_content)
+        
+        # 处理 url(static/xxx) 格式 (CSS中的URL引用)
+        processed_content = re.sub(r'url\([\'\"]?static/([^\'\"\)]+)[\'\"]?\)', 
+                                  f'url({config.get("SERVER", "")}/static/\\1)', 
+                                  processed_content)
+        
+        # 处理条件语句 (if-else)
+        def process_if_else(match):
+            condition = match.group(1).strip()
+            if_content = match.group(2)
+            else_content = match.group(3)
+            
+            # 评估条件
+            try:
+                # 安全地评估条件，只允许简单的比较和逻辑操作
+                # 替换变量为实际值
+                for var_name, var_value in context.items():
+                    condition = condition.replace(var_name, repr(var_value))
+                
+                # 评估条件
+                result = eval(condition, {"__builtins__": {}}, {})
+                return self._process_template(if_content if result else else_content, context)
+            except Exception as e:
+                logger.error(f"条件评估错误: {e}, 条件: {condition}")
+                return f"<!-- 条件评估错误: {condition} -->"
+        
+        # 处理条件语句 (if)
+        def process_if(match):
+            condition = match.group(1).strip()
+            content = match.group(2)
+            
+            # 评估条件
+            try:
+                # 替换变量为实际值
+                for var_name, var_value in context.items():
+                    condition = condition.replace(var_name, repr(var_value))
+                
+                # 评估条件
+                result = eval(condition, {"__builtins__": {}}, {})
+                return self._process_template(content, context) if result else ""
+            except Exception as e:
+                logger.error(f"条件评估错误: {e}, 条件: {condition}")
+                return f"<!-- 条件评估错误: {condition} -->"
+        
+        # 处理循环语句
+        def process_for(match):
+            var_name = match.group(1)
+            collection_name = match.group(2)
+            loop_content = match.group(3)
+            
+            # 获取集合
+            collection = self._get_nested_value(context, collection_name)
+            if not collection or not isinstance(collection, (list, tuple, dict)):
+                return f"<!-- 循环错误: {collection_name} 不是有效的集合 -->"
+            
+            # 处理循环
+            result = []
+            for item in collection:
+                # 创建新的上下文，包含循环变量
+                loop_context = context.copy()
+                loop_context[var_name] = item
+                # 递归处理循环内容
+                processed_loop = self._process_template(loop_content, loop_context)
+                result.append(processed_loop)
+            
+            return "".join(result)
+        
+        # 应用模板处理
+        processed_content = self.if_else_pattern.sub(process_if_else, processed_content)
+        processed_content = self.if_pattern.sub(process_if, processed_content)
+        processed_content = self.for_pattern.sub(process_for, processed_content)
+        
+        # 替换变量
+        def replace_var(match):
+            var_path = match.group(1)
+            value = self._get_nested_value(context, var_path)
+            return str(value) if value is not None else f"<!-- 未定义变量: {var_path} -->"
+        
+        processed_content = self.var_pattern.sub(replace_var, processed_content)
+        
+        # 替换简单的上下文变量 (向后兼容)
+        for key, value in context.items():
+            placeholder = '{' + key + '}'
+            processed_content = processed_content.replace(placeholder, str(value))
+        
+        return processed_content
+    
+    def _get_nested_value(self, context, var_path):
+        """获取嵌套字典中的值，支持点号访问，如 user.name"""
+        parts = var_path.split('.')
+        value = context
+        
+        for part in parts:
+            if isinstance(value, dict) and part in value:
+                value = value[part]
+            elif hasattr(value, part):
+                value = getattr(value, part)
+            else:
+                return None
+        
+        return value
 
     def get_login_html(self, login_failed=False):
+        """获取处理后的登录页HTML"""
         try:
-            # 使用字符串替换而不是format_map,更灵活且不易出错
-            login_html = self.login_html
-            replacements = {
-                '{login_failed}': '1' if login_failed else '0',
-                '{timestamp}': str(int(time.time())),
-                '{server_name}': config.get('SERVER_NAME', 'SilkRoad'),
-                '{domain}': config.get('DOMAIN', 'localhost')
+            # 准备上下文变量
+            context = {
+                'login_failed': '1' if login_failed else '0',
+                'timestamp': str(int(time.time())),
+                'server_name': config.get('SERVER_NAME', 'SilkRoad')
             }
             
-            for old, new in replacements.items():
-                login_html = login_html.replace(old, new)
-            return login_html
+            return self._process_template(self.login_html, context)
             
         except (KeyError, ValueError) as e:
             # 如果格式化失败，记录错误并返回原始模板
             logger.error(f"登录页面格式化错误: {e}")
             return self.login_html
+
+    def get_index_html(self, context=None):
+        """获取处理后的首页HTML"""
+        if context is None:
+            context = {}
+        return self._process_template(self.index_html, context)
         
-    # 添加获取chat.html的方法
-    def get_chat_html(self):
-        return self.chat_html
+    def get_chat_html(self, context=None):
+        """获取处理后的聊天页HTML"""
+        if context is None:
+            context = {}
+        return self._process_template(self.chat_html, context)
+    
+    def get_not_found_html(self, context=None):
+        """获取处理后的404页面HTML"""
+        if context is None:
+            context = {
+                'timestamp': str(int(time.time())),
+                'server_name': config.get('SERVER_NAME', 'SilkRoad'),
+                'requested_url': ''
+            }
+        return self._process_template(self.not_found_html, context)
+
+    def render_template(self, template_name, context=None):
+        """渲染指定的模板文件"""
+        if context is None:
+            context = {}
+        
+        template_path = os.path.join(self.template_dir, "templates", template_name)
+        if not os.path.exists(template_path):
+            logger.error(f"模板文件不存在: {template_path}")
+            return f"<!-- 模板文件不存在: {template_name} -->"
+        
+        try:
+            with open(template_path, encoding=self.encoding) as f:
+                template_content = f.read()
+            return self._process_template(template_content, context)
+        except Exception as e:
+            logger.error(f"渲染模板 {template_name} 失败: {e}")
+            return f"<!-- 渲染模板失败: {template_name}, 错误: {e} -->"
+    
+    def get_static_file(self, filename):
+        """获取静态文件内容"""
+        file_path = os.path.join(self.static_dir, filename)
+        if not os.path.exists(file_path):
+            return None, None
+        
+        # 根据文件扩展名确定内容类型
+        content_type = self._get_content_type(filename)
+        
+        try:
+            with open(file_path, 'rb') as f:
+                content = f.read()
+            return content, content_type
+        except Exception as e:
+            logger.error(f"读取静态文件失败 {filename}: {e}")
+            return None, None
+    
+    def _get_content_type(self, filename):
+        """根据文件扩展名确定内容类型"""
+        ext = os.path.splitext(filename)[1].lower()
+        content_types = {
+            '.css': 'text/css',
+            '.js': 'application/javascript',
+            '.jpg': 'image/jpeg',
+            '.jpeg': 'image/jpeg',
+            '.png': 'image/png',
+            '.gif': 'image/gif',
+            '.svg': 'image/svg+xml',
+            '.ico': 'image/x-icon',
+            '.woff': 'font/woff',
+            '.woff2': 'font/woff2',
+            '.ttf': 'font/ttf',
+            '.eot': 'application/vnd.ms-fontobject',
+            '.otf': 'font/otf',
+            '.json': 'application/json',
+            '.xml': 'application/xml',
+            '.pdf': 'application/pdf',
+            '.txt': 'text/plain',
+        }
+        return content_types.get(ext, 'application/octet-stream')
 
 template = Template()
 
@@ -495,8 +799,8 @@ class Proxy(object):
         self.process_request()
         content_length = int(self.handler.headers.get('Content-Length', 0))
         data = self.handler.rfile.read(content_length) if content_length > 0 else None
-        # 只对GET请求尝试使用缓存
-        if self.handler.command == 'GET':
+        # 只对GET请求尝试使用缓存，且缓存必须启用
+        if self.handler.command == 'GET' and cache_manager.cache_enabled:
             # 尝试从缓存获取响应
             cached_content, cached_headers = cache_manager.get_from_cache(self.url)
             if cached_content is not None:
@@ -601,7 +905,7 @@ class Proxy(object):
         url = self.url
         
         # 检查是否可缓存
-        cacheable = r.status_code == 200 and self.handler.command == 'GET'
+        cacheable = r.status_code == 200 and self.handler.command == 'GET' and cache_manager.cache_enabled
         
         # 如果响应为 HTML，则进行链接修正处理
         if "text/html" in content_type:
@@ -648,13 +952,16 @@ class Proxy(object):
         # 尝试缓存响应内容（如果是可缓存的响应）
         if cacheable:
             # 对于HTML内容，缓存修正后的内容
-            if is_html:
+            if is_html and cache_manager.cache_html:
                 cache_manager.save_to_cache(url, content, content_type, r.headers)
             # 对于非HTML内容或小文件，直接缓存原始内容
             elif not is_large_file:
-                cache_manager.save_to_cache(url, r.content, content_type, r.headers)
+                if ("image/" in content_type or "video/" in content_type or "audio/" in content_type) and cache_manager.cache_media:
+                    cache_manager.save_to_cache(url, r.content, content_type, r.headers)
+                elif cache_manager.cache_other:
+                    cache_manager.save_to_cache(url, r.content, content_type, r.headers)
             # 对于大文件，可以选择不缓存或仅缓存部分内容
-            elif is_large_file and config.get('CACHE_LARGE_FILES', False):
+            elif is_large_file and cache_manager.cache_large_files:
                 logger.debug(f"缓存大文件: {url}")
                 cache_manager.save_to_cache(url, r.content, content_type, r.headers)
         
@@ -691,7 +998,27 @@ class Proxy(object):
             self.handler.wfile.write(b"0\r\n\r\n")
 
     def process_error(self, error):
-        self.handler.send_error(HTTPStatus.BAD_REQUEST, str(error))
+        """处理代理请求错误"""
+        # 对于404错误，使用自定义404页面
+        if "404" in str(error) or "Not Found" in str(error):
+            # 去掉URL开头的斜杠
+            requested_url = self.url
+            if requested_url.startswith('/'):
+                requested_url = requested_url[1:]
+                
+            context = {
+                'requested_url': requested_url,
+                'error_message': str(error)
+            }
+            body = template.get_not_found_html(context)
+            self.handler.send_response(HTTPStatus.NOT_FOUND)
+            encoded = body.encode(config.get("TEMPLATE_ENCODING", "utf-8"))
+            self.handler.send_header('Content-Length', len(encoded))
+            self.handler.send_header('Content-Type', 'text/html; charset={}'.format(config.get("TEMPLATE_ENCODING", "utf-8")))
+            self.handler.end_headers()
+            self.handler.wfile.write(encoded)
+        else:
+            self.handler.send_error(HTTPStatus.BAD_REQUEST, str(error))
         logger.error("Proxy error: {}", error)
 
     def modify_request_header(self, header, value):
@@ -825,9 +1152,17 @@ class SilkRoadHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             self.process_login()
         elif self.path == '/chat':  # 添加对/chat路径的处理
             self.process_chat()
+        elif self.path.startswith('/static/'):  # 处理静态资源请求
+            self.process_static_file()
+        elif self.path.startswith('/templates/'):  # 处理模板资源请求
+            self.process_template_file()
         else:
-            self.process_index()
-
+            if self.path == '/':
+                self.process_index()
+            else:
+                # 返回404页面
+                self.process_not_found()
+    
     def process_login(self):
         if self.command == 'POST':
             content_length = int(self.headers.get('Content-Length', 0))
@@ -857,6 +1192,108 @@ class SilkRoadHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
     def process_chat(self):
         body = template.get_chat_html()
         self.return_html(body)
+
+    def process_not_found(self):
+        """处理404页面请求"""
+        # 去掉URL开头的斜杠
+        requested_url = self.path
+        if requested_url.startswith('/'):
+            requested_url = requested_url[1:]
+            
+        context = {
+            'requested_url': requested_url,
+            'timestamp': str(int(time.time())),
+            'server_name': self.server_name
+        }
+        body = template.get_not_found_html(context)
+        self.send_response(HTTPStatus.NOT_FOUND)
+        encoded = body.encode(config.get("TEMPLATE_ENCODING", "utf-8"))
+        self.send_header('Content-Length', len(encoded))
+        self.send_header('Content-Type', 'text/html; charset={}'.format(config.get("TEMPLATE_ENCODING", "utf-8")))
+        self.end_headers()
+        self.wfile.write(encoded)
+        logger.info(f"返回404页面: {self.path}")
+
+    def process_static_file(self):
+        """处理静态资源文件请求"""
+        try:
+            # 从路径中提取文件名
+            filename = self.path[8:]  # 去掉 '/static/' 前缀
+            
+            # 确保文件名不包含路径遍历攻击
+            if '..' in filename or filename.startswith('/'):
+                self.send_error(HTTPStatus.FORBIDDEN, "非法的文件路径")
+                return
+            
+            # 构建静态文件路径
+            file_path = os.path.join(template.static_dir, filename)
+            
+            if not os.path.exists(file_path) or not os.path.isfile(file_path):
+                self.send_error(HTTPStatus.NOT_FOUND, "静态文件未找到")
+                logger.warning(f"静态文件未找到: {file_path}")
+                return
+            
+            # 确定内容类型
+            content_type = template._get_content_type(filename)
+            
+            # 读取文件内容
+            with open(file_path, 'rb') as f:
+                content = f.read()
+            
+            # 发送文件内容
+            self.send_response(200)
+            self.send_header('Content-Type', content_type)
+            self.send_header('Content-Length', len(content))
+            self.send_header('Cache-Control', 'max-age=86400')  # 缓存1天
+            self.end_headers()
+            self.wfile.write(content)
+            logger.debug(f"成功提供静态文件: {filename}")
+        except Exception as e:
+            logger.error(f"处理静态文件失败 {self.path}: {e}")
+            self.send_error(HTTPStatus.INTERNAL_SERVER_ERROR, "处理静态文件失败")
+    
+    def process_template_file(self):
+        """处理模板资源文件请求"""
+        try:
+            # 从路径中提取文件名
+            filename = self.path[11:]  # 去掉 '/templates/' 前缀
+            
+            # 确保文件名不包含路径遍历攻击
+            if '..' in filename or filename.startswith('/'):
+                self.send_error(HTTPStatus.FORBIDDEN, "非法的文件路径")
+                return
+            
+            # 构建模板文件路径
+            templates_dir = os.path.join(template.template_dir, "templates")
+            if not os.path.exists(templates_dir):
+                os.makedirs(templates_dir)
+                logger.info(f"创建模板目录: {templates_dir}")
+            
+            file_path = os.path.join(templates_dir, filename)
+            
+            if not os.path.exists(file_path) or not os.path.isfile(file_path):
+                self.send_error(HTTPStatus.NOT_FOUND, "模板文件未找到")
+                logger.warning(f"模板文件未找到: {file_path}")
+                return
+            
+            # 确定内容类型
+            content_type = template._get_content_type(filename)
+            
+            # 读取文件内容
+            with open(file_path, 'rb') as f:
+                content = f.read()
+            
+            # 发送文件内容
+            self.send_response(200)
+            self.send_header('Content-Type', content_type)
+            self.send_header('Content-Length', len(content))
+            self.send_header('Cache-Control', 'max-age=86400')  # 缓存1天
+            self.end_headers()
+            self.wfile.write(content)
+            logger.debug(f"成功提供模板文件: {filename}")
+        except Exception as e:
+            logger.error(f"处理模板文件失败 {self.path}: {e}")
+            self.send_error(HTTPStatus.INTERNAL_SERVER_ERROR, "处理模板文件失败")
 
     def process_favicon(self):
         self.send_response(200)

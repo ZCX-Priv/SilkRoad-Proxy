@@ -1,0 +1,102 @@
+ body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url(../img/bgimg.jpg); /* 使用丝绸之路背景图片 */
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: repeat;
+            position: relative;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .search-container {
+            width: 80%;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        input[type="text"] {
+            font-size: 16px;
+            padding: 12px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #d6b35a;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #a67c1a;
+        }
+
+        .search-engines, .common-sites {
+            width: 80%;
+            max-width: 700px;
+            margin: 20px auto;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .section-title {
+            text-align: left;
+            color: #fff9e4;
+            margin-bottom: 15px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            grid-gap: 10px;
+            justify-content: flex-start;
+        }
+
+        .button {
+            background-color: #e7c17b;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 1%;
+            padding: 8px 15px;
+            text-decoration: none;
+            color: #ffffff;
+            border: 2px solid #a89e84;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ffcfa8;
+        }
+
+        /* 原有样式保留 */
+        .logo {
+            margin-top: 40px;
+            display: block;
+            width: 250px; 
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .logo-img {
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+        }
