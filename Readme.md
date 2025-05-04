@@ -98,6 +98,8 @@ python SilkRoad.py
 
 ```
 SilkRoad-Proxy/
+├── LICENSE
+├── Readme.md
 ├── SilkRoad.py          # 主程序
 ├── SilkRoad.log         # 日志文件
 ├── databases/           # 数据文件目录
@@ -107,20 +109,69 @@ SilkRoad-Proxy/
 ├── ssl/                 # SSL证书目录
 │   ├── cert.pem         # 证书文件
 │   └── key.pem          # 密钥文件
+├── static/              # 静态资源目录
+│   ├── css/             # CSS样式文件
+│   │   ├── all.min.css
+│   │   ├── animation.css
+│   │   ├── error.css
+│   │   ├── font.css
+│   │   ├── github.min.css
+│   │   ├── iconfont.css
+│   │   ├── iziToast.min.css
+│   │   ├── katex.min.css
+│   │   ├── loading.css
+│   │   ├── mobile.css
+│   │   └── style.css
+│   ├── font/            # 字体文件
+│   │   ├── MiSans-Regular.subset.ttf
+│   │   ├── MiSans-Regular.subset.woff2
+│   │   ├── MiSans-Regular.woff2
+│   │   ├── iconfont-exp.eot
+│   │   ├── iconfont-exp.svg
+│   │   ├── iconfont-exp.ttf
+│   │   ├── iconfont-exp.woff
+│   │   ├── iconfont-exp.woff2
+│   │   ├── iconfont.ttf
+│   │   ├── iconfont.woff
+│   │   └── iconfont.woff2
+│   ├── img/             # 图片资源
+│   │   ├── background1.webp
+│   │   ├── background10.webp
+│   │   ├── background11.webp
+│   │   ├── background2.webp
+│   │   ├── background3.webp
+│   │   ├── background4.webp
+│   │   ├── background5.webp
+│   │   ├── background6.webp
+│   │   ├── background7.webp
+│   │   ├── background8.webp
+│   │   ├── background9.webp
+│   │   └── bgimg.jpg
+│   └── js/              # JavaScript文件
+│       ├── auto-render.min.js
+│       ├── bash.min.js
+│       ├── core.min.js
+│       ├── cpp.min.js
+│       ├── iziToast.min.js
+│       ├── java.min.js
+│       ├── javascript.min.js
+│       ├── jquery.min.js
+│       ├── js.cookie.js
+│       ├── katex.min.js
+│       ├── main.js
+│       ├── marked.min.js
+│       ├── python.min.js
+│       └── set.js
+├── temp/                # 临时文件目录
+│   ├── html/
+│   ├── media/
+│   └── responses/
 ├── templates/           # 页面模板目录
 │   ├── 403.html         # 禁止访问页面
 │   ├── 404.html         # 页面未找到
 │   ├── chat.html        # 聊天页面
 │   ├── index.html       # 主页
 │   └── login.html       # 登录页
-├── static/              # 静态资源目录
-│   ├── css/             # CSS样式文件
-│   ├── img/             # 图片资源
-│   └── js/              # JavaScript文件
-├── temp/                # 临时文件目录
-│   ├── html/            # 临时HTML文件
-│   ├── media/           # 临时媒体文件
-│   └── responses/       # 临时响应文件
 ├── favicon.ico          # 网站图标
 ├── requirements.txt     # 依赖库列表
 ├── 添加开机自启.bat      # 添加开机自启脚本

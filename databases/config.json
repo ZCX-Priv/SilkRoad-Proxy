@@ -15,11 +15,11 @@
     "CACHE_MEDIA": false,
     "CACHE_OTHER": false,
     "CACHE_LARGE_FILES": false,
-    "SERVER_NAME": "SilkRoad/2.0",
+    "SERVER_NAME": "SilkRoad/3.0",
     "SESSION_COOKIE_NAME": "SilkRoad_session",
     "SCHEME": "https",
     "DOMAIN": "127.0.0.1",
-    "BIND_IP": "0.0.0.0",
-    "PORT": 8080,
+    "BIND_IP": "",
+    "PORT":8080,
     "SERVER": "https://127.0.0.1:8080/"
 }

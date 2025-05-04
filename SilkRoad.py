@@ -660,22 +660,25 @@ class Template(object):
         
         return value
 
-    def get_login_html(self, login_failed=False):
+    def get_login_html(self, login_failed=False, error_message=None):
         """获取处理后的登录页HTML"""
         try:
             # 准备上下文变量
             context = {
                 'login_failed': '1' if login_failed else '0',
                 'timestamp': str(int(time.time())),
-                'server_name': config.get('SERVER_NAME', 'SilkRoad')
+                'server_name': config.get('SERVER_NAME', 'SilkRoad'),
+                'error_message': error_message if error_message else '' # 添加错误消息
             }
             
             return self._process_template(self.login_html, context)
             
-        except (KeyError, ValueError) as e:
+        except Exception as e:
             # 如果格式化失败，记录错误并返回原始模板
             logger.error(f"登录页面格式化错误: {e}")
-            return self.login_html
+            # 返回一个包含错误信息的简单HTML，或者原始模板
+            # return f"<html><body>Login page error: {e}</body></html>"
+            return self.login_html # 保持返回原始模板，避免因格式化失败导致无法登录
 
     def get_index_html(self, context=None):
         """获取处理后的首页HTML"""
@@ -1129,13 +1132,73 @@ class SilkRoadHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
         self.do_request()
 
     def do_request(self):
-        self.pre_process_path()
-        if self.is_login():
-            if self.is_need_proxy():
-                Proxy(self).proxy()
+        """处理所有请求的核心逻辑"""
+        logger.info(f"{self.command} Request Raw Path: {self.path} from {self.client_address}")
+
+        # 解析路径和查询参数
+        parsed_url = parse.urlparse(self.path)
+        # Normalize path, ensure root path is '/' not '', remove trailing slash
+        parsed_path = parsed_url.path.rstrip('/') or '/'
+        query_params = parse.parse_qs(parsed_url.query) # Parse query params here
+
+        # Normalize login and favicon paths as well for robust comparison
+        norm_login_path = self.login_path.rstrip('/')
+        norm_favicon_path = self.favicon_path.rstrip('/')
+
+        # 添加详细日志，用于调试路径比较
+        logger.debug(f"Normalized Parsed Path: '{parsed_path}', Query Params: {query_params}, Comparing against Login Path: '{norm_login_path}', Favicon Path: '{norm_favicon_path}'")
+
+        # 1. 优先处理登录页面请求 (use normalized paths)
+        if parsed_path == norm_login_path:
+            logger.debug(f"Path matches normalized login_path ('{norm_login_path}'). Processing login.")
+            self.process_login() # 调用处理登录页面的方法
+            return # 处理完毕，直接返回
+
+        # 2. 处理 Favicon 请求 (use normalized paths)
+        elif parsed_path == norm_favicon_path:
+            logger.debug(f"Path matches normalized favicon_path ('{norm_favicon_path}'). Returning favicon.")
+            self.return_favicon() # 调用返回favicon的方法
+            return # 处理完毕，直接返回
+
+        # 3. 对于其他路径，检查是否登录
+        is_logged_in = self.is_login()
+        logger.debug(f"Path is not login or favicon. Checking login status: {is_logged_in}")
+        if is_logged_in:
+            # 用户已登录
+            logger.debug("User is logged in.")
+
+            # --- 修改开始 ---
+            # 优先检查是否存在 'url' 查询参数
+            if 'url' in query_params:
+                target_url = query_params['url'][0] # Get the target URL
+                logger.debug(f"Found 'url' parameter: '{target_url}'. Processing as proxy request.")
+                # Modify self.path temporarily for the Proxy class to work correctly
+                original_path = self.path
+                # Ensure the target URL starts with a scheme, add https if missing (common case)
+                if not target_url.startswith(('http://', 'https://')):
+                     # Basic check, might need refinement for //domain cases
+                     if target_url.startswith('//'):
+                         target_url = 'https:' + target_url # Assume https
+                     else:
+                         target_url = 'https://' + target_url # Assume https
+
+                self.path = '/' + target_url # Prepend '/' as Proxy expects
+                try:
+                    Proxy(self).proxy() # Call proxy logic with modified path
+                finally:
+                    self.path = original_path # Restore original path
+            # 如果没有 'url' 参数，再执行原来的判断逻辑 (基于路径 like /http://...)
+            elif self.is_need_proxy():
+                logger.debug("Request needs proxy based on path structure (is_need_proxy()).")
+                Proxy(self).proxy() # 执行代理逻辑
             else:
-                self.process_original()
+                logger.debug("Request does not need proxy. Processing original.")
+                self.process_original() # 处理本地资源或特殊路径
+        
+        # 4. 未登录且访问的不是登录页或Favicon，重定向到登录页
         else:
+            # Log the specific path being redirected
+            logger.warning(f"User is not logged in. Redirecting path '{parsed_url.path}' to login.")
             self.redirect_to_login()
 
     def is_login(self):
@@ -1164,26 +1227,51 @@ class SilkRoadHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
                 self.process_not_found()
     
     def process_login(self):
+        # 保持之前的 process_login 修改，特别是 GET 请求部分
         if self.command == 'POST':
+            # ... existing POST handling code ...
             content_length = int(self.headers.get('Content-Length', 0))
             raw_data = self.rfile.read(content_length).decode('utf-8')
-            parsed_data = parse.parse_qs(parse.unquote(raw_data))
-            if 'user' in parsed_data and 'password' in parsed_data:
-                if users.is_effective_user(parsed_data['user'][0], parsed_data['password'][0]):
+            # 尝试更健壮地解析 POST 数据
+            try:
+                parsed_data = parse.parse_qs(parse.unquote(raw_data))
+                user = parsed_data.get('user', [None])[0]
+                password = parsed_data.get('password', [None])[0]
+
+                if user and password and users.is_effective_user(user, password):
                     session = sessions.generate_new_session()
                     self.send_response(HTTPStatus.FOUND)
-                    self.send_header('Location', '/')
-                    # 设置会话 Cookie 24小时过期
+                    self.send_header('Location', '/') # 登录成功后重定向到根目录
                     expires = (datetime.datetime.now() + datetime.timedelta(hours=24)).strftime('%a, %d-%b-%Y %H:%M:%S GMT')
                     self.send_header('Set-Cookie',
                                      '{}={}; expires={}; path=/; HttpOnly'
                                      .format(self.session_cookie_name, session, expires))
                     self.end_headers()
-                    return
-            body = template.get_login_html(login_failed=True)
-        else:
-            body = template.get_login_html(login_failed=False)
-        self.return_html(body)
+                    logger.info(f"User '{user}' logged in successfully.")
+                    return 
+                else:
+                     logger.warning(f"Login failed for user '{user}'. Invalid credentials or missing data.")
+                     body = template.get_login_html(login_failed=True)
+                     self.return_html(body) # 返回登录页并提示失败
+
+            except Exception as e:
+                 logger.error(f"Error processing login POST data: {e}. Raw data: {raw_data}")
+                 # 即使解析出错，也返回登录页面，避免卡住
+                 body = template.get_login_html(login_failed=True, error_message="登录请求处理失败")
+                 self.return_html(body, status_code=HTTPStatus.BAD_REQUEST)
+
+
+        else: # GET request
+            session = self.get_request_cookie(self.session_cookie_name)
+            if sessions.is_session_exist(session):
+                logger.debug("Logged-in user accessed login page, redirecting to root.")
+                self.send_response(HTTPStatus.FOUND)
+                self.send_header('Location', '/')
+                self.end_headers()
+            else:
+                logger.debug("Serving login page to non-logged-in user.")
+                body = template.get_login_html(login_failed=False)
+                self.return_html(body) # 确保这里返回 200 OK
 
     def process_index(self):
         body = template.get_index_html()
@@ -1295,15 +1383,49 @@ class SilkRoadHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             logger.error(f"处理模板文件失败 {self.path}: {e}")
             self.send_error(HTTPStatus.INTERNAL_SERVER_ERROR, "处理模板文件失败")
 
-    def process_favicon(self):
-        self.send_response(200)
-        self.send_header('Content-Type', 'image/x-icon')
-        self.end_headers()
-        self.wfile.write(self.favicon_data)
+    def return_favicon(self):
+        """返回favicon.ico"""
+        # 从配置或默认值获取favicon路径
+        favicon_file_path = config.get('FAVICON_FILE', 'templates/favicon.ico') 
+        # 构建绝对路径
+        favicon_full_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), favicon_file_path)
 
-    def return_html(self, body):
+        if os.path.exists(favicon_full_path):
+            try:
+                with open(favicon_full_path, 'rb') as f:
+                    content = f.read()
+                self.send_response(HTTPStatus.OK)
+                # 根据文件扩展名确定 Content-Type
+                content_type = 'image/x-icon' # 默认
+                if favicon_full_path.lower().endswith('.png'):
+                    content_type = 'image/png'
+                elif favicon_full_path.lower().endswith('.svg'):
+                    content_type = 'image/svg+xml'
+                elif favicon_full_path.lower().endswith('.jpg') or favicon_full_path.lower().endswith('.jpeg'):
+                    content_type = 'image/jpeg'
+                # 可以根据需要添加更多类型
+                self.send_header('Content-type', content_type)
+                self.send_header('Content-Length', str(len(content)))
+                self.end_headers()
+                self.wfile.write(content)
+                logger.debug(f"Served favicon from {favicon_full_path}")
+            except IOError as e:
+                logger.error(f"IOError serving favicon {favicon_full_path}: {e}")
+                self.send_error(HTTPStatus.INTERNAL_SERVER_ERROR, "Error reading favicon")
+            except Exception as e:
+                logger.error(f"Unexpected error serving favicon {favicon_full_path}: {e}")
+                self.send_error(HTTPStatus.INTERNAL_SERVER_ERROR, "Error serving favicon")
+        else:
+            logger.warning(f"Favicon file not found at {favicon_full_path}. Sending 404.")
+            # 发送一个明确的 404 Not Found 响应
+            self.send_response(HTTPStatus.NOT_FOUND)
+            self.send_header('Content-type', 'text/plain')
+            self.end_headers()
+            self.wfile.write(b'Favicon not found')
+
+    def return_html(self, body, status_code=HTTPStatus.OK):
         encoded = body.encode(config.get("TEMPLATE_ENCODING", "utf-8"))
-        self.send_response(200)
+        self.send_response(status_code)
         self.send_header('Content-Length', len(encoded))
         self.send_header('Content-Type', 'text/html; charset={}'.format(config.get("TEMPLATE_ENCODING", "utf-8")))
         self.end_headers()

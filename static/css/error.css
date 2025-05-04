@@ -1,0 +1,137 @@
+:root {
+    --body-background-color: #333333; /* 保留，可能其他地方用到 */
+    --main-text-color: #efefef;
+    --main-text-form-color: #333333; /* 用于表单内文字 */
+    --main-background-color: #00000040; /* 半透明背景 */
+    --main-background-hover-color: #acacac60;
+    --main-background-active-color: #8a8a8a80;
+    --main-button-color: #ffffff40;
+    --main-button-hover-color: #00000030;
+    --main-button-active-color: #00000020;
+    --main-input-color: #ffffff30;
+    --main-input-text-placeholder-color: #ffffff70;
+    --main-text-shadow: 0px 0px 8px #00000066;
+    --border-bottom-color-hover: #efefef80;
+    --border-bottom-color-active: #efefef;
+    --link-color: #a7c7e7; /* 添加一个链接颜色变量 */
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    /* 应用梦幻渐变背景 */
+    background: linear-gradient(
+        135deg,
+        #ffafcc, /* 柔和粉 */
+        #bde0fe, /* 淡蓝 */
+        #cdb4db, /* 淡紫 */
+        #a2d2ff, /* 浅天蓝 */
+        #fff1e6  /* 浅桃色 */
+    );
+    background-size: 400% 400%;
+    animation: dreamyGradient 15s ease infinite;
+    /* --- 原有样式 --- */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    font-family: 'MiSans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--main-text-color); /* 保持文字颜色，可能需要调整以确保对比度 */
+    overflow: hidden; /* 防止动画可能导致的滚动条 */
+}
+
+/* 定义梦幻渐变动画 */
+@keyframes dreamyGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    min-width: 360px; 
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--main-background-color); /* 保持容器半透明 */
+    border-radius: 8px;
+    box-shadow: 0 0 20px #00000033;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); /* 模糊效果使容器内容更清晰 */
+    text-align: center;
+    z-index: 1; /* 确保在动画背景之上 */
+    color: var(--main-text-color); /* 确保容器内文字颜色 */
+}
+
+h1 {
+    color: var(--main-text-color);
+    text-shadow: var(--main-text-shadow);
+    margin-bottom: 30px;
+    font-family: '楷体', 'MiSans', cursive; /* 保留楷体，备用 MiSans */
+    font-size: 2.5em; /* 可以调整大小 */
+}
+
+p {
+   font-size: 1rem; /* 调整段落字体大小 */
+   line-height: 1.6;
+   margin-bottom: 20px;
+}
+
+.url { 
+    font-family: monospace;
+    background-color: rgba(255, 255, 255, 0.1); /* 调整背景色以适应新主题 */
+    padding: 10px;
+    border-radius: 4px;
+    word-break: break-all;
+    margin: 20px 0;
+    border-left: 4px solid var(--link-color); /* 使用链接颜色作为边框 */
+    text-align: left;
+    color: var(--main-text-color); /* 确保文字颜色 */
+    opacity: 0.9;
+}
+
+.back-button { /* 调整返回按钮样式以匹配主题 */
+    display: inline-block;
+    background-color: var(--main-button-color);
+    color: var(--main-text-color);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px; /* 圆角 */
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px; /* 与上方元素间距 */
+}
+
+.back-button:hover {
+    background-color: var(--main-button-hover-color);
+}
+
+.back-button:active {
+    background-color: var(--main-button-active-color);
+    transform: scale(0.98); /* 点击效果 */
+}
+
+.error-icon { /* 调整错误图标样式 */
+    font-size: 5em; /* 调整大小 */
+    margin-bottom: 20px;
+    display: inline-block;
+    color: var(--main-text-color); /* 使用主题文字颜色 */
+    opacity: 0.8;
+}
+ .error-icon::before {
+     content: "403";
+     font-weight: bold;
+     font-family: 'Times New Roman', serif; /* 可以保留或更改字体 */
+ }
