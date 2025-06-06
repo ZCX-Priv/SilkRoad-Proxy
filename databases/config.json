@@ -10,6 +10,8 @@
     "LOG_FILE": "SilkRoad.log",
     "LOGIN_PATH": "/login",
     "FAVICON_PATH": "/favicon.ico",
+    "LOGIN_VERIFICATION_ENABLED": false,
+    "RANDOM_UA_ENABLED": false,
     "CACHE_ENABLED": false,
     "CACHE_HTML": false,
     "CACHE_MEDIA": false,

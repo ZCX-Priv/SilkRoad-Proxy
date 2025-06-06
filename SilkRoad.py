@@ -21,6 +21,9 @@ import signal
 import sys
 import platform
 from loguru import logger
+import glob
+import queue
+import concurrent.futures
 
 # ------------------ 配置与数据加载 ------------------
 with open('databases/config.json', 'r', encoding='utf-8') as config_file:
@@ -73,6 +76,118 @@ def clear_temp_cache():
 
 # 注册清理函数
 atexit.register(clear_temp_cache)
+
+# ------------------ 脚本管理 ------------------
+class ScriptManager:
+    """管理自定义JS脚本的类"""
+    def __init__(self):
+        self.scripts_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts")
+        self.scripts_cache = {}
+        self.last_load_time = 0
+        self.cache_ttl = 60  # 缓存有效期（秒）
+        
+        # 确保脚本目录存在
+        if not os.path.exists(self.scripts_dir):
+            os.makedirs(self.scripts_dir)
+            logger.info(f"创建脚本目录: {self.scripts_dir}")
+    
+    def get_all_scripts(self):
+        """获取所有JS脚本内容"""
+        current_time = time.time()
+        
+        # 如果缓存未过期，直接返回缓存内容
+        if current_time - self.last_load_time < self.cache_ttl and self.scripts_cache:
+            return self.scripts_cache
+        
+        # 重新加载所有脚本
+        scripts = {}
+        script_files = glob.glob(os.path.join(self.scripts_dir, "*.js"))
+        
+        for script_path in script_files:
+            try:
+                script_name = os.path.basename(script_path)
+                with open(script_path, 'r', encoding='utf-8') as f:
+                    script_content = f.read()
+                scripts[script_name] = script_content
+                logger.debug(f"加载脚本: {script_name}")
+            except Exception as e:
+                logger.error(f"加载脚本 {script_path} 失败: {e}")
+        
+        # 更新缓存
+        self.scripts_cache = scripts
+        self.last_load_time = current_time
+        
+        return scripts
+
+# 初始化脚本管理器
+script_manager = ScriptManager()
+
+# ------------------ HTTP连接池管理 ------------------
+class HttpClientPool:
+    def __init__(self, pool_size=100):
+        self.pool = queue.Queue(maxsize=pool_size)
+        self.pool_size = pool_size
+        self.created_clients = 0  # 跟踪已创建的客户端数量
+        # 延迟初始化，不再一次性创建所有客户端
+        # 而是按需创建，最多创建pool_size个
+        
+    def init_pool(self):
+        # 此方法不再使用，保留为空以兼容现有代码
+        pass
+    
+    def get_client(self):
+        try:
+            return self.pool.get(block=False)
+        except queue.Empty:
+            # 如果池已空且未达到最大数量，创建新客户端
+            if self.created_clients < self.pool_size:
+                self.created_clients += 1
+                logger.debug(f"创建新的HTTP客户端 ({self.created_clients}/{self.pool_size})")
+                return httpx.Client(
+                    verify=False,
+                    follow_redirects=False,
+                    timeout=30.0,
+                    http2=False,
+                    transport=httpx.HTTPTransport(retries=2)
+                )
+            else:
+                # 如果已达到最大数量，等待可用客户端（最多等待1秒）
+                try:
+                    return self.pool.get(block=True, timeout=1)
+                except queue.Empty:
+                    # 如果等待超时，创建临时客户端（不计入池中）
+                    logger.warning("HTTP客户端池已满且无可用客户端，创建临时客户端")
+                    return httpx.Client(
+                        verify=False,
+                        follow_redirects=False,
+                        timeout=30.0,
+                        http2=False,
+                        transport=httpx.HTTPTransport(retries=2)
+                    )
+    
+    def release_client(self, client):
+        try:
+            # 检查客户端是否仍然可用
+            if hasattr(client, 'is_closed') and not client.is_closed:
+                # 如果客户端有is_closed属性且未关闭
+                self.pool.put(client, block=False)
+            elif not hasattr(client, 'is_closed') and hasattr(client, '_transport') and not client._transport.is_closed:
+                # 如果客户端没有is_closed属性但有_transport属性且未关闭
+                self.pool.put(client, block=False)
+            else:
+                # 客户端已关闭，减少计数
+                self.created_clients -= 1
+                client.close()
+        except queue.Full:
+            # 如果池已满，关闭客户端
+            client.close()
+        except Exception as e:
+            # 处理其他异常
+            logger.error(f"释放HTTP客户端时出错: {e}")
+            try:
+                client.close()
+            except:
+                pass
 
 # ------------------ 缓存管理类 ------------------
 class CacheManager:
@@ -426,18 +541,38 @@ class Sessions(object):
         self.age = age
         self.recycle_interval = recycle_interval
         self.sessions = list()
+        self.session_cache = {}  # 添加会话缓存
+        self.cache_ttl = 300  # 缓存有效期（秒）
         self.recycle_session()
 
     def generate_new_session(self):
         new_session = ''.join(random.choice(self.charset) for _ in range(self.length))
-        self.sessions.append([new_session, time.time()])
+        current_time = time.time()
+        self.sessions.append([new_session, current_time])
+        # 添加到缓存
+        self.session_cache[new_session] = current_time
         return new_session
 
     def is_session_exist(self, session):
+        # 快速检查：无效会话直接返回False
+        if not session:
+            return False
+            
+        # 检查缓存 - 使用简单的字典查找，避免遍历
+        if session in self.session_cache:
+            return True
+                
+        # 缓存未命中，检查会话列表
+        current_time = time.time()
         for _session in self.sessions:
             if _session[0] == session:
-                _session[1] = time.time()
+                # 更新缓存，但不频繁更新时间戳
+                self.session_cache[session] = True
+                # 只有当距离上次更新超过一定时间才更新时间戳
+                if current_time - _session[1] > 300:  # 5分钟更新一次
+                    _session[1] = current_time
                 return True
+                
         return False
 
     def recycle_session(self):
@@ -445,6 +580,16 @@ class Sessions(object):
         deleting_sessions = [s for s in self.sessions if now - s[1] > self.age]
         for s in deleting_sessions:
             self.sessions.remove(s)
+            # 同时清理缓存
+            if s[0] in self.session_cache:
+                del self.session_cache[s[0]]
+                
+        # 清理过期缓存
+        expired_cache = [k for k, v in self.session_cache.items() if now - v > self.cache_ttl]
+        for k in expired_cache:
+            if k in self.session_cache:
+                del self.session_cache[k]
+                
         Timer(self.recycle_interval, self.recycle_session).start()
 
 sessions = Sessions()
@@ -828,59 +973,58 @@ class Proxy(object):
                 return
         # 添加重试逻辑
         retry_count = 0
-        while retry_count < self.max_retries:
-            try:
-                # 复制所有请求头，并随机设置 User-Agent 以伪装客户端信息
-                headers = {}
-                for k, v in self.handler.headers.items():
-                    if k.lower() not in self.invalid_headers:
-                       headers[k] = v
-                headers['User-Agent'] = random.choice(USER_AGENTS)
-                
-                # 配置 httpx 客户端，添加更多的 SSL 选项
-                with httpx.Client(
-                    verify=False, 
-                    follow_redirects=False, 
-                    timeout=self.timeout,
-                    http2=False,  # 禁用 HTTP/2 可能会解决一些 SSL 问题
-                    transport=httpx.HTTPTransport(retries=2)  # 内置重试机制
-                ) as client:
-                    # 若目标响应为大文件或非 HTML，则采用流式传输
+        # 从连接池获取客户端
+        client = http_client_pool.get_client()
+        try:
+            while retry_count < self.max_retries:
+                try:
+                    # 复制所有请求头，并随机设置 User-Agent 以伪装客户端信息
+                    headers = {}
+                    for k, v in self.handler.headers.items():
+                        if k.lower() not in self.invalid_headers:
+                           headers[k] = v
+                    if config.get("RANDOM_UA_ENABLED", True):
+                        headers['User-Agent'] = random.choice(USER_AGENTS)
+                    
+                    # 使用连接池中的客户端发送请求
                     r = client.request(method=self.handler.command, url=self.url, headers=headers, content=data)
                     # 如果请求成功，处理响应并退出重试循环
                     self.process_response(r)
                     break
-            except ssl.SSLError as ssl_error:
-                # 特别处理 SSL 错误
-                logger.warning(f"SSL Error on attempt {retry_count+1}/{self.max_retries}: {ssl_error}")
-                if "EOF occurred in violation of protocol" in str(ssl_error) and retry_count < self.max_retries - 1:
-                    retry_count += 1
-                    time.sleep(1)  # 短暂延迟后重试
-                    continue
-                else:
-                    self.process_error(f"SSL Error: {ssl_error}")
+                except ssl.SSLError as ssl_error:
+                    # 特别处理 SSL 错误
+                    logger.warning(f"SSL Error on attempt {retry_count+1}/{self.max_retries}: {ssl_error}")
+                    if "EOF occurred in violation of protocol" in str(ssl_error) and retry_count < self.max_retries - 1:
+                        retry_count += 1
+                        time.sleep(1)  # 短暂延迟后重试
+                        continue
+                    else:
+                        self.process_error(f"SSL Error: {ssl_error}")
+                        break
+                except httpx.TimeoutException as timeout_error:
+                    # 处理超时错误
+                    logger.warning(f"Timeout on attempt {retry_count+1}/{self.max_retries}: {timeout_error}")
+                    if retry_count < self.max_retries - 1:
+                        retry_count += 1
+                        time.sleep(1)
+                        continue
+                    else:
+                        self.process_error(f"Request timed out after {self.max_retries} attempts")
+                        break
+                except Exception as error:
+                    # 处理其他错误，添加更多上下文信息
+                    error_context = {
+                        "url": self.url,
+                        "method": self.handler.command,
+                        "headers": str(headers)[:200] + "..." if len(str(headers)) > 200 else str(headers),
+                        "retry_count": retry_count
+                    }
+                    logger.error(f"Error on attempt {retry_count+1}/{self.max_retries}: {error}, Context: {error_context}")
+                    self.process_error(f"请求错误: {error}")
                     break
-            except httpx.TimeoutException as timeout_error:
-                # 处理超时错误
-                logger.warning(f"Timeout on attempt {retry_count+1}/{self.max_retries}: {timeout_error}")
-                if retry_count < self.max_retries - 1:
-                    retry_count += 1
-                    time.sleep(1)
-                    continue
-                else:
-                    self.process_error(f"Request timed out after {self.max_retries} attempts")
-                    break
-            except Exception as error:
-                # 处理其他错误，添加更多上下文信息
-                error_context = {
-                    "url": self.url,
-                    "method": self.handler.command,
-                    "headers": str(headers)[:200] + "..." if len(str(headers)) > 200 else str(headers),
-                    "retry_count": retry_count
-                }
-                logger.error(f"Error on attempt {retry_count+1}/{self.max_retries}: {error}, Context: {error_context}")
-                self.process_error(f"请求错误: {error}")
-                break
+        finally:
+            # 请求完成后，将客户端归还到连接池
+            http_client_pool.release_client(client)
 
     def process_websocket(self):
         # 占位处理：后续可结合 websockets 库实现双向持续连接
@@ -979,7 +1123,9 @@ class Proxy(object):
                 content = content.decode('ascii', errors='ignore').encode('ascii')
                 content_type = "text/html; charset=ascii"
             
-            self.handler.send_header('Content-Length', len(content))
+            # 更新内容长度，确保反映插入脚本后的实际长度
+            content_length = len(content)
+            self.handler.send_header('Content-Length', content_length)
             self.handler.end_headers()
             self.handler.wfile.write(content)
         else:
@@ -1066,6 +1212,25 @@ class Proxy(object):
             pattern = rule[0].replace('{}', '')
             replacement = rule[0].format(rule[1]).encode('utf-8')
             body = body.replace(pattern.encode('utf-8'), replacement)
+            # 在HTML内容中插入自定义JS脚本
+        try:
+            # 只处理HTML内容
+            content_str = body.decode('utf-8', errors='ignore')
+            if "</body>" in content_str:
+                # 获取所有自定义脚本
+                scripts = script_manager.get_all_scripts()
+                if scripts:
+                    # 创建脚本标签
+                    script_tags = "\n<!-- 自定义JS脚本开始 -->\n"
+                    for script_name, script_content in scripts.items():
+                        script_tags += f"<script>/* {script_name} */\n{script_content}\n</script>\n"
+                    script_tags += "<!-- 自定义JS脚本结束 -->\n"
+                    
+                    # 在</body>标签前插入脚本
+                    content_str = content_str.replace("</body>", f"</body>{script_tags}")
+                    body = content_str.encode('utf-8')
+        except Exception as e:
+            logger.error(f"插入自定义JS脚本失败: {e}")
         return body
 
     def revision_set_cookie(self, cookies):
@@ -1133,79 +1298,140 @@ class SilkRoadHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
 
     def do_request(self):
         """处理所有请求的核心逻辑"""
-        logger.info(f"{self.command} Request Raw Path: {self.path} from {self.client_address}")
+        # 减少日志记录频率，只记录关键信息
+        if random.random() < 0.1:  # 只记录10%的请求，减少日志开销
+            logger.info(f"{self.command} Request: {self.path} from {self.client_address}")
 
-        # 解析路径和查询参数
-        parsed_url = parse.urlparse(self.path)
-        # Normalize path, ensure root path is '/' not '', remove trailing slash
-        parsed_path = parsed_url.path.rstrip('/') or '/'
-        query_params = parse.parse_qs(parsed_url.query) # Parse query params here
+        # 快速路径检查 - 直接检查常见路径模式，避免不必要的解析
+        if self.path == self.login_path or self.path == self.login_path + '/':
+            self.process_login()
+            return
+        elif self.path == self.favicon_path:
+            self.return_favicon()
+            return
+        elif self.path == '/':
+            self.process_index()
+            return
+        elif self.path == '/chat' or self.path == '/chat/':
+            self.process_chat()
+            return
+        elif self.path.startswith('/static/'):
+            self.process_static_file()
+            return
+        elif self.path.startswith('/templates/'):
+            self.process_template_file()
+            return
 
-        # Normalize login and favicon paths as well for robust comparison
-        norm_login_path = self.login_path.rstrip('/')
-        norm_favicon_path = self.favicon_path.rstrip('/')
-
-        # 添加详细日志，用于调试路径比较
-        logger.debug(f"Normalized Parsed Path: '{parsed_path}', Query Params: {query_params}, Comparing against Login Path: '{norm_login_path}', Favicon Path: '{norm_favicon_path}'")
-
-        # 1. 优先处理登录页面请求 (use normalized paths)
-        if parsed_path == norm_login_path:
-            logger.debug(f"Path matches normalized login_path ('{norm_login_path}'). Processing login.")
-            self.process_login() # 调用处理登录页面的方法
-            return # 处理完毕，直接返回
-
-        # 2. 处理 Favicon 请求 (use normalized paths)
-        elif parsed_path == norm_favicon_path:
-            logger.debug(f"Path matches normalized favicon_path ('{norm_favicon_path}'). Returning favicon.")
-            self.return_favicon() # 调用返回favicon的方法
-            return # 处理完毕，直接返回
-
-        # 3. 对于其他路径，检查是否登录
-        is_logged_in = self.is_login()
-        logger.debug(f"Path is not login or favicon. Checking login status: {is_logged_in}")
-        if is_logged_in:
-            # 用户已登录
-            logger.debug("User is logged in.")
-
-            # --- 修改开始 ---
-            # 优先检查是否存在 'url' 查询参数
+        # 检查是否需要登录验证 - 如果配置禁用了登录验证，跳过验证
+        if not config.get("LOGIN_VERIFICATION_ENABLED", True):
+            # 直接检查是否是代理请求，避免解析URL
+            if self.path[1:].startswith('http://') or self.path[1:].startswith('https://'):
+                Proxy(self).proxy()
+                return
+                
+            # 解析查询参数，检查是否有url参数
+            parsed_url = parse.urlparse(self.path)
+            query_params = parse.parse_qs(parsed_url.query)
+            
             if 'url' in query_params:
-                target_url = query_params['url'][0] # Get the target URL
-                logger.debug(f"Found 'url' parameter: '{target_url}'. Processing as proxy request.")
-                # Modify self.path temporarily for the Proxy class to work correctly
+                target_url = query_params['url'][0]
                 original_path = self.path
-                # Ensure the target URL starts with a scheme, add https if missing (common case)
                 if not target_url.startswith(('http://', 'https://')):
-                     # Basic check, might need refinement for //domain cases
-                     if target_url.startswith('//'):
-                         target_url = 'https:' + target_url # Assume https
-                     else:
-                         target_url = 'https://' + target_url # Assume https
-
-                self.path = '/' + target_url # Prepend '/' as Proxy expects
+                    if target_url.startswith('//'):
+                        target_url = 'https:' + target_url
+                    else:
+                        target_url = 'https://' + target_url
+                self.path = '/' + target_url
                 try:
-                    Proxy(self).proxy() # Call proxy logic with modified path
+                    Proxy(self).proxy()
                 finally:
-                    self.path = original_path # Restore original path
-            # 如果没有 'url' 参数，再执行原来的判断逻辑 (基于路径 like /http://...)
-            elif self.is_need_proxy():
-                logger.debug("Request needs proxy based on path structure (is_need_proxy()).")
-                Proxy(self).proxy() # 执行代理逻辑
-            else:
-                logger.debug("Request does not need proxy. Processing original.")
-                self.process_original() # 处理本地资源或特殊路径
-        
-        # 4. 未登录且访问的不是登录页或Favicon，重定向到登录页
+                    self.path = original_path
+                return
+                
+            # 如果不是代理请求，处理本地资源
+            self.process_not_found()
+            return
+
+        # 需要登录验证 - 检查会话
+        session = self.get_request_cookie(self.session_cookie_name)
+        if sessions.is_session_exist(session):
+            # 直接检查是否是代理请求，避免解析URL
+            if self.path[1:].startswith('http://') or self.path[1:].startswith('https://'):
+                Proxy(self).proxy()
+                return
+                
+            # 解析查询参数，检查是否有url参数
+            parsed_url = parse.urlparse(self.path)
+            query_params = parse.parse_qs(parsed_url.query)
+            
+            if 'url' in query_params:
+                target_url = query_params['url'][0]
+                original_path = self.path
+                if not target_url.startswith(('http://', 'https://')):
+                    if target_url.startswith('//'):
+                        target_url = 'https:' + target_url
+                    else:
+                        target_url = 'https://' + target_url
+                self.path = '/' + target_url
+                try:
+                    Proxy(self).proxy()
+                finally:
+                    self.path = original_path
+                return
+                
+            # 如果不是代理请求，处理本地资源
+            self.process_not_found()
         else:
-            # Log the specific path being redirected
-            logger.warning(f"User is not logged in. Redirecting path '{parsed_url.path}' to login.")
+            # 未登录，重定向到登录页
             self.redirect_to_login()
+            
+    def _process_authenticated_request(self, parsed_path, query_params, parsed_url):
+        """处理已通过身份验证的请求"""
+        # 优先检查是否存在 'url' 查询参数
+        if 'url' in query_params:
+            target_url = query_params['url'][0] # Get the target URL
+            logger.debug(f"Found 'url' parameter: '{target_url}'. Processing as proxy request.")
+            # Modify self.path temporarily for the Proxy class to work correctly
+            original_path = self.path
+            # Ensure the target URL starts with a scheme, add https if missing (common case)
+            if not target_url.startswith(('http://', 'https://')):
+                 # Basic check, might need refinement for //domain cases
+                 if target_url.startswith('//'):
+                     target_url = 'https:' + target_url # Assume https
+                 else:
+                     target_url = 'https://' + target_url # Assume https
+
+            self.path = '/' + target_url # Prepend '/' as Proxy expects
+            try:
+                Proxy(self).proxy() # Call proxy logic with modified path
+            finally:
+                self.path = original_path # Restore original path
+        # 如果没有 'url' 参数，再执行原来的判断逻辑 (基于路径 like /http://...)
+        elif self.path[1:].startswith('http://') or self.path[1:].startswith('https://'):
+            logger.debug("Request needs proxy based on path structure (direct check).")
+            Proxy(self).proxy() # 执行代理逻辑
+        else:
+            logger.debug("Request does not need proxy. Processing original.")
+            self.process_original() # 处理本地资源或特殊路径
 
     def is_login(self):
-        # 登录页面与 favicon 均无需验证会话
-        if self.path == self.login_path or self.path == self.favicon_path:
+        # 如果登录验证被禁用，直接返回True
+        if not config.get("LOGIN_VERIFICATION_ENABLED", True):
             return True
+            
+        # 登录页面与 favicon 均无需验证会话
+        parsed_url = parse.urlparse(self.path)
+        parsed_path = parsed_url.path.rstrip('/') or '/'
+        norm_login_path = self.login_path.rstrip('/')
+        norm_favicon_path = self.favicon_path.rstrip('/')
+        
+        if parsed_path == norm_login_path or parsed_path == norm_favicon_path:
+            return True
+            
+        # 获取会话Cookie
         session = self.get_request_cookie(self.session_cookie_name)
+        
+        # 使用优化后的会话验证方法
         return sessions.is_session_exist(session)
 
     def process_original(self):
@@ -1431,10 +1657,6 @@ class SilkRoadHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(encoded)
 
-    def is_need_proxy(self):
-        # 当请求路径以 "http://" 或 "https://" 开头时，启用代理转发
-        return self.path[1:].startswith('http://') or self.path[1:].startswith('https://')
-
     def pre_process_path(self):
         # 支持通过 URL 参数进行跳转
         if self.path.startswith('/?url='):
@@ -1443,7 +1665,7 @@ class SilkRoadHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
         if self.is_start_with_domain(self.path[1:]):
             self.path = '/https://' + self.path[1:]
         # 如果非代理请求，则尝试从 Referer 中补全路径
-        if not self.is_need_proxy():
+        if not (self.path[1:].startswith('http://') or self.path[1:].startswith('https://')):
             referer = self.get_request_header('Referer')
             if referer is not None and parse.urlparse(referer.replace(config['SERVER'], '')).netloc != '':
                 self.path = '/' + referer.replace(config['SERVER'], '') + self.path
@@ -1492,12 +1714,52 @@ class SilkRoadHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
 
 # ------------------ 多线程 HTTP 服务器 ------------------
 class ThreadingHttpServer(ThreadingMixIn, http.server.HTTPServer):
-    pass
+    # 设置线程池大小，防止线程爆炸
+    daemon_threads = True  # 使用守护线程
+    # 限制最大线程数
+    max_worker_threads = 200  # 根据服务器性能调整
+    
+    def __init__(self, *args, **kwargs):
+        self._thread_pool = concurrent.futures.ThreadPoolExecutor(
+            max_workers=self.max_worker_threads,
+            thread_name_prefix="SilkRoad-Worker"
+        )
+        super().__init__(*args, **kwargs)
+    
+    def process_request_thread(self, request, client_address):
+        try:
+            self.finish_request(request, client_address)
+        except Exception:
+            self.handle_error(request, client_address)
+        finally:
+            self.shutdown_request(request)
+    
+    def process_request(self, request, client_address):
+        # 使用线程池处理请求，而不是为每个请求创建新线程
+        self._thread_pool.submit(self.process_request_thread, request, client_address)
+
+# 性能调优配置
+PERFORMANCE_CONFIG = {
+    'HTTP_CLIENT_POOL_SIZE': 100,      # HTTP客户端连接池大小
+    'MAX_WORKER_THREADS': 200,        # 最大工作线程数
+    'SESSION_CACHE_TTL': 300,         # 会话缓存有效期（秒）
+    'LOG_SAMPLE_RATE': 1,           # 日志采样率（0-1）
+    'ENABLE_PERFORMANCE_MODE': True   # 是否启用性能模式
+}
 
 # ------------------ 主程序入口 ------------------
 if __name__ == '__main__':
-    # 设置日志
-    logger.add(config['LOG_FILE'], rotation="500 MB", level="INFO")
+    # 设置日志 - 在高并发模式下调整日志级别
+    if PERFORMANCE_CONFIG['ENABLE_PERFORMANCE_MODE']:
+        logger.add(config['LOG_FILE'], rotation="500 MB", level="WARNING")  # 只记录警告和错误
+    else:
+        logger.add(config['LOG_FILE'], rotation="500 MB", level="INFO")
+    
+    # 初始化HTTP客户端连接池
+    http_client_pool = HttpClientPool(pool_size=PERFORMANCE_CONFIG['HTTP_CLIENT_POOL_SIZE'])
+    
+    # 设置线程池大小
+    ThreadingHttpServer.max_worker_threads = PERFORMANCE_CONFIG['MAX_WORKER_THREADS']
     
     # 执行系统自检和缓存清理
     system_check_and_cleanup()

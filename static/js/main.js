@@ -1,4 +1,4 @@
-//加载完成后执行
+// 在页面加载完成后执行
 window.addEventListener('load', function () {
     //载入动画
     $('#loading-box').attr('class', 'loaded');
@@ -9,7 +9,7 @@ window.addEventListener('load', function () {
     //用户欢迎
     iziToast.settings({
         timeout: 3000,
-        backgroundColor: '#ffffff40',
+        backgroundColor: 'rgba(255, 255, 255, 0.25)',  // 改为rgba格式提高兼容性
         titleColor: '#efefef',
         messageColor: '#efefef',
         progressBar: false,
@@ -31,32 +31,67 @@ window.addEventListener('load', function () {
     //中文字体缓加载-此处写入字体源文件
     //先行加载简体中文子集，后续补全字集
     //由于压缩过后的中文字体仍旧过大，可转移至对象存储或 CDN 加载
-    const font = new FontFace(
-        "MiSans",
-        "url(" + "./static/font/MiSans-Regular.woff2" + ")"
-    );
-    document.fonts.add(font);
+    if ('FontFace' in window) {  // 添加FontFace API检测
+        try {
+            var font = new FontFace(
+                "MiSans",
+                "url(" + "./static/font/MiSans-Regular.woff2" + ")"
+            );
+            document.fonts.add(font);
+            font.load().catch(function(err) {
+                console.log('字体加载失败:', err);
+            });
+        } catch (e) {
+            console.log('字体API不支持:', e);
+        }
+    }
 
-}, false)
+    // 检测浏览器是否支持backdrop-filter
+    var testEl = document.createElement('div');
+    var isBackdropFilterSupported = ('backdropFilter' in testEl.style) || ('webkitBackdropFilter' in testEl.style);
+    
+    // 检查Chrome版本
+    var isOldChrome = false;
+    var chromeMatch = navigator.userAgent.match(/Chrome\/([0-9]+)/);
+    if (chromeMatch && parseInt(chromeMatch[1]) <= 76) {
+        isOldChrome = true;
+    }
+    
+    // 如果不支持backdrop-filter或是旧版Chrome，添加类名到body
+    if (!isBackdropFilterSupported || isOldChrome) {
+        document.body.classList.add('no-backdrop-filter');
+    }
+    
+    // 确保搜索框正常工作
+    if (document.querySelector('.sou-button') && document.querySelector('.wd') && document.querySelector('#search-submit')) {
+        // 搜索框元素存在，确保事件绑定
+        document.querySelector('.sou-button').addEventListener('click', function() {
+            if (document.querySelector('.wd').value !== '') {
+                document.querySelector('#search-submit').click();
+            }
+        });
+    }
+}, false);
 
 //进入问候
-now = new Date(), hour = now.getHours()
+var now = new Date(), hour = now.getHours();  // 添加var关键字
+var hello;  // 提前声明hello变量
 if (hour < 6) {
-    var hello = "凌晨好";
+    hello = "凌晨好";
 } else if (hour < 9) {
-    var hello = "早上好";
+    hello = "早上好";
 } else if (hour < 12) {
-    var hello = "上午好";
+    hello = "上午好";
 } else if (hour < 14) {
-    var hello = "中午好";
+    hello = "中午好";
 } else if (hour < 17) {
-    var hello = "下午好";
+    hello = "下午好";
 } else if (hour < 19) {
-    var hello = "傍晚好";
+    hello = "傍晚好";
 } else if (hour < 22) {
-    var hello = "晚上好";
+    hello = "晚上好";
 } else {
-    var hello = "夜深了";
+    hello = "夜深了";
 }
 
 //获取时间
@@ -65,7 +100,7 @@ t = setTimeout(time, 1000);
 
 function time() {
     clearTimeout(t);
-    dt = new Date();
+    var dt = new Date();  // 添加var关键字
     var mm = dt.getMonth() + 1;
     var d = dt.getDate();
     var weekday = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
@@ -78,8 +113,12 @@ function time() {
     if (m < 10) {
         m = "0" + m;
     }
-    $("#time_text").html(h + '<span id="point">:</span>' + m);
-    $("#day").html(mm + "&nbsp;月&nbsp;" + d + "&nbsp;日&nbsp;" + weekday[day]);
+    if ($("#time_text").length) {  // 添加元素存在检查
+        $("#time_text").html(h + '<span id="point">:</span>' + m);
+    }
+    if ($("#day").length) {  // 添加元素存在检查
+        $("#day").html(mm + "&nbsp;月&nbsp;" + d + "&nbsp;日&nbsp;" + weekday[day]);
+    }
     t = setTimeout(time, 1000);
 }
 
@@ -88,16 +127,16 @@ $(function () {
     $(".mark .tab .tab-item").click(function () {
         $(this).addClass("active").siblings().removeClass("active");
         $(".products .mainCont").eq($(this).index()).css("display", "flex").siblings().css("display", "none");
-    })
-})
+    });
+});
 
 //设置
 $(function () {
     $(".set .tabs .tab-items").click(function () {
         $(this).addClass("actives").siblings().removeClass("actives");
         $(".productss .mainConts").eq($(this).index()).css("display", "flex").siblings().css("display", "none");
-    })
-})
+    });
+});
 
 //输入框为空时阻止跳转
 $(window).keydown(function (e) {
@@ -111,7 +150,7 @@ $(window).keydown(function (e) {
 
 //点击搜索按钮
 $(".sou-button").click(function () {
-    if ($("body").attr("class") === "onsearch") {
+    if ($(".wd").length && $("#search-submit").length) {  // 添加元素存在检查
         if ($(".wd").val() != "") {
             $("#search-submit").click();
         }
@@ -120,28 +159,30 @@ $(".sou-button").click(function () {
 
 //鼠标中键点击事件
 $(window).mousedown(function (event) {
-    if (event.button == 1) {
+    if (event.button == 1 && $("#time_text").length) {  // 添加元素存在检查
         $("#time_text").click();
     }
 });
 
 //控制台输出
-var styleTitle1 = `
-font-size: 20px;
-font-weight: 600;
-color: rgb(244,167,89);
-`
-var styleTitle2 = `
-font-size:12px;
-color: rgb(244,167,89);
-`
-var styleContent = `
-color: rgb(30,152,255);
-`
-var title1 = '丝绸之路'
-var title2 = `Nav`
-var content = `
-版 本 号：3.0
-`
-console.log(`%c${title1} %c${title2}
-%c${content}`, styleTitle1, styleTitle2, styleContent)
+var styleTitle1 = 
+"font-size: 20px;" +
+"font-weight: 600;" +
+"color: rgb(244,167,89);";
+
+var styleTitle2 = 
+"font-size:12px;" +
+"color: rgb(244,167,89);";
+
+var styleContent = 
+"color: rgb(30,152,255);";
+
+var title1 = '丝绸之路';
+var title2 = 'Nav';
+var content = '版 本 号：3.0';
+
+try {
+    console.log("%c" + title1 + " %c" + title2 + "\n%c" + content, styleTitle1, styleTitle2, styleContent);
+} catch (e) {
+    console.log("丝绸之路 Nav - 版本号：3.0");
+}
